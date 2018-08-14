@@ -1,0 +1,48 @@
+<!--@subject Subject Of your email  @-->
+
+<!--@vars {
+
+"var this.getUrl($store, 'admin')":"Warehouse Account URL",
+
+"var customer.email":"Customer Email",
+
+"var customer.name":"Customer Name"
+
+} @-->
+
+ 
+
+{{template config_path="design/email/header_template"}} <!-- path of template header-->
+
+ 
+
+<!-- here $myvar1 , $myvar2, $myvar3, $myvar4, $myvar5, $myvar6 are variables in which we
+
+                                     asssign values when we use this template for send mail-->
+
+ $prod_name
+
+<!-- you can Modify content of template according to your requirement-->
+
+<p>Please submit below inquiry form for whatever vehicles you want to buy from autosupply.ph. We will find and locate it from our pool of updated listings and even refer you to trusted dealers so you don’t need to waste time searching and talking to the wrong people.</p>
+<p>We do not charge any commission or transaction fee like any other websites. It’s totally free safe and secure.</p>
+<ul style="list-style:none;"><p>Vehicle Information:</p>
+<li>Make:</li>
+<li>Model:</li>
+<li>Manufacturing Year:</li>
+</ul>
+
+<ul style="list-style:none;">
+<li>Name:</li>
+<li>Email:</li>
+<li>Mobile No:</li>
+<li>Address:</li>
+</ul>
+
+<p>Thank you, <br/>
+{{trans "%store_name" store_name=$store.getFrontendName()}}
+</p>
+
+ 
+
+{{template config_path="design/email/footer_template"}} <!--footer of template-->

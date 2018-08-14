@@ -1,0 +1,38 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Newsletter $block */
+?>
+<?= $block->getChildHtml('form_before') ?>
+    <form class="form form-newsletter-manage" action="<?= $block->escapeUrl($block->getAction()) ?>" method="post" id="form-validate">
+        <fieldset class="fieldset">
+            <?= $block->getBlockHtml('formkey') ?>
+            <legend class="legend"><span><?= $block->escapeHtml(__('Subscription option')) ?></span></legend><br>
+            <div class="field choice">
+                <input type="checkbox" name="is_subscribed" id="subscription" value="1" title="<?= $block->escapeHtmlAttr(__('General Subscription')) ?>"<?php if ($block->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox">
+                <label for="subscription" class="label"><span><?= $block->escapeHtml(__('Subscribe to Auto Supply PH Newsletter')) ?></span></label>
+            </div>
+            <?php /* Extensions placeholder */ ?>
+            <?= $block->getChildHtml('customer.form.newsletter.extra') ?>
+        </fieldset>
+		
+		<fieldset class="fieldset newsletter-additional">
+			<div class="newsletter-img"></div>
+			<div class="newsletter-desc">
+				<span class="newsletter-desc-title">Better to subscribe than get left behind!</span>
+				<span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+			</div>
+		</fieldset>
+		
+        <div class="actions-toolbar">
+            <div class="primary"><button type="submit" title="<?= $block->escapeHtmlAttr(__('Save')) ?>" class="action save primary"><span><?= $block->escapeHtml(__('Save Changes')) ?></span></button></div>
+            <div class="secondary"><a class="action back" href="<?= $block->escapeUrl($block->getBackUrl()) ?>"><span><?= $block->escapeHtml(__('Back')) ?></span></a></div>
+        </div>
+    </form>
+<?php /* Extensions placeholder */ ?>
+<?= $block->getChildHtml('customer.form.newsletter.extra2') ?>

@@ -1,0 +1,176 @@
+<?php $helper = $this->helper('Acommerce\Address\Helper\Data'); ?>
+<script>
+    window.checkoutAddress = <?php echo $helper->prepareAddressData() ?>;
+    require(['jquery'],function($){
+        $(document).ready(function(){
+            $(document).on('change', '#shipping-new-address-form select[name="region_id"]', function() {
+                var region_id = $(this).val();
+                if(region_id){
+                    $.ajax({
+                        url: '<?php echo $block->getUrl('address/data/index'); ?>',
+                        data: {type: 'city', region_id: region_id},
+                        dataType: "json",
+                        success: function(data) {
+                            if(Object.keys(data).length > 0){
+                                var listCities = JSON.parse(data.city);
+                                $('#shipping-new-address-form select[name="city_id"]').find('option:not(:first)').remove();
+                                $('#shipping-new-address-form select[name="subdistrict_id"]').find('option:not(:first)').remove();
+                                $('#shipping-new-address-form select[name="zipcode"]').find('option:not(:first)').remove();
+                                if(listCities){
+                                    $.each(listCities, function(index, value) {
+                                        $('#shipping-new-address-form select[name="city_id"]')
+                                            .append($("<option></option>")
+                                            .attr("value",index)
+                                            .text(value));
+                                    });
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+            $(document).on('change', '#shipping-new-address-form select[name="city_id"]', function() {
+                var city_id = $(this).val()
+                    thisObj = $(this);
+                if(city_id){
+                    $.ajax({
+                        url: '<?php echo $block->getUrl('address/data/index'); ?>',
+                        data: {type: 'subdistrict', city_id: city_id},
+                        dataType: "json",
+                        success: function(data) {
+                            if(Object.keys(data).length > 0){
+                                var listSubdistrict = JSON.parse(data.subdistrict);
+                                $('#shipping-new-address-form select[name="subdistrict_id"]').find('option:not(:first)').remove();
+                                $('#shipping-new-address-form select[name="zipcode"]').find('option:not(:first)').remove();
+                                if(listSubdistrict){
+                                    $('input[name="city"]').val(thisObj.find('option:selected').text()).trigger('change');
+                                    $.each(listSubdistrict, function(index, value) {
+                                        $('#shipping-new-address-form select[name="subdistrict_id"]')
+                                            .append($("<option></option>")
+                                            .attr("value",index)
+                                            .text(value));
+                                    });
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+            $(document).on('change', '#shipping-new-address-form select[name="subdistrict_id"]', function() {
+                var subdistrict_id = $(this).val()
+                    thisObj = $(this);
+                if(subdistrict_id){
+                    $.ajax({
+                        url: '<?php echo $block->getUrl('address/data/index'); ?>',
+                        data: {type: 'postcode', subdistrict_id: subdistrict_id},
+                        dataType: "json",
+                        success: function(data) {
+                            if(Object.keys(data).length > 0){
+                                var listPostcode = JSON.parse(data.postcode);
+                                $('#shipping-new-address-form select[name="zipcode"]').find('option:not(:first)').remove();
+                                if(listPostcode){
+                                    $('#shipping-new-address-form input[name="subdistrict"]').val(thisObj.find('option:selected').text()).trigger('change');
+                                    $.each(listPostcode, function(index, value) {
+                                        $('#shipping-new-address-form select[name="zipcode"]')
+                                            .append($("<option></option>")
+                                            .attr("value",value)
+                                            .text(value));
+                                    });
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+            $(document).on('change', '#shipping-new-address-form select[name="zipcode"]', function() {
+                if($(this).find('option:selected').val() != ''){
+                    $('#shipping-new-address-form input[name="postcode"]').val($(this).find('option:selected').text()).trigger('change');
+                }
+            });
+            $(document).on('change', '#billing-new-address-form select[name="region_id"]', function() {
+                var region_id = $(this).val();
+                if(region_id){
+                    $.ajax({
+                        url: '<?php echo $block->getUrl('address/data/index'); ?>',
+                        data: {type: 'city', region_id: region_id},
+                        dataType: "json",
+                        success: function(data) {
+                            if(Object.keys(data).length > 0){
+                                var listCities = JSON.parse(data.city);
+                                $('#billing-new-address-form select[name="city_id"]').find('option:not(:first)').remove();
+                                $('#billing-new-address-form select[name="subdistrict_id"]').find('option:not(:first)').remove();
+                                $('#billing-new-address-form select[name="zipcode"]').find('option:not(:first)').remove();
+                                if(listCities){
+                                    $.each(listCities, function(index, value) {
+                                        $('#billing-new-address-form select[name="city_id"]')
+                                            .append($("<option></option>")
+                                            .attr("value",index)
+                                            .text(value));
+                                    });
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+            $(document).on('change', '#billing-new-address-form select[name="city_id"]', function() {
+                var city_id = $(this).val()
+                    thisObj = $(this);
+                if(city_id){
+                    $.ajax({
+                        url: '<?php echo $block->getUrl('address/data/index'); ?>',
+                        data: {type: 'subdistrict', city_id: city_id},
+                        dataType: "json",
+                        success: function(data) {
+                            if(Object.keys(data).length > 0){
+                                var listSubdistrict = JSON.parse(data.subdistrict);
+                                $('#billing-new-address-form select[name="subdistrict_id"]').find('option:not(:first)').remove();
+                                $('#billing-new-address-form select[name="zipcode"]').find('option:not(:first)').remove();
+                                if(listSubdistrict){
+                                    $('input[name="city"]').val(thisObj.find('option:selected').text()).trigger('change');
+                                    $.each(listSubdistrict, function(index, value) {
+                                        $('#billing-new-address-form select[name="subdistrict_id"]')
+                                            .append($("<option></option>")
+                                            .attr("value",index)
+                                            .text(value));
+                                    });
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+            $(document).on('change', '#billing-new-address-form select[name="subdistrict_id"]', function() {
+                var subdistrict_id = $(this).val()
+                    thisObj = $(this);
+                if(subdistrict_id){
+                    $.ajax({
+                        url: '<?php echo $block->getUrl('address/data/index'); ?>',
+                        data: {type: 'postcode', subdistrict_id: subdistrict_id},
+                        dataType: "json",
+                        success: function(data) {
+                            if(Object.keys(data).length > 0){
+                                var listPostcode = JSON.parse(data.postcode);
+                                $('#billing-new-address-form select[name="zipcode"]').find('option:not(:first)').remove();
+                                if(listPostcode){
+                                    $('#billing-new-address-form input[name="subdistrict"]').val(thisObj.find('option:selected').text()).trigger('change');
+                                    $.each(listPostcode, function(index, value) {
+                                        $('#billing-new-address-form select[name="zipcode"]')
+                                            .append($("<option></option>")
+                                            .attr("value",value)
+                                            .text(value));
+                                    });
+                                }
+                            }
+                        }
+                    });
+                }
+            });
+            $(document).on('change', '#billing-new-address-form select[name="zipcode"]', function() {
+                if($(this).find('option:selected').val() != ''){
+                    $('#billing-new-address-form input[name="postcode"]').val($(this).find('option:selected').text()).trigger('change');
+                }
+            });
+        });
+    });
+</script>

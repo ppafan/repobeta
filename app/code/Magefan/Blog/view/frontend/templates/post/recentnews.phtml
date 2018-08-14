@@ -1,0 +1,28 @@
+<?php
+	$objectManager = \Magento\Framework\App\ObjectManager::getInstance(); // Instance of object manager
+	$resource = $objectManager->get('Magento\Framework\App\ResourceConnection');
+	$connection = $resource->getConnection();
+	
+	$storeManager = $objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+	$currentStore = $storeManager->getStore();
+	$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+	
+	$sql = "select a.*, DATE_FORMAT(a.publish_time, '%M %d, %Y') as publish_date
+			from magefan_blog_post a 
+			left join magefan_blog_post_category b on a.post_id=b.post_id
+			where b.category_id = 1 order by a.post_id desc limit 1";
+	$result = $connection->fetchRow($sql);
+	
+	$featured_img = $mediaUrl . $result['featured_img'];
+
+	$link = "/news/post/" . $result['identifier'];
+?>
+
+<div class="div-news">
+<p><img class="img-news" src="<?php echo $featured_img; ?>" alt="<?php echo $result['title']; ?>" /></p>
+<p class="headline"><?php echo $result['title']; ?></p>
+<p class="date"><?php echo $result['publish_date']; ?></p>
+<br />
+<p class="content"><?php echo $result['short_content']; ?></p>
+<p class="link"><a href="<?php echo $link; ?>">Read more</a></p>
+</div>

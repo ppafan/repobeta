@@ -1,0 +1,28 @@
+<?php
+	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+	$pagetitle = $objectManager->get('Magento\Framework\View\Page\Title');
+	$_pagetitle = $pagetitle->getShort();
+	
+?>
+
+<div class="services-image">
+	<div class='services-name'>Services</div>
+	<div class='services-desc'>Every car deserves quality service.	</div>
+</div>
+<div class="suppport-submenu">
+	<ul class="sub-services">
+		<li class="list-subservices <? if($_pagetitle == 'Insurance'){ echo 'active'; } ?>"><a href="/services/index/insurance" title="Insurance">Insurance</a></li>
+<?php /*
+		<li class="list-subservices <? if($_pagetitle == 'Car Maintenance'){ echo 'active'; } ?>"><a href="/services/index/carmaintenance" title="Car Maintenance">Car Maintenance</a></li>
+		<li class="list-subservices <? if($_pagetitle == 'Parts Installation'){ echo 'active'; } ?>"><a href="/services/index/partsinstallation" title="Parts Installation">Parts Installation</a></li>
+		<li class="list-subservices <? if($_pagetitle == 'Rentals and Leasing'){ echo 'active'; } ?>"><a href="/car-rentals.html" title="Rentals & Leasing">Rentals & Leasing</a></li>
+*/ ?>
+		<li class="list-subservices <? if($_pagetitle == 'Car Care and Detailing'){ echo 'active'; } ?>"><a href="/services/index/carcaredetailing" title="Car Care & Detailing">Car Care & Detailing</a></li>
+		<li class="list-subservices <? if($_pagetitle == 'Parts Finder'){ echo 'active'; } ?>"><a href="/services/index/partsfinder" title="Parts Finder">Parts Finder</a></li>
+		<li class="list-subservices <? if($_pagetitle == 'Car Finder'){ echo 'active'; } ?>"><a href="/services/index/carfinder" title="Car Finder">Car Finder</a></li>
+		<li class="list-subservices <? if($_pagetitle == 'Advertise with Us'){ echo 'active'; } ?>"><a href="/inquiry/index/advertise?success=" title="Advertise with Us">Advertise with Us</a></li>
+		<li class="list-subservices <? if($_pagetitle == 'Buy/Sell your Car'){ echo 'active'; } ?>"><a href="/services/index/buysell" title="Buy/Sell your car">Buy/Sell your car</a></li>
+		<li class="list-subservices <? if($_pagetitle == 'Services Inquiry Form'){ echo 'active'; } ?>"><a href="/inquiry/index/services?id=" title="Inquire Now">Inquire Now</a></li>	
+	</ul>
+</div>
+

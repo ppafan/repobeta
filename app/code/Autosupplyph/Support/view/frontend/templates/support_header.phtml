@@ -1,0 +1,23 @@
+<?php
+	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+	$pagetitle = $objectManager->get('Magento\Framework\View\Page\Title');
+	$_pagetitle = $pagetitle->getShort();
+	
+?>
+
+
+<div class="support-image">
+	<div class='support-name'>Support</div>
+</div>
+<div class="suppport-submenu">
+	<ul class="sub-support">
+		<li class="list-subsupport <? if($_pagetitle == 'Contact Us'){ echo 'active'; } ?>"><a href="/inquiry/index/support?success=" title="Contact Us">Contact Us</a></li>
+		<li class="list-subsupport <? if($_pagetitle == 'Privacy Policy & Disclaimer'){ echo 'active'; } ?>"><a href="/privacy-policy-disclaimer" title="Privacy Policy & Disclaimer">Privacy Policy & Disclaimer</a></li>
+		<li class="list-subsupport <? if($_pagetitle == 'Shipping & Delivery'){ echo 'active'; } ?>"><a href="/support/index/shipping" title="Shipping & Delivery">Shipping & Delivery</a></li>
+		<li class="list-subsupport <? if($_pagetitle == 'Terms & Conditions'){ echo 'active'; } ?>"><a href="/support/index/terms" title="Terms & Conditions">Terms & Conditions</a></li>
+		<li class="list-subsupport <? if($_pagetitle == 'Warranty & Returns'){ echo 'active'; } ?>"><a href="/support/index/warranty" title="Warranty and Returns">Warranty and Returns</a></li>
+		<li class="list-subsupport <? if($_pagetitle == 'Payments'){ echo 'active'; } ?>"><a href="/support/index/payments" title="Payments">Payments</a></li>
+		<li class="list-subsupport <? if($_pagetitle == 'Frequently Asked Questions'){ echo 'active'; } ?>"><a href="/support/index/faqs" title="FAQs">FAQs</a></li>		
+	</ul>
+</div>
+

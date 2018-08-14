@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+
+
+
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+
+    <head>
+        <title>Car Care and Detailing</title>
+    </head>
+
+	<body>
+		<referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string">Home</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}</item>
+                </argument>
+            </action>
+			
+			<action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Services</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Services</item>
+                    <item name="label" xsi:type="string">Services</item>
+                    <item name="link" xsi:type="string">/services/index/services</item>
+                </argument>
+            </action>
+
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Car Care and Detailing</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Car Care and Detailing</item>
+                    <item name="label" xsi:type="string">Car Care and Detailing</item>
+                </argument>
+            </action>
+
+        </referenceBlock>
+
+		<referenceContainer name="page.top">
+            <container name="services.view.container" htmlTag="div" htmlClass="services-view" before="breadcrumbs">
+				<block class="Magento\Framework\View\Element\Template" name="services.image" template="Autosupplyph_Services::services_header.phtml"/>
+            </container>
+        </referenceContainer>
+
+        <referenceContainer name="content">
+            <block class="Magento\Framework\View\Element\Template" name="services.carcaredetailing" template="Autosupplyph_Services::carcaredetailing.phtml"/>
+        </referenceContainer>
+    </body>
+
+
+
+</page>

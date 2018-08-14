@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <!--//<title>Car Inquiry Form</title>//-->
+        <title>Inquiry Form</title>
+    </head>
+	<body>
+		<referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string">Home</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}</item>
+                </argument>
+            </action>
+            <!--//
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Cars</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Cars</item>
+                    <item name="label" xsi:type="string">Cars</item>
+                </argument>
+            </action>
+            //-->
+			<action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Inquiry</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Inquiry</item>
+                    <item name="label" xsi:type="string">Inquiry</item>
+                </argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Autosupplyph\Inquiry\Block\Inquiry" name="inquiry.car" template="Autosupplyph_Inquiry::car_inquiry.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

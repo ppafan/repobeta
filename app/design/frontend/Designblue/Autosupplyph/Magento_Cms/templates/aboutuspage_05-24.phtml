@@ -1,0 +1,105 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<div class="div-whoweare"><a name="whoweare"></a>
+	<div class="header-aboutus"><p>WHO WE ARE</p>
+	<div class="header-bottom">&nbsp;</div>
+	</div>
+
+	<div class="div-aboutus-intro">
+	<img src="<?php echo $mediaUrl?>wysiwyg/Who_We_Are-image_1.png" />
+		<p class="div-aboutus-intro"><strong>Autosupply.ph</strong> is an e-commerce concept-based store that gives a big helping hand to its' customers and partners for any given car needs present and make everybody's life easy from buying auto parts, owning cars to providing all kinds of services a car should have and should need any time of the day. It magnifies the trend of living a modern life with so much convenience, timeliness and advantage that will make you experience an effortless manner of providing the essentials for your own auto.</p>
+		<p class="div-aboutus-intro">We live in the 21st century and we all want to use and maximize our time in the best possible way and when people attend to the necessities of their vehicles, schedules don't go as planned simply because attention, time and effort hinders it while looking for a great way to its' resolve.</p>
+		<p class="div-aboutus-intro">No more struggles finding what you need for your cars. No more time killing situations or even those annoying delays. Visit the website anytime and get direct help from people who know how to provide everything about your car. </p>
+		<p class="div-aboutus-intro">
+			<span id="securityisfirst"><strong>Security is First</strong></span>
+		</p>
+		<p class="div-aboutus-intro">We give priority to the importance of the security while shopping here on our website so we provide a broad range of secure payment options including cash-on-delivery, where a payment can only be done after receiving the package.</p>
+		<p class="div-aboutus-intro">All products offered are all quality guaranteed by its’ respective brands. Everything is authentic, genuine and not defective. Should there be any mishaps, simply return it within ( 7 ) days and get a full refund under our company refund policy.</p>
+	</div>
+	
+</div>
+
+
+<div class="div-whatweoffer">
+	<div class="content-whatweoffer">
+		<a name="whatweoffer"></a>
+		<div class="header-aboutus"><p>WHAT WE OFFER</p>
+			<div class="header-bottom">&nbsp;</div>
+		</div>
+
+		<div class="div-aboutus-intro">
+			<p class="div-aboutus-intro">From over a million and more auto-related products and top-quality brand new or even pre-owned cars to all types of services needed covering all car models. You will never run out of options. We offer everything about cars that anyone can ever think of.  You name it, we definitely have it!</p>
+			<p class="div-aboutus-intro">Our website interface is designed to recommend a massive quantity of product coverage for all people who wants to fill in the needs of their cars in the most comfortable and convenient possible way. You will never have to visit your local automotive stores because we have everything they have and you can find it here. Worry free while waiting for your car to get fixed because we are tied up with trusted partners who can directly guarantee the services they offer.</p>
+			<p class="div-aboutus-intro">Great deals and promotions will also be posted to put an absolute certainty that everyone gets the best value of their money and the products that they wish to buy or avail online. </p>
+			<div class="div-offerings-icon">
+				<ul class="ul-steps">
+					<li class="li-steps">
+						<p class="offerings-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Auto_Parts___Merchandise-icon.png" /></p>
+						<p class="lbl-steps">Auto Parts & Merchandise</p>
+						<p class="steps-desc">
+							Checkout the wide array of items and other car related merchandise that’s easy to find and locate on our website. 
+						</p>
+					</li>
+					<li class="li-steps">
+						<p class="offerings-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Cars-icon.png" /></p>
+						<p class="lbl-steps">Cars</p>
+						<p class="steps-desc">
+							Spot the hottest and latest cars according to your preference only here on autosupply.ph. Either brand-new or pre-owned we have all kinds of cars for you. 
+						</p>
+					</li>
+					<li class="li-steps">
+						<p class="offerings-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Services-icon.png" /></p>
+						<p class="lbl-steps">Services</p>
+						<p class="steps-desc">
+							We give only the finest services for what your cars deserve. Guaranteed by experts and recommended by thousands of car enthusiasts. 
+						</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="div-missionandvision"><a name="missionvision"></a>
+	<div class="header-aboutus"><p>MISSION AND VISION</p>
+	<div class="header-bottom">&nbsp;</div>
+	</div>
+
+	<div class="div-aboutus-intro">
+		<h3 id="mandv">Mission</h3>
+		<p class="div-aboutus-intro">Our mission is to empower people with freedom and great convenience when they think about buying and maintaining their own cars easy and trouble-free. We care about everyone’s time so we want to help on every car concern there may be at any point in the country any time. We want everyone to know that there is a user-friendly platform (autosupply.ph) that can be used to maximize the experience of owning a car and fulfills the goals of his or her owner in the quickest possible time.</p>
+
+
+		<h3 id="mandv">Vision</h3>
+		<p class="div-aboutus-intro">Our vision is to make people’s way of living in the same trend that technology is filling up the convenience of doing our everyday routines effortless and hassle-free... In the world of automobiles, one may seem to think and understand that the way things work here requires a great amount of time, money and patience. An issue that has been continuously ravaging the mainstream for so long, seeking answers to create a channel that keeps everybody on top of his or her auto plans specially the expenses. Autosupply.ph comes in to fill that wide space, helping people connect and get straightforward attention they need for their cars at great prices.</p>  
+	</div>
+
+	<div class="div-missionvision-icons">
+		<ul class="ul-missionvision-icons">
+			<li class="missionvision-icons">
+			    <p class="steps-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Careers-icon.png" /></p>
+			    <p class="lbl-steps">Careers</p>
+			    <p class="services-redirect"><a class="mandv-links" href="inquiry/index/careers?success=">SEE CAREERS</a></p>
+			</li>
+			<li class="missionvision-icons">
+			    <p class="steps-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Contact-icon.png" /></p>
+			    <p class="lbl-steps">Contact</p>
+			    <p class="services-redirect"><a class="mandv-links" href="inquiry/index/contactus?success=">TALK TO US</a></p>
+			</li>
+
+		</ul>
+	</div>
+	
+</div>
+
+
+
+
+<style>
+
+
+</style>

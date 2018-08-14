@@ -1,0 +1,34 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+$serviceid = 7;
+?>
+
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="cms-main-container">
+	<div class="cms-container carfinder">
+		<div class="cms-image-container">
+			<img src="<?php echo $mediaUrl?>wysiwyg/Car_Finder-image.png" />
+		</div>
+		<div class="cms-desc-container">
+			<p class="cms-header-name">Find a car that fits your preference on the spot</p>
+			<br>
+			<p class="cms-desc">
+				From oldies and pre-owned cars to the latest brand-new models. We provide specifications and comparisons from all cars out there sorting out the best options for you.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="div-services-inquire">
+	<div class="header-services-inquire">Interested?</div>
+	<p class="inquire-desc">Dont hesitate to contact us. Send an inquiry now and we'll get back to you shortly.</p>
+	<p class="services-inquire">
+		<a class="action inquirenow" href="/inquiry/index/services?id=<?php echo $serviceid; ?>">INQUIRE NOW</a>
+	</p>
+</div>

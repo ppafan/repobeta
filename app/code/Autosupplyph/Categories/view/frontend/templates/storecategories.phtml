@@ -1,0 +1,73 @@
+<?php
+      $catTitle = $block->getContent();
+      $mainCats = $block->getMainCategories();
+      $subcats  = $block->getMainCategories();
+	  $sub2cats = $block->getMainCategories();
+	  $catIds = array(100,102,103);
+ ?>
+ <div class="home-categories">
+ <div class="home-lbl"><div class="lbl-popularcat"><?php echo __($catTitle); ?></div></div>
+	 <div class="home-cat">
+		<?php $catcount = 0; ?>
+		<?php foreach ($mainCats as $category): ?>
+			<?php if ($category->getLevel() == 2): ?>
+					<!--sub cat-->
+					<?php $subcount = 0; ?>
+					<?php foreach ($subcats as $key => $subcategory):?>
+							<?php if (in_array($subcategory->getId(),$catIds) && $subcategory->getParentId() == 97):?>
+									<div class="home-subcat">
+										<div class="categories">
+											<div class="category-title" >
+												<!--<h3><b><?php echo __($subcategory->getName()); ?></b></h3>-->
+												<a href="<?php echo $subcategory->getUrl() ?>">
+												<img src="<?php echo $subcategory->getImageUrl();?>">
+											  </a>
+											</div>
+<?php /*
+											<div class="subcat-container">
+												<!--sub sub-->
+												<?php $sub2count = 0; ?>
+												<?php foreach ($sub2cats as $key => $sub2category):?>
+														<?php if ($subcategory->getId() == $sub2category->getParentId()):?>
+																<div class="sub-categories">
+																	<a href="<?php echo $sub2category->getUrl() ?>">
+																		<?php echo __($sub2category->getName()); ?>
+																	</a>
+																</div>
+															<?php $sub2count++; ?>
+														<?php endif;?>
+														<?php if ($sub2count == '5'){break;} ?>
+												<?php endforeach; ?>
+
+												<div class="shop-by-all-categories">
+													<a href="<?php echo $block->getUrl('categories/index/view/id/' . $sub2category->getId()) ?>">
+														<!--<img src="<?php echo $subcategory->getImageUrl();?>">--><?php echo __("See All"); ?>
+													</a>
+												</div>
+
+												<!--sub sub-->
+											</div>
+*/ ?>
+										</div>
+									</div>
+								<?php $subcount++; ?>
+							<?php endif;?>
+							<?php if ($subcount == '6'){break;} ?>
+					<?php endforeach; ?>
+					<!--sub cat-->
+
+		  <?php $catcount++; ?>
+		  <?php endif; ?>
+		  <?php if ($catcount == '1'){break;} ?>
+	  <?php endforeach; ?>
+	  </div>
+  </div>
+
+  <script type="text/javascript">
+
+  require(['jquery'],function($){
+    $('.category-title').click(function(){
+  	$(this).siblings('.subcat-container').toggleClass('active');
+  });
+});
+  </script>

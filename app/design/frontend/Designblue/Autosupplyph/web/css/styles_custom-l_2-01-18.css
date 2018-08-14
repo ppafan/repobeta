@@ -1,0 +1,1786 @@
+@media only screen and (min-device-width: 320px) and (max-device-width: 780px) and (orientation: landscape) {
+
+}
+
+@media all and (min-width: 768px), print {
+	p {
+		 margin: 0;
+	}
+	.page-layout-2columns-right .sidebar-main{
+		width: 25%;
+		padding-left: 4%;
+		margin: 30px 0;
+	}
+
+	.page-layout-2columns-left .column.main {
+		width: 50% !important;
+		margin-right: 160px;
+	}
+		
+	.page-layout-2columns-left .sidebar{
+	   margin-left: 240px  !important;
+		width: 20% !important;
+	}
+
+	 .page-main {
+		 max-width: none;
+		 padding:0;
+	}
+	 .page-layout-1colum.page-main {
+		 max-width: 1280px;
+	}
+	 .page-layout-2columns-right .column.main {
+		 width: 65%;
+		 margin: 30px 0;
+	}
+	 .page-layout-2columns-right .sidebar-additional {
+		 width: 27%;
+		 float: left;
+		 padding-left: 60px;
+	}
+	.page-wrapper .compare.wrapper, .sidebar-additional{
+		display:none;
+	}
+	 .page-header .header.panel {
+		 padding: 8px 85px;
+	}
+	 .page-header .panel.wrapper{
+		 background-color: #313131;
+		 border:none;
+	}
+	 .header.panel>.header.links>.authorization-link:after{
+		 display: none !important;
+	}
+	 .block-search .action.search{
+		 background: #f00;
+		 opacity: 1 !important;
+		 right: 0;
+		 top: 1px;
+		 width: 25px;
+		 border-radius: 0;
+	}
+	 input#search{
+		 height: 20px;
+		 font-size: 12px;
+		 color: #858585;
+		 background: #000;
+		 border: none;
+		 font-weight: 600;
+	}
+
+	.greet.welcome {
+		display: none !important;
+	}
+	
+	.panel.header .block-search{
+		margin-right: 45px;
+	}
+	.minicart-wrapper {
+		top: -28px;
+		width: 45px;
+	}
+
+	.minicart-wrapper .action.showcart .counter.qty {
+		background: #e62f2d;
+		height: 17px;
+		line-height: 17px;
+		margin: 0;
+		padding: 0;
+	}
+
+	 .block-search .action.search:before{
+		 font-size: 16px;
+		 line-height: 20px;
+		 color: #ffffff;
+	}
+	 .header.content {
+		 padding: 0;
+		 width: 65%;
+	}
+	 .logo {
+		 margin: -15px 0;
+		 width: 120px;
+	}
+	 .page-header{
+		 background: #95989a;
+		 /* z-index: -1; */
+	}
+	 .cms-footer {
+		 display: inline-flex;
+	}
+	 .footerlinks {
+		 margin-right: 40px;
+		 line-height: 1.8;
+		 font-size: 10px;
+		 color: #c1bcb6;
+	}
+	 .footer.content {
+		 padding: 0px 40px 0px 55px;
+	}
+	 .page-footer {
+		 background: #262726 !important;
+	}
+	 .footer.content .links{
+		 padding-right: 0px !important;
+	}
+
+	.footer.content .links a:hover {
+		color: #e62f2d;
+		text-decoration: none;
+	}
+
+	 .block.newsletter {
+		 color: #fff;
+		 font-size: 12px;
+	}
+	 .block.newsletter {
+		 width: 28%;
+		 margin-top: 50px;
+	}
+	 #newsletter {
+		 border-radius: 30px 0 0 30px;
+		 border: none;
+		 font-size: 10px;
+	}
+	 .navigation .level0 .submenu {
+		 min-width: 185px;
+		 background: #c81c1f;
+		 top: 50px !important;
+		 border: none;
+	}
+	 .navigation .level0 .submenu a{
+		 color: #fff;
+	}
+	 .navigation .level0 .submenu a:hover, .navigation .level0 .submenu a.ui-state-focus{
+		 background: #ed383b;
+		 color: #fff;
+		 text-decoration: none;
+	}
+	 .navigation {
+		 background: #f7f7f7;
+		 padding-left: 320px;
+		 font-weight: 600;
+	}
+	 .navigation .level0 > .level-top{
+		 line-height: 40px;
+		 padding: 0px 10px;
+	}
+	 .shopslink {
+		 display: inline-flex;
+		 width: 100%;
+		 height: 226px;
+	}
+	 .sections.nav-sections{
+		 margin-bottom: 0 !important;
+		 /* z-index: -2; */
+	}
+	 .top-container {
+		 margin: 0;
+		 padding: 0;
+		 max-width: none;
+	}
+	 .shopautoparts{
+		 width: 50%;
+		 background: url('../images/AutoParts-banner.png') no-repeat;
+		 background-size: 100%;
+	}
+	 .shopcars{
+		 width: 50%;
+		 background: url('../images/Cars-banner.png') no-repeat;
+		 background-size: 100%;
+	}
+	 .shoplink-title {
+		 color: #FFF;
+		 font-size: 32px;
+		 font-weight: bold;
+		 padding: 35px 95px 0;
+	}
+	 .shoplink-desc {
+		 font-weight: 100;
+		 font-size: 14px;
+		 color: #FFF;
+		 padding: 0 95px 0;
+		 margin-bottom: 20px;
+	}
+	 .shoplink-now {
+		 width: 95px;
+		 padding: 5px 14px;
+		 border: 2px solid #ed1f24;
+		 border-radius: 30px;
+		 position: relative;
+		 left: 100px;
+		 text-align: center;
+	}
+
+	.shoplink-now.parts:hover, .shoplink-now.cars:hover, .submenu-shopnow-link:hover{
+		background-color: #ed1f24;
+	}
+
+
+	.shoplink-now.parts a:hover, .shoplink-now.cars a:hover, .submenu-shopnow-link:hover{
+		text-decoration: none;
+	}
+	.customer-welcome .action.switch:after, .customer-welcome.active .action.switch:after{
+		font-size: 24px;
+		content: '\e627';
+	}
+
+	 .dv-srvc {
+		 display: inline-flex;
+		 background-color: #f7f7f7;
+		 padding: 0px 80px 30px;
+	}
+	 .div-services {
+		 width: 80%;
+		 padding-right: 20px;
+	}
+	 .shoplink-now a{
+		 color: #FFF;
+	}
+	 .shoplink-desc.parts {
+		 width: 270px;
+	}
+	 .shoplink-desc.cars {
+		 width: 185px;
+	}
+	 ul.ul-services {
+		 list-style: none;
+		 display: inline-flex;
+		 padding: 0;
+		 margin: 0;
+	}
+	 .services-buysell {
+		 border-left: 2px solid #b1b1b1;
+		 width: 20%;
+		 padding: 0 20px;
+	}
+	 .ul-services li{
+		 width: 18%;
+		 padding: 20px;
+		 font-size: 10px;
+		 margin: 0;
+	}
+	 p.lbl-service {
+		 text-align: center;
+		 font-weight: bold;
+		 margin: 10px 0;
+	}
+	 p.service-icon img {
+		 height: 55px;
+	}
+	 p.service-icon, p.service-desc {
+		 text-align: center;
+	}
+	 .widget.block.block-static-block {
+		 margin-bottom: 0;
+	}
+	 .header-srvc {
+		 background-color: #f8f7f7;
+	}
+	 .header-srvc p{
+		 text-align: center;
+		 font-size: 24px;
+		 font-weight: bold;
+		 padding: 40px 0;
+	}
+	 .buysell-lbl{
+		 color: #c81c1f;
+		 text-align: center;
+		 font-size: 32px;
+		 font-weight: 700;
+		 padding-top: 45px;
+	}
+	 .services-buysell img{
+		 padding: 0 40px;
+		 width: 70%;
+	}
+	 .buysell-desc {
+		 font-size: 10px;
+		 padding: 20px;
+		 text-align: center;
+	}
+	 .page-wrapper{
+		 min-height: 0;
+	}
+	 .block-search {
+		 margin-bottom: 0 !important;
+	}
+	 .home-search{
+		 width: 100%;
+	}
+	 .home-ads {
+		 padding: 10px 0px;
+		 width: 100%;
+	}
+	 .home-ads img, .home-search input#search2, .home-cat, .home-cars{
+		 width: 80%;
+		 float: right;
+	}
+	 .home-search input#search2 {
+		 background: #fff;
+		 border: 1px solid #e62f2d;
+		 height: 35px;
+		 border-radius: 30px;
+		 font-weight: 400;
+		 padding: 10px 0;
+		 padding-left: 20px;
+	}
+	 .home-search .action.search:before{
+		 display:none;
+	}
+	 .home-search .action.search > span{
+		 position:relative;
+	}
+	 .home-search .action.search{
+		 border-radius: 0 30px 30px 0;
+		 height: 35px;
+		 width: 80px;
+		 top: 0px;
+		 background: #f00 !important;
+		 color: #fff;
+		 font-size: 12px;
+		 font-weight: 500;
+	}
+	 .home-categories, .home-topbrands, .home-featuredcars {
+		 float: left;
+		 width: 100%;
+	}
+	 .home-subcat {
+		 width: 210px;
+		 float: left;
+		 margin: 10px 0 0 20px;
+	}
+	 .sub-categories {
+		 background: #f8f7f7;
+		 padding: 10px;
+		 margin: 10px 0;
+	}
+	 .sub-categories a{
+		color: #333333;
+		font-weight: 600;
+		font-size: 12px;
+		display: table-cell;
+		vertical-align: middle;
+		height: 33px;
+	}
+	.sub-categories:hover a{
+		 color: #fff;
+		 text-decoration: none;
+	}
+	 .home-lbl{
+		 padding: 10px;
+		 margin: 20px 0 10px 0;
+		 background: linear-gradient(120deg, #c81c1f 40%, #fff 40%);
+	}
+	 .sub-categories:hover {
+		 background: #ed1f24;
+		 color: #fff;
+	}
+	 .lbl-popularcat, .lbl-topbrands, .lbl-featuredcars{
+		 width: 37%;
+		 text-align: right;
+		 color: #fff;
+		 text-transform: uppercase;
+		 font-size: 14px;
+		 font-weight: 700;
+	}
+
+	.featuredcars-seeall {
+		text-align: center;
+	}
+
+	 .shop-by-all-categories a {
+		 color: #ed1f24;
+		 padding-left: 45px;
+	}
+	 .sub-categories:first-child{
+		 margin: 0;
+	}
+	 .shop-by-all-categories {
+		 background: url('../images/See_All-icon.png') no-repeat;
+		 background-size: 28px;
+	}
+	 .shop-by-all-categories:hover{
+		 background: url('../images/See_All-icon-hover.png') no-repeat;
+		 background-size: 28px;
+	}
+	.shop-by-all-categories:hover a{
+		text-decoration:none;
+	}
+	 .home-lbl.topbrands{
+		 background: linear-gradient(120deg, #c81c1f 35%, #fff 35%);
+	}
+	 .lbl-topbrands {
+		 width: 32%;
+	}
+	 .home-brands {
+		 width: 118px;
+		 float: left;
+		 margin: 10px 0 0 20px;
+		 height: 100px;
+	}
+	 .category-name {
+		 color: #FFF;
+		 text-transform: uppercase;
+		 font-size: 28px;
+		 font-weight: bold;
+		 padding: 20px 140px 0;
+	}
+	 .category-desc {
+		 font-size: 12px;
+		 color: #fff;
+		 width: 218px;
+		 padding: 0 140px;
+	}
+	 .category-image {
+		 height: 107px;
+		 background-size: 100% !important;
+		 background-repeat: no-repeat !important;
+		 margin: 0;
+	}
+	 .div-submenu {
+		 background: #313131;
+		 width: 100%;
+		 /* float: left; */
+		 height: 40px;
+	}
+	 .sub-cat {
+		 margin: 0;
+		 padding: 0;
+		 list-style: none;
+		 background: #313131;
+		 float: left;
+	}
+	 .list-subcat {
+		 float: left;
+		 margin: 0;
+		 /* width: 110px; */
+		 min-width: 30px;
+		 max-width: 120px;
+		 padding: 5px;
+		 height: 30px;
+		 border-right: 2px solid #1a1a1a;
+		 text-align: center;
+		 font-size: 10px;
+		 text-transform: uppercase;
+		 color: #fff;
+		 font-weight: bold;
+	}
+
+	.list-subcat a{
+		display:table-cell;
+		vertical-align: middle;
+		height:30px;
+		color: #FFF;
+	}
+
+	.list-subcat a:hover{
+		text-decoration:none;
+	}
+
+	.list-subcat:hover{
+		background: #ed1f24;
+	}
+
+	 .submenu-shopnow {
+		 float: right;
+		 background: #2f3031;
+		 height: 40px;
+	}
+	 .submenu-shopnow-link {
+		 padding: 5px 15px;
+		 margin: 0 5px;
+		 border: 2px solid #ed1f24;
+		 color: #FFF !important;
+		 border-radius: 30px;
+		 position: relative;
+		 top: 10px;
+		 text-align: center;
+	}
+	 .breadcrumbs {
+		 padding: 10px 240px;
+		 margin: 0;
+	}
+	 .breadcrumbs strong {
+		 font-weight: 600;
+		 color: #ed1f24;
+	}
+	 .breadcrumbs a:visited, .breadcrumbs a {
+		 font-weight: 600;
+		 color: #575757;
+	}
+	 .login-line span {
+		 margin: 10px 0;
+	}
+	 .login-line hr {
+		 width: 40%;
+	}
+	 .login-line {
+		 display: flex;
+	}
+	 .customer-account-login .page-title-wrapper, .customer-account-create .page-title-wrapper, .customer-account-forgotpassword .page-title-wrapper{
+		 display: none;
+	}
+	 .block.block-customer-login, .form.create.account, .form.password.forget,
+	 .form-inquiry-car {
+		 padding: 10px;
+		 box-shadow: 0 0 20px 0 #888888;
+		 background: #fff;
+		 border-radius: 5px;
+	}
+	 .customer-account-login .page-main {
+		 background: url('../images/Login-art.png') no-repeat;
+		 background-size: contain;
+		 background-color: #f7f7f7;
+		 background-repeat: no-repeat;
+		 background-position-y: 85%;
+	}
+
+	 .login-container{
+		 margin: 50px auto;
+	}
+	
+	.login-container .fieldset.login,
+	.login-container .fieldset:after{
+		margin:0;
+	}
+	
+	 .login-container .fieldset > .field > .control{
+		 width: 100%;
+	}
+	 .login-container .secondary {
+		 float: right;
+	}
+	.login-container .action.remind {
+		 color: #49aade;
+	}
+	 .block.block-new-customer .block-title {
+		 width: 80%;
+		 text-align: center;
+	}
+	 .block-customer-login .block-content, .block-new-customer .block-content{
+		 width: 60%;
+		 margin: auto;
+	}
+	 .login-container .block-new-customer .actions-toolbar {
+		 margin-top: 90px;
+	}
+	 .div-block-title{
+		 color: #ed1f24;
+		 font-weight: bold;
+		 font-size: 14px;
+	}
+	 .login-container .block .block-title {
+		 border-bottom: 0px solid #e8e8e8;
+		 font-size: 1.8rem;
+		 margin: 20px;
+		 padding: 0;
+		 text-align: center;
+	}
+	 .login-container .action.login.primary, 
+	 .login-container .action.create.primary, 
+	 .customer-account-create .action.submit.primary,  
+	 .customer-account-forgotpassword .action.submit.primary, 
+	 .featuredcars-seeall a,
+	 .form-edit-account .action.primary,
+	 .form-address-edit .action.primary,
+	 .form-newsletter-manage .action.primary,
+	 .action.primary.checkout,
+	 .methods-shipping .actions-toolbar .action.primary,
+	 .opc-wrapper .action-show-popup,
+	 .sidebar .action.compare.primary,
+	 .checkout-onepage-success .action.primary.continue,
+	 .inquiry-index-index .action.submit.primary,
+	 .inquiry-index-services .action.submit.primary,
+	 .inquiry-index-rentals .action.submit.primary{
+		 font-size: 12px;
+		 background: none;
+		 color: #ed1f24;
+		 border: 2px solid #ed1f24;
+		 border-radius: 30px;
+		 padding: 7px 30px;
+		 text-transform: uppercase;
+		 margin: 0;
+		 box-shadow: none;
+	}
+	 .login-container .action.login.primary:hover, 
+	 .login-container .action.create.primary:hover, 
+	 .customer-account-create .action.submit.primary:hover, 
+	 .customer-account-forgotpassword .action.submit.primary:hover,  
+	 .featuredcars-seeall a:hover,
+	 .form-edit-account .action.primary:hover,
+	 .form-address-edit .action.primary:hover,
+	 .form-newsletter-manage .action.primary:hover,
+	 .action.primary.checkout:hover,
+	 .methods-shipping .actions-toolbar .action.primary:hover span,
+	 .methods-shipping .actions-toolbar .action.primary:hover,
+	 .opc-wrapper .action-show-popup:hover,
+	 .sidebar .action.compare.primary:hover,
+	 .checkout-onepage-success .action.primary.continue:hover,
+	 .inquiry-index-index .action.submit.primary:hover,
+	 .inquiry-index-services .action.submit.primary:hover,
+	 .inquiry-index-rentals .action.submit.primary:hover,
+	 .link-inquire-car:hover,
+	 #product-addtocart-button:hover{
+		 background-color: #ed1f24;
+		 color: #fff;
+	}
+	
+	 .login-container .action.login.primary:hover a, 
+	 .login-container .action.create.primary:hover a, 
+	 .customer-account-create .action.submit.primary:hover a, 
+	 .customer-account-forgotpassword .action.submit.primary:hover a, 
+	 .featuredcars-seeall a:hover,
+	 .form-edit-account .action.primary:hover a,
+	 .form-address-edit .action.primary:hover a,
+	 .form-newsletter-manage .action.primary:hover a,
+	 .link-inquire-car:hover {
+		 text-decoration: none;
+	}
+	
+	 .login-container ul {
+		list-style: none;
+		padding: 0;
+	}
+
+	 .login-container ul li:before {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-size: 12px;
+		line-height: 22px;
+		color: #ed1f24;
+		content: '\e610';
+		font-family: 'luma-icons';
+		vertical-align: middle;
+		display: inline-block;
+		font-weight: normal;
+		overflow: hidden;
+		speak: none;
+		text-align: center;
+		padding: 0 5px;
+		border: 1px solid #ed1f24;
+		border-radius: 20px;
+		margin: 0 15px;
+	}
+
+	 .fb-login {
+		border: 2px solid #395799;
+		margin: 10px 0;
+	}
+	 .fb-logo {
+		 width: 40px;
+		 float: left;
+		 background-color: #395799;
+	}
+	 .fb-logo img {
+		 width: 15px;
+		 margin: auto;
+		 padding: 10px;
+	}
+	 .fb-link {
+		 padding: 10px;
+		 text-align: center;
+	}
+	 .fb-link a{
+		 color: #395799;
+	}
+	 .block-customer-login .block-content {
+		 margin-bottom: 50px !important;
+	}
+	 .block.block-new-customer {
+		 margin: 50px 0;
+	}
+	/*signup*/
+	 .customer-account-create .page-main{
+		background: url('../images/Signup-art.png') no-repeat;
+		 background-size: contain;
+		 background-color: #f7f7f7;
+		 background-repeat: no-repeat;
+		 background-position-y: 75%;
+	}
+
+	 .form.create.account, .form.password.forget,
+	 .form.inquiry.car {
+		margin: 50px auto;
+		width: 40%;
+		min-width: 560px;
+		margin: 0 auto;
+	}
+	
+	
+	 .fieldset.create.info, .forgot.password {
+		 margin-bottom: 0;
+	}
+	 .fieldset.create.info .field, .fieldset.create.account .field, .fieldset.forgot.password .field, .fieldset.inquiry.car .field{
+		 width: 60%;
+		 margin: 10px auto;
+	}
+
+	.g-recaptcha {
+		width: 54%;
+		margin: 10px auto;
+	}
+
+	.customer-account-create .actions-toolbar,  .customer-account-forgotpassword .actions-toolbar {
+		width: 35%;
+		margin: 0 auto 25px;
+	}
+
+	.customer-account-create .div-block-title {
+		width: 50%;
+		margin: 20px auto;
+		text-align: center;
+		background: url('../images/Signup-icon.png') no-repeat;
+		background-size: 27px;
+		background-position-x: 120px;
+	}
+	.customer-account-create .ui-datepicker-trigger{
+		display:none;
+	}
+
+	.customer-account-create ._has-datepicker{
+		width: 100% !important;
+		margin-right: 0px !important;
+	}
+
+	.fieldset.create.info legend {
+		width: 82%;
+		margin: 25px 50px;
+		padding: 0;
+	}
+
+	/*forgot password*/
+	 .customer-account-forgotpassword .div-block-title{
+		 width: 100%;
+		text-align: center;
+		margin: 20px 0;
+	 }
+	 
+	.form.password.forget{
+		margin: 50px auto;
+	}
+
+	 .customer-account-forgotpassword .page-main{
+		 background: url('../images/Forgotpassword-art.png') no-repeat;
+		 background-size: contain;
+		 background-color: #f7f7f7;
+		 background-repeat: no-repeat;
+		 background-position-y: 75%;
+	}
+
+	/*cart*/
+	.page-layout-1column .column.main,
+	.checkout-cart-index .page-title-wrapper,
+	.page.messages,
+	.page-layout-1column .toolbar-products{
+		width: 68%;
+		margin: 0 auto;
+	}
+	
+	.cart-summary {
+		width: 27%;
+		float: right;
+	}
+	
+	.cart-summary {
+		background: #FFF;
+		padding: 10px 20px;
+		margin-bottom: 30px;
+		border-radius: 5px;
+		box-shadow: 0px 4px 12px 2px #ccc;
+	}
+	
+	.abs-shopping-cart-items-desktop, .block-cart-failed, .cart-container .form-cart, .cart-container .cart-gift-item {
+		width: 70%;
+		float: left;
+		padding: 0;
+	}
+
+	.checkout-cart-index .page-title-wrapper .page-title {
+		font-size: 16px;
+		color: #ed1f24;
+		font-weight: bold;
+		margin: 40px 0 0;
+	}
+	.cart-summary > .title {
+		font-size: 14px;
+		color: #ed1f24;
+		font-weight: bold;
+		text-align: center;
+	}
+	
+	.checkout-cart-index .product-image-container{
+		width: 100px !important;
+	}
+	
+	.cart.table-wrapper .product-item-name {
+		font-size: 12px;
+		margin: 5px 0;
+	}
+	.cart.table-wrapper .col.price .price-excluding-tax .price,
+	.cart.table-wrapper .col.subtotal .price-excluding-tax{
+		font-weight: 600;
+		color: #333333;
+		font-size: 12px;
+	}
+	
+	.checkout-cart-index .action-towishlist{
+		display:none;
+	} 
+	
+	#shopping-cart-table tbody:nth-child(odd) {
+		background-color: #fffafa;
+	}
+	
+	#shopping-cart-table tbody:nth-child(even) {
+		background-color: #ffffff;
+	}
+	
+	.cart.table-wrapper .actions-toolbar{
+		width: 40px;
+	}
+	
+	.cart.table-wrapper .actions-toolbar > .action-edit:hover:before, .cart.table-wrapper .actions-toolbar > .action-delete:hover:before {
+		color: #ed1f24;
+	}
+	
+	.cart.table-wrapper .actions-toolbar > .action-edit, .cart.table-wrapper .actions-toolbar > .action-delete{
+		right: 3px;
+	}
+	
+	.block-cart-failed .actions.main .continue, .block-cart-failed .actions.main .clear, .cart-container .form-cart .actions.main .continue, .cart-container .form-cart .actions.main .clear{
+		display:block;
+	}
+	
+	.checkout-cart-index .action.continue {
+		float: left;
+	}
+	
+	.checkout-cart-index .action.update, .checkout-cart-index .action.clear{
+		float:right;
+		margin: 0 5px;
+	}
+	
+	.cart.main.actions button a{
+		color: #a3a3a3;
+		text-transform: uppercase;
+	}
+	
+	.cart.main.actions button {
+		box-shadow: none;
+		background-image: none;
+		background-color: #FFF;
+		border: none;
+		color: #a3a3a3;
+		padding: 5px 20px;
+		font-size: 12px;
+		font-weight: 600;
+		box-sizing: unset;
+		text-transform: uppercase;
+	}
+	
+	.cart.main.actions button:hover, .action.continue:hover span, .action.continue:hover a {
+		color: #ed1f24;
+		text-decoration: none;
+	}
+	
+	.cart-totals .grand .mark, .opc-block-summary .table-totals .grand .mark,
+	.cart-totals .grand .amount, .opc-block-summary .table-totals .grand .amount {
+		font-size: 12px;
+	}
+	
+	.cart-summary .block > .title:after {
+		color: #ed1f24;
+	}
+	
+	tbody.empty.cart.item tr {
+		height: 250px;
+		background: url('../images/empty-cart.png') no-repeat;
+		background-size: contain;
+		background-color: #f7f7f7;g
+	}
+	
+	.cart.table-wrapper .item .col.item {
+		padding: 20px 8px 20px 15px;
+	}
+	
+	/*sidebar*/
+	.sidebar-title {
+		color: #c92726;
+		text-align: center;
+		font-size: 16px;
+		font-weight: bold;
+		margin-bottom: 15px;
+	}
+
+	.sidebar-title.featuredproducts:before {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-size: 18px;
+		line-height: 17px;
+		color: #ed1f24;
+		content: '\e625';
+		font-family: 'luma-icons';
+		vertical-align: middle;
+		overflow: hidden;
+		margin: 0px 10px;
+	}
+
+	.sidebar-title.newspromos:before {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-size: 18px;
+		line-height: 17px;
+		color: #ed1f24;
+		content: '\e625';
+		font-family: 'luma-icons';
+		vertical-align: middle;
+		overflow: hidden;
+		margin: 0px 10px;
+	}
+
+	.sidebar .widget.block.block-static-block {
+		width: 80%;
+		margin: 30px auto;
+	}
+
+	.cms-home .sidebar a {
+		color: #ed1f24;
+	}
+	 
+
+	/*My Account*/
+	.account .sidebar-additional{
+		display:block;
+	}
+	.account .page-title-wrapper,
+	.account .block.block-collapsible-nav {
+		display: none;
+	}
+
+	.account .page-main,
+	.checkout-cart-index .page-main,
+	.checkout-index-index .page-main{
+		background: #f7f7f7;
+	}
+
+	.account .column.main .block:not(.widget) .block-title,
+	.account .legend{
+		border: 0;
+		margin: 0;
+	}
+
+	.nav.items {
+		background: #FFF;
+	}
+
+	.nav.item {
+		border-left: 2px solid #FFF;
+		padding: 5px 20px;
+		margin: 0;
+		color: #333333;
+	}
+
+	.nav.item a {
+		color: #333333;
+	}
+
+	.nav.item.current {
+		border-left: 2px solid #ed1f24;
+	}
+
+	.nav.item.delimiter {
+		border-bottom: 1px solid #e5e5e5;
+	}
+
+	.account .column.main .block:not(.widget) .block-title > strong,
+	.account .legend > span {
+		font-size: 16px;
+		font-weight: bold;
+	}
+
+	.account .column.main .block:not(.widget) .box-title > span {
+		font-size: 14px;
+	}
+
+	.title.account-nav.acct-title:before {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-size: 16px;
+		font-weight: bold;
+		color: #ed1f24;
+		content: 'My Account';
+		margin: 0px 20px;
+	}
+
+	.content.account-nav.acct-content, .box-information .box-content, .box-newsletter .box-content,
+	.box-billing-address .box-content, .box-shipping-address .box-content,
+	.fieldset > .field > .label, .fieldset > .fields > .field > .label, input, select {
+		font-size: 12px !important;
+		/* height: 26px !important; */
+	}
+
+	.account .column.main .block:not(.widget) .block-content .box{
+		width: 44%;
+		min-height: 110px;
+		background: #FFF;
+		padding: 10px 15px;
+		border-radius: 5px;
+		box-shadow: 0px 4px 12px 2px #ccc;
+	}
+
+	.account .dashboard-box-actions, .account .action.edit,
+	.block-dashboard-orders .block-title.order .action.view	{
+		box-shadow: none;
+		background-image: none;
+		background-color: #f7f7f7;
+		border: none;
+		color: #a3a3a3;
+		padding: 5px 20px;
+		font-size: 12px;
+		font-weight: 600;
+		box-sizing: unset;
+	}
+
+	.account .dashboard-box-actions:hover{
+		background: #f7f7f7;
+		border: none;
+		color:#ee373b;
+	}
+
+	.account .dashboard-box-actions a{
+		color:#a3a3a3;
+		text-decoration: none;
+	}
+
+	.account .dashboard-box-actions a:hover, .account .action.edit:hover{
+		color:#ed1f24;
+		text-decoration: none;
+	}
+
+	.account .block-title .action.edit,
+	.block-dashboard-orders .block-title.order .action.view	{
+		background: #FFF;
+		padding: 2px 10px;
+		color: #a9a9a9;
+	}
+
+	/*Account Edit*/
+	.form-edit-account .fieldset.info, 
+	.form-edit-account .fieldset.password, 
+	.form-address-edit .fieldset {
+		float: none !important;
+		background: #FFF;
+		padding: 15px 30px;
+		margin-bottom: 30px;
+		border-radius: 5px;
+		box-shadow: 0px 4px 12px 2px #ccc;
+	}
+
+	.fieldset > .field, .fieldset > .fields > .field {
+		margin: 0 0 10px;
+	}
+
+	.field-checkbox {
+		display: inline-flex;
+	}
+
+	.customer-account-create .field.choice {
+		width: 150px;
+	}
+
+	/*newsletter*/
+	.form-newsletter-manage .field.choice {
+		width: 100%;
+	}
+
+
+	/*catalog*/
+	.modes{
+		float:right;
+	}
+
+	.mode-list {
+		border: 0;
+		border-radius: 0;
+		background: #b9b9b9;
+		margin: 0 10px;
+	}
+
+	.modes-mode.active{
+		background: #c81c1f;
+		box-shadow: none;
+		border-radius: 0;
+		border: 0;
+		color: #FFF;
+	}
+
+	.modes-mode:before{
+		color: #fff;
+	}
+	
+	.modes-mode:last-child {
+		border-radius: 0;
+		border: 0;
+	}
+
+	.multicheckout .action.primary, .order-review-form .action.primary, .bundle-actions .action.primary.customize, .bundle-options-container .block-bundle-summary .box-tocart .action.primary, .box-tocart .action.tocart, .cart-summary .checkout-methods-items .action.primary.checkout, .block-minicart .block-content > .actions > .primary .action.primary, .methods-shipping .actions-toolbar .action.primary, .block-authentication .action.action-register, .block-authentication .action.action-login, .checkout-payment-method .payment-method-content > .actions-toolbar > .primary .action.primary, .form-address-edit .actions-toolbar .action.primary {
+		font-size: 12px;
+		padding: 5px 15px;
+	}
+	
+	.products-grid .product-reviews-summary{
+		text-align: center;
+	}
+
+	.products-grid .product-item-inner {
+		background: #ffffff;
+		box-shadow: none;
+		border: none;
+		border-top: none;
+		left: unset;
+		margin: 0;
+		padding: 0;
+		position: unset;
+		right: unset;
+		z-index: 2;
+	}
+
+	.products-grid .product-item-info:not(:hover):not(.active) .product-item-inner {
+		border: 0;
+		clip: rect(0, 0, 0, 0);
+		height: unset;
+		margin: 0px;
+		overflow: unset;
+		padding: 0;
+		position: unset;
+		width: 100%;
+	}
+
+	.product-isfeatured {
+		position: absolute;
+		z-index: 3;
+		background: linear-gradient(120deg, #ed1f24 86%, transparent 81%);
+		/*box-shadow: 0px 0px 18px 3px rgba(0, 0, 0, 0.3);*/
+		color: #FFF;
+		text-transform: uppercase;
+		font-weight: bold;
+		padding: 3px 15px;
+		margin: 25px 0;
+	}
+	
+	.product-item .action.primary {
+		background: #fff;
+		border: 1px solid #ed1f24;
+		color: #ed1f24;
+		font-size: 12px;
+		width: 100%;
+		text-transform: uppercase;
+	}
+	
+	.product-item-info:hover .action.primary,
+	.product-item-info:hover .product-inquire,
+	.product-item-info:hover .product-inquire a	{
+		background: #ed1f24;
+		color: #FFF;
+		font-size: 12px;
+		width: 100%;
+	}
+	
+	.product-item-info:hover a.product-item-link {
+		color: #ed1f24;
+		text-decoration: none;
+	}
+	
+	
+	.catalog-category-view .action.tocart.primary:before,
+	.catalog-category-view .action.inquire.primary:before,
+	.catalog-category-view .link-inquire-car:before{
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-size: 16px;
+		line-height: 10px;
+		color: #FFF;
+		content: '+';
+		background: #b11316;
+		border-radius: 8px;
+		padding: 2px 3px;
+		margin: -1px 5px;
+		vertical-align: top;
+		display: inline-block;
+		font-weight: 400;
+		overflow: hidden;
+	}
+	
+	.products.wrapper.list .product-reviews-summary {
+		position: absolute;
+		margin: 25px 0;
+	}
+
+    .catalog-ads {
+        width: 100%;
+        float: left;
+        margin-bottom: 10px;
+    }
+
+    .catalog-ads1 {
+        width: 70%;
+        float: left;
+    }
+
+    .catalog-ads2 {
+        float: right;
+        width: 27%;
+    }
+
+	/*product view*/
+	.product-info-main .page-title-wrapper h1 {
+		margin-bottom: 15px;
+		font-size: 28px;
+		font-weight: bold;
+		color: #ed1f24;
+	}
+
+	.product-info-main .product-add-form {
+		padding-top: 0;
+	}
+	
+	/*checkout*/
+	.opc-progress-bar-item._active > span:before,
+	.opc-progress-bar-item._active > span:after,
+	.opc-progress-bar-item > span:before, 
+	.opc-progress-bar-item > span:after{
+		display:none;
+	}
+	.opc-progress-bar-item > span{
+		padding-top: 0;
+	}
+	.opc-progress-bar-item:before{
+		top: 30px;
+		height: 2px;
+	}
+	
+	.opc-progress-bar-item._active:before {
+		background: #ed1f24;
+		border-color: #ed1f24;
+	}
+	
+	.opc-progress-bar-item._active > span {
+		color: #ed1f24;
+		font-size: 14px;
+	}
+	
+	.opc-progress-bar-item > span{
+		font-size: 12px;
+		font-weight: 600;
+	}
+	.opc-progress-bar-item:before {
+    background: #a3a3a3;
+    border: 1px solid #e2e2e2;	
+	}
+	
+	.checkout-index-index  input, .checkout-index-index select{
+		border: 1px solid #6f6f6f;
+		border-radius: 3px;
+	}
+	
+	.opc-progress-bar-item._complete > span {
+		color: #666666;
+	}
+
+	.cms-no-route .page-main {
+	    background: url('../images/notfound-BGart.png') no-repeat;
+	    background-size: contain;
+	    background-color: #f7f7f7;
+	    background-repeat: no-repeat;
+	    background-position-y: 0%;
+		min-height: 450px;
+	}
+
+	/*Services Inquire Footer*/
+	.div-services-inquire{
+		text-align: center;
+	    background-color: #f7f7f7;
+	}
+
+	.header-services-inquire p {
+	    text-align: center;
+	    font-size: 24px;
+	    font-weight: bold;
+	    color: #ed1f24;
+	}
+
+	.div-services-inquire p {
+		padding: 10px 0 20px 0;
+		text-align: center;
+	}
+
+	.div-services-inquire form {
+		text-align: center;
+	}
+
+	.div-services-inquire button{
+	    font-size: 12px;
+	    background: none;
+	    color: #ed1f24;
+	    border: 2px solid #ed1f24;
+	    border-radius: 30px;
+	    padding: 7px 30px;
+	    text-transform: uppercase;
+	    margin: 0;
+	}
+
+	.div-services-inquire button:hover{
+		background-color: #ed1f24;
+	    color: #fff;
+	}
+
+	button.action.inquirenow{
+			    font-size: 12px;
+	    background: none;
+	    color: #ed1f24;
+	    border: 2px solid #ed1f24;
+	    border-radius: 30px;
+	    padding: 7px 30px;
+	    text-transform: uppercase;
+	    margin: 0;
+	}
+
+	/*end Inquire*/
+
+	.div-insurance-imgdesc {
+	    display: inline-flex;
+	    padding: 50px 0 130px 30px;
+	    background: url('../images/Insurance-BG.png') no-repeat;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position-y: 85%;
+	}
+
+	.div-carmaintenance-imgdesc {
+	    display: inline-flex;
+	    background-color: #f7f7f7;
+	    padding: 50px 0 130px 30px;
+	    background: url('../images/Carmaintenance-BG.png') no-repeat;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+		background-position-y: 85%;
+	}
+
+	.div-partsinstallation-imgdesc {
+	    display: inline-flex;
+    	padding: 50px 0 130px 30px;
+	    background: url('../images/Partsinstallation-BG.png') no-repeat;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position-y: 85%;
+	}
+
+	.div-carcaredetailing-imgdesc {
+	    display: inline-flex;
+    	padding: 50px 0 130px 30px;
+	    background: url('../images/Carcare-BG.png') no-repeat;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position-y: 85%;
+	}
+
+	.div-carfinder-imgdesc {
+	    display: inline-flex;
+    	padding: 50px 0 130px 30px;
+	    background: url('../images/Carfinder-BG.png') no-repeat;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position-y: 85%;
+	}
+
+	.div-partsfinder-imgdesc {
+	    display: inline-flex;
+    	padding: 50px 0 130px 30px;
+	    background: url('../images/Partsfinder-BG.png') no-repeat;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position-y: 85%;
+	}
+
+	.div-buysell-imgdesc {
+	    display: inline-flex;
+    	padding: 50px 0 130px 30px;
+	    background: url('../images/Buysell-BG.png') no-repeat;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position-y: 85%;
+	}
+	
+
+	.dv-advertise {
+	    background: url('../images/Advertisewithus-BG.png') no-repeat;
+	    background-size: contain;
+	    background-repeat: no-repeat;
+	    background-position-y: 85%;
+	}
+
+	.notfound {
+		text-align: center;
+		position: relative;
+		top: 350px;
+	}
+	
+	.label-notfound {
+		font-size: 14px;
+		font-weight: 400;
+	}
+	
+	.link-notfound {
+		width: 95px;
+		padding: 5px 14px;
+		border: 2px solid #ed1f24;
+		border-radius: 30px;
+		position: relative;
+		top: 20px;
+	}
+
+	
+	.checkout-index-index .opc-block-shipping-information{
+		display:none;
+	}
+	
+	.block.block-reorder, .block.block-reviews-dashboard {
+		display: none;
+	}
+	
+	.block-compare .block-title strong{
+		font-size: 16px;
+		font-weight: bold;
+		color: #ed1f24;
+		margin: 0px 20px;
+	}
+	
+	.block-compare .block-content{
+		background: #fff;
+		padding: 15px;
+	}
+	
+	.checkout-onepage-success .page-title-wrapper {
+		width: 68%;
+		margin: 50px auto 0;
+	}
+
+	.inquiry-index-index .page-main {
+		background: url('../images/carInquiry-BG.png') no-repeat;
+		background-size: contain;
+		background-color: #f7f7f7;
+		background-repeat: no-repeat;
+		background-position-y: 55%;
+	}
+	
+	.inquiry-index-services .page-main {
+		background: url('../images/services-BG.png') no-repeat;
+		background-size: contain;
+		background-color: #f7f7f7;
+		background-repeat: no-repeat;
+		background-position-y: 55%;
+	}
+	
+	.inquiry-index-rentals .page-main {
+		background: url('../images/rentals-BG.png') no-repeat;
+		background-size: contain;
+		background-color: #f7f7f7;
+		background-repeat: no-repeat;
+		background-position-y: 55%;
+	}
+
+	.inquiry-index-index .page-title-wrapper,
+	.inquiry-index-services .page-title-wrapper,
+	.inquiry-index-rentals .page-title-wrapper,
+	.catalogsearch-result-index .page-title-wrapper
+	{
+		width: 50%;
+		margin: 30px auto;
+		text-align: center;
+	}
+
+	.form-inquiry-car .primary{
+		margin: 0 auto;
+		width: 100%;
+		float: none;
+	}
+
+	.page-title-wrapper h1 {
+		color: #ed1f24;
+		font-weight: bold;
+		font-size: 14px;
+		margin: 0;
+	}
+
+	.catalog-category-view .link-inquire-car {
+		border: 1px solid #ed1f24;
+		font-size: 12px;
+		width: 100%;
+		text-align: center;1418
+		cursor: pointer;
+		display: inline-block;
+		font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		font-weight: 600;
+		padding: 7px 15px;
+		box-sizing: border-box;
+		vertical-align: middle;
+		text-transform: uppercase;
+	}
+
+	.link-inquire-car:before{
+		margin: 2px 5px;
+	}
+
+	.field-product .control{
+		width: 100%;
+		float: left;
+	}
+
+	.prod-img {
+		float: left;
+	}
+
+	.prod-details {
+		width: 60%;
+		border: 1px solid #c2c2c2;
+		padding: 38px 10px;
+		float: right;
+	}
+
+	.prod-details .name {
+		font-size: 12px;
+		font-weight: 600;
+		color: #ed1f24;
+	}
+
+	.prod-details .price {
+		font-size: 12px;
+		font-weight: 600;
+	}
+
+	.prod-img img{
+		width: 98%;
+		border: 1px solid #c2c2c2;
+	}
+
+	#product-addtocart-button{
+		font-size: 12px;
+		background: none;
+		color: #575757;
+		border: 2px solid #ed1f24;
+		border-radius: 30px;
+		padding: 7px 30px;
+		text-transform: uppercase;
+		margin: 0;
+		line-height: 1.2em;
+		width: auto;
+	}
+
+	.product-info-price .price-box .price-container .price {
+		font-size: 24px;
+		line-height: 22px;
+	}
+	
+	.home-featuredcars .link-inquire-car {
+		display:none;
+	}
+
+	.catalog-product-view .product-inquire {
+		margin: 20px 0;
+	}
+	
+	.catalog-product-view .product-info-main .rating-summary {
+		position: absolute;
+		top: 340px;
+		z-index: -1;
+	}
+	
+	.reviews-actions {
+		display: none !important;
+	}
+	
+	.catalog-product-view .product-info-main .rating-summary .label:after {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		font-size: 14px;
+		color: #666666;
+		content: 'Customer Rating:';
+		margin-right: 10px;
+		font-weight: 700;
+	}
+	
+	.catalog-product-view .product-info-main .rating-summary .label span {
+		display: none;
+	}
+	
+	.catalog-product-view .product-info-main .rating-summary .label{
+		position:unset;
+	}
+	
+	/*review modal*/
+	#tab-label-product.info.description,
+	#product.info.description,
+	#tab-label-additional,
+	#additional,
+	#tab-label-reviews{
+		display:none;
+	}
+	#reviews {
+		display: none;
+		position: fixed;
+		z-index: 999999;
+		left: 0;
+		top: 0;
+		width: 102%;
+		height: 100%;
+		overflow: auto;
+		background-color: rgba(0,0,0,0.4);
+		margin: 0;
+		padding: 10px 0;
+	}
+	
+	.catalog-product-view .block.review-add {
+		width: 40%;
+		margin: 0 auto;
+		background: #FFF;
+		padding: 25px 50px;
+	}
+	
+	.catalog-product-view #product-review-container {
+		width: 40%;
+		margin: 0 auto;
+		background: #FFF;
+		padding: 25px 50px 0;
+	}
+	
+	#review-form .action.submit.primary{
+		font-size: 12px;
+		background: none;
+		color: #ed1f24;
+		border: 2px solid #ed1f24;
+		border-radius: 30px;
+		padding: 7px 30px;
+		text-transform: uppercase;
+		margin: 5px 0;
+	}
+	
+	#review-form .action.submit.primary:hover{
+	    background: #ed1f24;
+		color: #fff;
+	}
+	
+	.review-control-vote label:before {
+		color:#ffda00;
+	}
+	
+	.catalog-product-view .product-info-main {
+		width: 27%;
+		margin-right: 217px;
+	}
+	
+	.catalog-product-view .product.media {
+		width: 38%;
+		margin-left: 217px;
+	}
+	
+	.catalog-product-view .column.main{
+		width: 100%;
+	}
+	
+	.catalog-prod-desc {
+		width: 84%;
+	}
+
+	.prod-desc-lbl {
+		padding: 10px;
+		margin: 20px 0 10px 0;
+		background: linear-gradient(120deg, #c81c1f 30%, #fff 30%);
+	}
+
+	.prod-desc-label {
+		width: 27%;
+		text-align: right;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	
+	.prod-desc-content {
+		width: 45%;
+		float: left;
+		margin-left: 220px;
+	}
+	
+	.prod-desc-ads {
+		float: right;
+		width: 30%;
+	}
+		
+	.message.info{
+		float: right;
+		width: 90%;
+	}
+	
+	.catalog-product-view .columns {
+		margin: 0 0 50px;
+	}
+	
+	.catalog-prod-specs {
+		width: 100%;
+		float: right;
+	}
+	
+	.prod-specs-lbl {
+		padding: 10px;
+		margin: 20px 0 10px 0;
+		background: linear-gradient(120deg, #c81c1f 30%, #fff 30%);
+	}
+	
+	.prod-specs-label {
+		width: 27%;
+		text-align: right;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	
+	.prod-specs-content {
+		width: 100%;
+		float: left;
+		margin-left: 220px;
+	}
+}
+
+@media all and (min-width: 1024px), print {
+	
+	.page-products .products-grid .product-item {
+		margin-left: calc((100% - 4 * 22%) / 3);
+		padding: 0;
+		width: 30%;
+	}
+	
+	.page-products .products-grid .product-item:nth-child(5),
+	.page-products .products-grid .product-item:nth-child(8),
+	.page-products .products-grid .product-item:nth-child(11)	{
+		margin-left: calc((100% - 4 * 22%) / 3);
+	}
+	
+	.page-products .products-grid .product-item:nth-child(4),
+	.page-products .products-grid .product-item:nth-child(7),
+	.page-products .products-grid .product-item:nth-child(10){
+		margin-left: 0;
+	}
+	
+	.opc-wrapper .shipping-address-item {
+		width: 100%;
+	}
+}
+
+@media all and (min-width: 1440px), print {
+	
+}
+
+

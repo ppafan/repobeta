@@ -1,0 +1,35 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+$serviceid = 2;
+?>
+
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="cms-main-container">
+	<div class="cms-container carmaintenance">
+		<div class="cms-image-container">
+			<img src="<?php echo $mediaUrl?>wysiwyg/Car_maintenance-image.png" />
+		</div>
+		<div class="cms-desc-container">
+			<p class="cms-header-name">Your car deserves the best car maintenance.</p>
+			<br>
+			<p class="cms-desc">
+				Keep your car running fresh and free from unexpected breakdowns.<br/> 
+				Autosupply.ph teamed up with highly recommended auto centers across the country that assure notable service for your car maintenance.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="div-services-inquire">
+	<div class="header-services-inquire">Interested?</div>
+	<p class="inquire-desc">Dont hesitate to contact us. Send an inquiry now and we'll get back to you shortly.</p>
+	<p class="services-inquire">
+		<a class="action inquirenow" href="/inquiry/index/services?id=<?php echo $serviceid; ?>">INQUIRE NOW</a>
+	</p>
+</div>

@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="categoryFilterList" type="Magento\Catalog\Model\Layer\FilterList">
+        <arguments>
+            <argument name="filters" xsi:type="array">
+                <item name="attribute" xsi:type="string">Niks\LayeredNavigation\Model\Layer\Filter\Attribute</item>
+                <item name="price" xsi:type="string">Niks\LayeredNavigation\Model\Layer\Filter\Price</item>
+                <item name="decimal" xsi:type="string">Niks\LayeredNavigation\Model\Layer\Filter\Decimal</item>
+                <item name="category" xsi:type="string">Niks\LayeredNavigation\Model\Layer\Filter\Category</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="searchFilterList" type="Magento\Catalog\Model\Layer\FilterList">
+        <arguments>
+            <argument name="filters" xsi:type="array">
+                <item name="attribute" xsi:type="string">Niks\LayeredNavigation\Model\Layer\Filter\Attribute</item>
+                <item name="price" xsi:type="string">Niks\LayeredNavigation\Model\Layer\Filter\Price</item>
+                <item name="decimal" xsi:type="string">Niks\LayeredNavigation\Model\Layer\Filter\Decimal</item>
+                <item name="category" xsi:type="string">Niks\LayeredNavigation\Model\Layer\Filter\Category</item>
+            </argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Magento\CatalogSearch\Model\Layer\Search\Context" type="Magento\Catalog\Model\Layer\Search\Context">
+        <arguments>
+            <argument name="collectionProvider" xsi:type="object">Niks\LayeredNavigation\Model\Layer\ItemCollectionProvider</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="Magento\CatalogSearch\Model\Layer\Category\Context" type="Magento\Catalog\Model\Layer\Category\Context">
+        <arguments>
+            <argument name="collectionProvider" xsi:type="object">Niks\LayeredNavigation\Model\Layer\ItemCollectionProvider</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="categoryViewContext" type="Magento\Framework\View\Element\Template\Context">
+        <arguments>
+            <argument name="urlBuilder" xsi:type="object">Niks\LayeredNavigation\Model\Url\Builder</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Theme\Block\Html\Pager">
+        <arguments>
+            <argument name="context" xsi:type="object">categoryViewContext</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Catalog\Block\Product\ProductList\Toolbar">
+        <arguments>
+            <argument name="context" xsi:type="object">categoryViewContext</argument>
+        </arguments>
+    </type>
+    <type name="Magento\LayeredNavigation\Block\Navigation\State">
+        <arguments>
+            <argument name="context" xsi:type="object">categoryViewContext</argument>
+        </arguments>
+        <plugin name="replace_clear_url" type="Niks\LayeredNavigation\Plugin\State" sortOrder="1" />
+    </type>
+    <type name="Niks\LayeredNavigation\Block\LayeredNavigation\RenderLayered">
+        <arguments>
+            <argument name="context" xsi:type="object">categoryViewContext</argument>
+        </arguments>
+    </type>
+    <type name="Niks\LayeredNavigation\Block\LayeredNavigation\SliderRenderer">
+        <arguments>
+            <argument name="context" xsi:type="object">categoryViewContext</argument>
+        </arguments>
+    </type>
+
+    <type name="Niks\LayeredNavigation\Model\Layer\Filter\Item">
+        <arguments>
+            <argument name="url" xsi:type="object">Niks\LayeredNavigation\Model\Url\Builder</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Catalog\Model\Layer\Filter\ItemFactory">
+        <arguments>
+            <argument name="instanceName" xsi:type="string">Niks\LayeredNavigation\Model\Layer\Filter\Item</argument>
+        </arguments>
+    </type>
+    <type name="Magento\CatalogSearch\Model\Adapter\Mysql\Filter\Preprocessor">
+        <plugin name="multiple_category_ids" type="Niks\LayeredNavigation\Plugin\Preprocessor" sortOrder="1" />
+    </type>
+
+    <type name="Magento\Catalog\Controller\Category\View">
+        <plugin name="ajax_layered_navigation" type="Niks\LayeredNavigation\Plugin\CategoryView" sortOrder="1" />
+    </type>
+    <type name="Magento\CatalogSearch\Controller\Result\Index">
+        <plugin name="ajax_layered_navigation_search" type="Niks\LayeredNavigation\Plugin\SearchView" sortOrder="1" />
+    </type>
+    <type name="Magento\Catalog\Block\Product\ListProduct">
+        <plugin name="niks_navigation_wrapper" type="Niks\LayeredNavigation\Plugin\CategoryViewBlock" sortOrder="1" />
+    </type>
+
+    <type name="Magento\CatalogSearch\Model\Adapter\Aggregation\Checker\Query\CatalogView">
+        <plugin name="category_aggregation" type="Niks\LayeredNavigation\Plugin\CategoryAggregation" sortOrder="1" />
+    </type>
+    <type name="Magento\LayeredNavigation\Block\Navigation\FilterRenderer">
+        <plugin name="swatches_layered_renderer" type="Niks\LayeredNavigation\Plugin\FilterRenderer" sortOrder="1" />
+    </type>
+    <type name="Magento\Framework\Search\Dynamic\Algorithm\Improved">
+        <arguments>
+            <argument name="algorithm" xsi:type="object">Niks\LayeredNavigation\Model\Search\Dynamic\Algorithm</argument>
+        </arguments>
+    </type>
+</config>

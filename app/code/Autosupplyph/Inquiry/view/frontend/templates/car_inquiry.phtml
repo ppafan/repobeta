@@ -1,0 +1,159 @@
+<?php
+    $showsuccessmessage = 0;
+    $productID = $_GET['id'];
+    $categories = array(97,2);
+    $doNotShowPrice = false;
+
+    $objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+    if($productID == "success"){
+        $showsuccessmessage = 1;
+        $storeManager = $objectManager->get('Magento\Store\Model\StoreManagerInterface');
+        $currentStore = $storeManager->getStore();
+        $mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+        $baseUrl = $currentStore->getBaseUrl();
+    }else{
+        $product = $this->getLoadProduct($productID);
+        $prod_price = $this->helper('Magento\Framework\Pricing\Helper\Data')->currency($product->getPrice(),true,false);
+        $imageHelper  = $objectManager->get('\Magento\Catalog\Helper\Image');
+        $image_url = $imageHelper->init($product, 'product_page_image_small')->setImageFile($product->getFile())->getUrl();
+
+        if ($categoryIds = $product->getCustomAttribute('category_ids')) {
+          foreach ($categoryIds->getValue() as $categoryId) {
+            $productCategories[] = $categoryId;
+          }
+
+          if(count(array_intersect($categories,$productCategories)) > 0){
+            $doNotShowPrice = true;
+          }
+
+        }
+
+    }
+
+?>
+<?php if($showsuccessmessage == 1){ ?>
+<form class="form inquiry success form-inquiry-car">
+    <fieldset class="fieldset inquiry car">
+    <div class="success-div">
+        <p class="success-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Form_sent-icon.png" /></p>
+        <h3 class="success-title">Thank you!</h3>
+        <p class="success-label">Your message has been sent. Please expect our response shortly.</p>
+    </div>
+    </fieldset>
+
+<?php }else{ ?>
+<form class="form inquiry car form-inquiry-car"
+action="<?php echo $block->getFormAction() ?>"
+method="post"
+id="inquirycar-form"
+data-mage-init='{"validation":{}}'>
+
+    <fieldset class="fieldset inquiry car">
+
+        <div class="field field-fullname required">
+            <label class="label" for="fullname">
+                <span>Full Name</span>
+            </label>
+
+            <div class="control">
+                <input type="text" id="fullname" name="fullname" value="" title="Full Name" class="input-text required-entry"  data-validate="{required:true}">
+            </div>
+        </div>
+
+        <div class="field field-mobile required">
+            <label class="label" for="mobile">
+                <span>Contact Number</span>
+            </label>
+
+            <div class="control">
+                <input type="text" id="mobile" name="mobile" value="" title="Contact Number" class="input-text required-entry"  data-validate="{required:true}">
+            </div>
+        </div>
+
+        <div class="field field-email required">
+            <label class="label" for="email">
+                <span>Email Address</span>
+            </label>
+
+            <div class="control">
+                <input type="text" id="email" name="email" value="" title="Email Address" class="input-text required-entry"  data-validate="{required:true, 'validate-email':true}">
+            </div>
+        </div>
+
+        <div class="field field-product">
+            <label class="label" for="product">
+                <span>Product</span>
+            </label>
+
+            <div class="control">
+                <div class="prod-img">
+                    <img src="<?php echo $image_url; ?>">
+                    <input type="hidden" value="<?php echo $image_url; ?>" id="prod_img" name="prod_img">
+                </div>
+
+                <div class="prod-details">
+                    <input type="hidden" value="<?php echo $productID; ?>" id="prodid" name="prodid">
+                    <input type="hidden" value="<?php echo $product->getName(); ?>" id="prod_name" name="prod_name">
+                    <input type="hidden" value="<?php echo $prod_price; ?>" id="prod_price" name="prod_price">
+                    <span class="name"><?php echo $product->getName(); ?></span><br>
+                    <?php if(!$doNotShowPrice){ ?>
+                    <span class="price"><?php echo $prod_price; ?></span>
+                    <?php } ?>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="field field-inquiry required">
+            <label class="label" for="inquiry">
+                <span>Inquiry</span>
+            </label>
+
+            <div class="control">
+                <textarea id="inquiry" name="inquiry" value="" title="Inquiry" class="input-text required-entry"  data-validate="{required:true}" rows="7"></textarea>
+            </div>
+        </div>
+
+
+    </fieldset>
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <button type="submit" class="action submit primary" title="Send"><span>Send</span></button>
+        </div>
+    </div>
+    <?php } ?>
+</form>
+
+<style>
+.form.inquiry.success{
+    box-shadow: 0 0 20px 0 #888888;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+.success-div{
+    text-align: center;
+    padding: 50px;
+}
+h3.success-title {
+    color: #C81C1F;
+}
+p.success-icon {
+    width: 20%;
+    margin: 0 auto;
+}
+
+p.success-label {
+    width: 75%;
+    margin: 0px auto;
+    font-family: 'Muli Bold';
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+
+</style>

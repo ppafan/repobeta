@@ -1,0 +1,58 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+/** @var \Magento\Vault\Block\Customer\CreditCards $block */
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+$tokens = $block->getPaymentTokens();
+?>
+<?php if (count($tokens) !== 0): ?>
+    <div class="table-wrapper my-credit-cards">
+        <table class="data table table-credit-cards" id="my-orders-table">
+            <caption class="table-caption"><?= /* @noEscape */ __('Stored Payment Methods') ?></caption>
+            <thead>
+            <tr>
+                <th scope="col" class="col card-number"><?= /* @noEscape */ __('Card Number') ?></th>
+                <th scope="col" class="col expire"><?= /* @noEscape */ __('Expiration Date') ?></th>
+                <th scope="col" class="col card-type"><?= /* @noEscape */ __('Type') ?></th>
+                <th scope="col" class="col actions">&nbsp;</th>
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            foreach ($tokens as $token) {
+                echo $block->renderTokenHtml($token);
+            }
+            ?>
+            </tbody>
+        </table>
+    </div>
+
+<?php elseif (!$block->isExistsCustomerTokens()): ?>
+    <div class="div-nopayments">
+      <h2>Stored Payment Methods</h2>
+          <div class="table-wrapper my-credit-cards">
+            <table class="data table table-credit-cards" id="my-orders-table">
+                <caption class="table-caption"><?= /* @noEscape */ __('Stored Payment Methods') ?></caption>
+                <thead>
+                <tr>
+                    <th scope="col" class="col card-number"><?= /* @noEscape */ __('Card Number') ?></th>
+                    <th scope="col" class="col expire"><?= /* @noEscape */ __('Expiration Date') ?></th>
+                    <th scope="col" class="col card-type"><?= /* @noEscape */ __('Type') ?></th>
+                    <th scope="col" class="col actions">&nbsp;</th>
+                </tr>
+                </thead>
+            </table>
+        </div>
+          <div class="payments-img-p">
+            <img src="<?php echo $mediaUrl?>wysiwyg/Nopaymentmethod-icon.png" />
+            <p>You have no payment methods entered.</p>
+          </div>
+    </div>
+<?php endif ?>

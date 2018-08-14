@@ -1,0 +1,34 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+$serviceid = 5;
+?>
+
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="cms-main-container">
+	<div class="cms-container partsfinder">
+		<div class="cms-image-container">
+			<img src="<?php echo $mediaUrl?>wysiwyg/Parts_Finder-image.png" />
+		</div>
+		<div class="cms-desc-container">
+			<p class="cms-header-name">Locate an auto part that you need in just seconds at autosupply.ph</p>
+			<br>
+			<p class="cms-desc">
+				While we recommend and suggest other related choices that are possibly useful and you may want for your car. There is a wide array of quality automobile parts that you can even check and compare prices for better options.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="div-services-inquire">
+	<div class="header-services-inquire">Interested?</div>
+	<p class="inquire-desc">Dont hesitate to contact us. Send an inquiry now and we'll get back to you shortly.</p>
+	<p class="services-inquire">
+		<a class="action inquirenow" href="/inquiry/index/services?id=<?php echo $serviceid; ?>">INQUIRE NOW</a>
+	</p>
+</div>

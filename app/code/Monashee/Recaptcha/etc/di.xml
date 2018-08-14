@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Contact\Controller\Index\Post">
+        <plugin disabled="false" name="Monashee_Recaptcha_Plugin_Contact_Controller_Index_Post"
+                sortOrder="1" type="Monashee\Recaptcha\Plugin\Contact\Controller\Index\Post"/>
+    </type>
+    <type name="Magento\Customer\Controller\Account\CreatePost">
+        <plugin disabled="false" name="Monashee_Recaptcha_Plugin_Customer_Controller_Account_CreatePost"
+                sortOrder="1" type="Monashee\Recaptcha\Plugin\Customer\Controller\Account\CreatePost"/>
+    </type>
+    <type name="Magento\Customer\Controller\Account\ForgotPasswordPost">
+        <plugin disabled="false" name="Monashee_Recaptcha_Plugin_Customer_Controller_Account_ForgotPasswordPost"
+                sortOrder="1" type="Monashee\Recaptcha\Plugin\Customer\Controller\Account\ForgotPasswordPost"/>
+    </type>
+
+    <type name="Magento\Inquiry\Controller\Index\ServicesPost">
+        <plugin disabled="false" name="Monashee_Recaptcha_Plugin_Inquiry_Controller_Index_ServicesPost"
+                sortOrder="1" type="Monashee\Recaptcha\Plugin\Inquiry\Controller\Index\ServicesePost"/>
+    </type>
+
+    <type name="Magento\Inquiry\Controller\Index\AdvertisePost">
+        <plugin disabled="false" name="Monashee_Recaptcha_Plugin_Inquiry_Controller_Index_AdvertisePost"
+                sortOrder="1" type="Monashee\Recaptcha\Plugin\Inquiry\Controller\Index\AdvertisePost"/>
+    </type>
+
+    <type name="Magento\Inquiry\Controller\Index\RentalsPost">
+        <plugin disabled="false" name="Monashee_Recaptcha_Plugin_Inquiry_Controller_Index_RentalsPost"
+                sortOrder="1" type="Monashee\Recaptcha\Plugin\Inquiry\Controller\Index\RentalsPost"/>
+    </type>
+
+    <type name="Magento\Inquiry\Controller\Index\SupportPost">
+        <plugin disabled="false" name="Monashee_Recaptcha_Plugin_CMS_Controller_Page_SupportPost"
+                sortOrder="1" type="Monashee\Recaptcha\Plugin\CMS\Controller\Page\SupportPost"/>
+    </type>
+
+    <type name="Magento\Inquiry\Controller\Index\CareersPost">
+        <plugin disabled="false" name="Monashee_Recaptcha_Plugin_CMS_Controller_Page_CareersPost"
+                sortOrder="1" type="Monashee\Recaptcha\Plugin\CMS\Controller\Page\CareersPost"/>
+    </type>
+
+    <type name="Magento\Inquiry\Controller\Index\ContactusPost">
+        <plugin disabled="false" name="Monashee_Recaptcha_Plugin_CMS_Controller_Page_ContactusPost"
+                sortOrder="1" type="Monashee\Recaptcha\Plugin\CMS\Controller\Page\ContactusPost"/>
+    </type>
+</config>

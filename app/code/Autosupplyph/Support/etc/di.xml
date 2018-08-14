@@ -1,0 +1,15 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="autosupplyph_support_inquiry_listing_data_source" xsi:type="string">Autosupplyph\Support\Model\ResourceModel\Inquiry\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Autosupplyph\Support\Model\ResourceModel\Inquiry\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">autosupplyph_support_inquiry</argument>
+            <argument name="resourceModel" xsi:type="string">Autosupplyph\Support\Model\ResourceModel\Inquiry</argument>
+        </arguments>
+    </virtualType>
+</config>

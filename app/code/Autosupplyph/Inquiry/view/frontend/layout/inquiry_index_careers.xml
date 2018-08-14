@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Careers</title>
+    </head>
+    <body>
+        <referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string">Home</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">About Us</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">About Us</item>
+                    <item name="label" xsi:type="string">About Us</item>
+                    <item name="link" xsi:type="string">/aboutus</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Careers</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Careers</item>
+                    <item name="label" xsi:type="string">Careers</item>
+                </argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="page.top">
+            <container name="aboutus.view.container" htmlTag="div" htmlClass="aboutus-view" before="breadcrumbs">
+                <block class="Magento\Framework\View\Element\Template" name="aboutus.image" template="Autosupplyph_Support::aboutus_header.phtml"/>
+            </container>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Autosupplyph\Inquiry\Block\Careers" name="inquiry.careers" template="Autosupplyph_Inquiry::careers_inquiry.phtml"/>
+
+        </referenceContainer>
+    </body>
+</page>

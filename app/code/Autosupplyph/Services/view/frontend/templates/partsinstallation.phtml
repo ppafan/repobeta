@@ -1,0 +1,32 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+$serviceid = 3;
+
+?>
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="cms-main-container">
+	<div class="cms-container partsinstallation">
+		<div class="cms-image-container">
+			<img src="<?php echo $mediaUrl?>wysiwyg/Parts_Installation-image.png" />
+		</div>
+		<div class="cms-desc-container">
+			<p class="cms-desc">
+				We have highly trained mechanics who can go straight to you to supervise and run the installation of the auto parts that you want for your car anywhere in the country. 
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="div-services-inquire">
+	<div class="header-services-inquire">Interested?</div>
+	<p class="inquire-desc">Dont hesitate to contact us. Send an inquiry now and we'll get back to you shortly.</p>
+	<p class="services-inquire">
+		<a class="action inquirenow" href="/inquiry/index/services?id=<?php echo $serviceid; ?>">INQUIRE NOW</a>
+	</p>
+</div>

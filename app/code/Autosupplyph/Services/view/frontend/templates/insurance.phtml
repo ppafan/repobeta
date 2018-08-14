@@ -1,0 +1,48 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+$serviceid = 1;
+
+?>
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="cms-main-container">
+	<div class="cms-container insurance">
+		<div class="cms-image-container">
+			<img src="<?php echo $mediaUrl?>wysiwyg/Insurance-image.png" />
+			<br/><br/><br/>
+		</div>
+		<div class="cms-desc-container">
+			<p class="cms-header-name">Why do you need an insurance?</p>
+			<br>
+			<p class="cms-desc">
+				Do you, sometimes, ever find yourself in the middle of an agony that, anytime, unforeseen events happen when you drive. If you do, then you are drive-conscious and if you are, then here’s our answer to your question.
+				<br/><br/>
+				Car insurance plays a vital role in the event of vehicle damage or injuries to other drivers, passengers or pedestrians. It covers the expenses in all these unexpected events that nobody ever wanted. With our car insurance, you will never have to worry about your savings getting compromised or even endanger your budget for the month because it will take care of everything from the smallest detail of the damage up to the total cost of the overall outlay.
+			</p>
+		</div>
+		
+		<div class="cms-desc2-container">
+			<p class="cms-desc">
+				Driving plus car insurance is equals to “worry-free-driving”.
+				Whereas, Driving without car insurance is equals to getting yourself in a total mess.
+				<br/><br/>
+				Autosupply.ph offers comprehensive insurance for your cars and you’ll be surprised on its coverage. Refer to our contact lines to inquire.
+			</p>
+		</div>
+	</div>
+</div>
+
+<div class="div-services-inquire">
+	<div class="header-services-inquire">Interested?</div>
+	<p class="inquire-desc">Dont hesitate to contact us. Send an inquiry now and we'll get back to you shortly.</p>
+	<p class="services-inquire">
+		<a class="action inquirenow" href="/inquiry/index/services?id=<?php echo $serviceid; ?>">INQUIRE NOW</a>
+	</p>
+</div>
+
+

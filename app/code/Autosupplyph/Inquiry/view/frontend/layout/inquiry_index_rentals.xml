@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Reservation Form</title>
+    </head>
+	<body>
+		<referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string">Home</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Services</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Services</item>
+                    <item name="label" xsi:type="string">Services</item>
+                    <item name="link" xsi:type="string">/services/index/services</item>
+                </argument>
+            </action>
+			<action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Rentals and Leasing</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Rentals and Leasing</item>
+                    <item name="label" xsi:type="string">Rentals and Leasing</item>
+                </argument>
+            </action>
+			<action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Rentals/Leasing Inquiry Form</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Rentals/Leasing Inquiry Form</item>
+                    <item name="label" xsi:type="string">Rentals/Leasing Inquiry Form</item>
+                </argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="content">
+            <block class="Autosupplyph\Inquiry\Block\Rentals" name="inquiry.rentals" template="Autosupplyph_Inquiry::rentals_inquiry.phtml"/>
+
+        </referenceContainer>
+    </body>
+</page>

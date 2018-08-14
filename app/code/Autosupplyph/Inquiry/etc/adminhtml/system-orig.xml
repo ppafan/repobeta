@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+
+    <system>
+
+        <tab id="autosupplyph" translate="label" sortOrder="9999998">
+
+            <label>Auto Supply PH</label>
+
+        </tab>
+
+        <section id="inquiry" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+
+            <class>separator-top</class>
+
+            <label>Autosupply Inquiry</label>
+
+            <tab>autosupplyph</tab>
+
+            <resource>Autosupplyph_Inquiry::inquiry_config</resource>
+
+            <group id="cars" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+
+                <label>Autosupply Inquiry Settings</label>
+
+                <field id="enable" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="0" showInStore="0">
+
+                    <label>Module Enable</label>
+
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+
+                </field>
+
+				<field id="cartemplate" translate="label comment" type="select" sortOrder="2" showInDefault="1" showInWebsite="1" showInStore="1">
+
+					<label>Car Inquiry Email Template</label>
+
+					<source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+
+				</field>
+
+
+                <field id="rentaltemplate" translate="label comment" type="select" sortOrder="3" showInDefault="1" showInWebsite="1" showInStore="1">
+
+                    <label>Rentals and Leasing Email Template</label>
+
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+
+                </field>
+
+                <field id="servicetemplate" translate="label comment" type="select" sortOrder="4" showInDefault="1" showInWebsite="1" showInStore="1">
+
+                    <label>Services Inquiry Email Template</label>
+
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+
+                </field>
+
+                <field id="supporttemplate" translate="label comment" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+
+                    <label>Support Email Template</label>
+
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+
+                </field>
+
+                <field id="advertisetemplate" translate="label comment" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+
+                    <label>Advertise with us Email Template</label>
+
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+
+                </field>
+
+                <field id="careerstemplate" translate="label comment" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+
+                    <label>Advertise with us Email Template</label>
+
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+
+                </field>
+
+                <field id="contactustemplate" translate="label comment" type="select" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+
+                    <label>Advertise with us Email Template</label>
+
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+
+                </field>
+            </group>
+
+        </section>
+
+    </system>
+
+</config>

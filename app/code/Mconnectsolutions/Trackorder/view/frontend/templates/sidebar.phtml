@@ -1,0 +1,58 @@
+<?php
+if ($block->getEnableTrackOrder()) {
+?>
+<div class="mcs-track" id="mcs_track">
+    <h2><?php /* @noEscape */ echo __('Track Order'); ?></h2>
+    <form class="form track-order"
+          name="track_order"
+          action="<?php /* @noEscape */ echo $block->getAjaxUrl(); ?>"
+          id="track_order"
+          method="post"
+          data-hasrequired="<?php /* @noEscape */ echo __('* Required Fields') ?>"
+          data-mage-init='{"validation":{}}'>
+        <fieldset class="fieldset">
+            <div class="field order required">
+                <label class="label" for="name">
+                    <span><?php /* @noEscape */ echo __('Order Id') ?></span>
+                </label>
+                <div class="control">
+                    <input name="order" id="order_id" title="<?php /* @noEscape */ echo __('Order Id') ?>"
+                    value="<?php if ($block->getRequest()->getParam('ord')) {/* @noEscape */ echo $block->getRequest()->getParam('ord');} ?>"
+                        class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            </div>
+            <div class="field email required">
+                <label class="label" for="email">
+                    <span><?php /* @noEscape */ echo __('Email Address') ?></span>
+                </label>
+                <div class="control">
+                    <input name="email" id="email_order" title="<?php /* @noEscape */ echo __('Email Address') ?>"
+                    value="<?php if ($block->getRequest()->getParam('email')) { /* @noEscape */ echo $block->getRequest()->getParam('email');} ?>"
+                    class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">            
+                <button type="submit" title="<?php /* @noEscape */ echo __('Track Order') ?>"
+                class="action submit primary track-info">
+                    <span><?php /* @noEscape */ echo __('Track Order') ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="mcs-tracking-info"></div>
+
+<script type="text/javascript">
+//<![CDATA[
+require(
+    ['jquery','mcs'],
+    function($,mcs){
+        var ajaxurl = '<?php /* @noEscape */ echo $block->getAjaxUrl() ?>';
+        mcs.mcsData(ajaxurl);
+    }
+);
+// ]]>
+</script>
+<?php } ?>

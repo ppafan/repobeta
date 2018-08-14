@@ -1,0 +1,18 @@
+<?php
+	$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+	$pagetitle = $objectManager->get('Magento\Framework\View\Page\Title');
+	$_pagetitle = $pagetitle->getShort();
+	
+?>
+
+<div class="newspromos-image">
+	<div class='newspromos-name'>News & Promos</div>
+</div>
+<div class="newspromos-submenu">
+	<ul class="sub-newspromos">
+		<li class="list-newspromos <? if($_pagetitle == 'News'){ echo 'active'; } ?>"><a href="/news/category/news" title="News">News</a></li>
+		<li class="list-newspromos <? if($_pagetitle == 'Promos'){ echo 'active'; } ?>"><a href="/news/category/promos" title="Promos">Promos</a></li>
+		<li class="list-newspromos <? if($_pagetitle == 'Community'){ echo 'active'; } ?>"><a href="/community" title="Community">Community</a></li>
+		<li class="list-newspromos <? if($_pagetitle == 'Events'){ echo 'active'; } ?>"><a href="/news/category/events" title="Events">Events</a></li>	
+	</ul>
+</div>

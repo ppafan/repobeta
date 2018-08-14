@@ -1,0 +1,2532 @@
+@font-face {
+     font-family: 'Muli Regular';
+     src: url('../fonts/Muli/Muli-Regular.ttf');
+}
+@font-face {
+     font-family: 'Muli SemiBold';
+     src: url('../fonts/Muli/Muli-SemiBold.ttf');
+}
+@font-face {
+     font-family: 'Muli Bold';
+     src: url('../fonts/Muli/Muli-Bold.ttf');
+}
+@font-face {
+     font-family: 'Muli ExtraBold';
+     src: url('../fonts/Muli/Muli-ExtraBold.ttf');
+}
+@font-face {
+     font-family: 'Raleway Regular';
+     src: url('../fonts/Raleway/Raleway-Regular.ttf');
+}
+@font-face {
+     font-family: 'Raleway SemiBold';
+     src: url('../fonts/Raleway/Raleway-SemiBold.ttf');
+}
+@font-face {
+     font-family: 'Raleway Bold';
+     src: url('../fonts/Raleway/Raleway-Bold.ttf');
+}
+@font-face {
+     font-family: 'Raleway ExtraBold';
+     src: url('../fonts/Raleway/Raleway-ExtraBold.ttf');
+}
+body {
+     color: #000000;
+     font-family: 'Muli Regular';
+     font-style: normal;
+     font-weight: 400;
+     line-height: 1.42857143;
+     font-size: 12px;
+}
+
+.navigation {
+    display: none !important;
+}
+
+.cms-home .ul-support{
+	display:none;
+	float: left;
+}
+
+.breadcrumbs {
+    display: block !important;
+	float: left;
+}
+
+ /* .breadcrumbs { */
+	 /* padding: 10px 240px !important; */
+	 /* margin: 0; */
+/* } */
+ .breadcrumbs strong {
+	 color: #ed1f24;
+}
+ .breadcrumbs a:visited, .breadcrumbs a, .breadcrumbs li {
+	font-family: 'Muli SemiBold';
+    font-size: 16px;
+    color: #000 !important;
+}
+
+.filter-options-title{
+	z-index: unset;
+
+}
+
+.rating-summary .rating-result > span:before{
+	z-index: 1;
+}
+
+/*Footer*/
+ .page-footer {
+     background: #262726 !important;
+    float: left;
+}
+ .block.newsletter {
+	 color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.fb-login {
+	border: 2px solid #395799;
+	margin: 10px 0;
+}
+ .fb-logo {
+	 width: 40px;
+	 float: left;
+	 background-color: #395799;
+}
+ .fb-logo img {
+	 width: 15px;
+	 margin: auto;
+	 /*padding: 10px;*/
+	 padding: 9px;
+}
+ .fb-link {
+	 padding: 10px;
+	 text-align: center;
+}
+ .fb-link a{
+	 color: #395799;
+}
+
+.link.compare a:before {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFF;
+	content: url('../images/compare-icon.png');
+}
+
+.link.compare span,.link.wishlist span {
+	display: none;
+}
+.link.compare a,.link.wishlist a{
+	text-decoration: none;
+}
+
+.link.wishlist a:before {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	line-height: 22px;
+	color: #FFF;
+	content: '\e600';
+	font-family: 'luma-icons';
+}
+
+.catalogsearch-result-index .products.wrapper.grid.products-grid {
+    padding-top: 50px;
+}
+
+/*Header*/
+ .page-header .panel.wrapper {
+     background-color: #313131;
+     border: none;
+}
+
+ .header.contacts li {
+     font-family: 'Muli Bold';
+     font-size: 16px;
+     display: inline-block;
+     margin: 0 0 0 15px;
+     vertical-align: top;
+     font-size: 14px;
+}
+.header.wishcompare {
+     margin: 0;
+     padding: 0;
+     list-style: none none;
+     float: right;
+     margin-left: auto;
+}
+.header.wishcompare li {
+     display: inline-block;
+     line-height: 1.4;
+     margin: 0 0 0 15px;
+}
+ .navigation .level0 .submenu a {
+     color: #444444;
+     font-family: 'Muli SemiBold';
+     font-size: 16px;
+}
+ a:visited, .alink:visited {
+     color: #ed1f24;
+     text-decoration: none;
+}
+ a, .alink {
+     color: #ed1f24;
+     text-decoration: none;
+}
+ a:hover, .alink:hover {
+     color: #ed1f24;
+     text-decoration: underline;
+}
+ .minicart-wrapper .action.showcart:before{
+     color: #FFFFFF !important;
+     font-size: 16px !important;
+     line-height: 1.2em !important;
+	 content: url('../images/cart-icon.png') !important;
+}
+ .minicart-items .product-item-name a {
+     color: #ed1f24;
+     font-weight: bold;
+}
+
+.box-information .box-title.info span:before{
+	content: url('../images/ContactInformation-icon.png');
+	margin: 0 10px 0;
+    position: relative;
+    top: 5px;
+}
+
+.box-newsletter .box-title.newsletter span:before{
+	content: url('../images/Newsletters-icon.png');
+	margin: 0 10px 0;
+    position: relative;
+    top: 5px;
+}
+
+.box-billing-address .box-title span:before{
+	content: url('../images/BillingAddress-icon.png');
+	margin: 0 10px 0;
+    position: relative;
+    top: 5px;
+}
+
+.box-shipping-address .box-title span:before{
+	content: url('../images/ShippingAddress-icon.png');
+	margin: 0 10px 0;
+    position: relative;
+    top: 5px;
+}
+
+ .copyright {
+     display:none !important;
+}
+ .footer.content .links strong {
+     color: #FFF;
+     font-weight: 600;
+}
+ .action.primary {
+     background: #ed1f24;
+     border: 1px solid #ed1f24;
+     font-size: 12px;
+}
+ .block.newsletter .action.subscribe{
+     border-radius: 0 30px 30px 0;
+}
+ .block.newsletter .form.subscribe{
+     margin: 10px 0;
+}
+ .nav-sections {
+     background: #f7f7f7;
+}
+ .action.primary:hover {
+     background: #95989a;
+     border: 1px solid #95989a;
+     color: #ffffff;
+}
+
+ .home-featuredcars .products-grid .product-item-info:hover, .home-featuredcars .products-grid .product-item-info.active{
+     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+     border: 0px solid #bbbbbb;
+     margin: 0;
+     padding: 0;
+}
+ .home-featuredcars .product-image-wrapper{
+     padding-bottom: 65% !important;
+     border-bottom: 5px solid #FFF;
+}
+ .home-featuredcars .product-image-wrapper:hover {
+     border-bottom: 5px solid #c92726;
+}
+
+ .home-featuredcars .product-image-wrapper:hover .product-item-link {
+     color: #ed1f24 !important;
+}
+
+ .home-featuredcars .block-product-slider {
+    margin: 0 !important;
+}
+
+ .home-featuredcars .products{
+    margin: 30px 0 0 !important;
+}
+
+.home-featuredproducts .slick-prev {
+    left: 0px !important;
+}
+
+.home-featuredproducts .slick-next {
+    right: 0px !important;
+}
+
+.home-featuredproducts .slick-prev, .home-featuredproducts .slick-next{
+	top: 30% !important;
+}
+
+.dv-srvc {
+    display: inline-flex;
+    background-color: #f7f7f7;
+    padding: 0px 5% 30px
+}
+
+.header-srvc p:after {
+    content: "";
+    position: relative;
+    top: 22px;
+    left: -76px;
+    margin: auto;
+    background: #C81C1F;
+    height: 1px;
+    font-size: 0.12em;
+    padding: 0 26px;
+}
+
+.home-featuredproducts .product-item-actions{
+	display: none !important;
+}
+
+
+.home-cars .product-item-link:hover {
+    text-decoration: none;
+    color: #ED1F24;
+}
+
+.slick-prev:hover:before{
+	content: url('../images/prevhover-icon.png') !important;
+}
+
+.slick-next:hover:before{
+	content: url('../images/nexthover-icon.png') !important;
+}
+
+.slick-prev:hover, .slick-next:hover, .slick-prev:focus, .slick-next:focus {
+    border: none;
+}
+
+.slick-prev, .slick-next{
+	box-shadow: unset !important;
+	top: 20% !important;
+}
+
+.slick-next:before, .slick-prev:before{
+	opacity: 1 !important;
+}
+
+.slick-next:before {
+    content: url('../images/next-icon.png') !important;
+}
+
+.slick-prev:before {
+    content: url('../images/prev-icon.png') !important;
+}
+
+.home-featuredcars .product-image-container{
+	width: 190px !important;
+    margin: 5px auto !important;
+    display: block;
+}
+
+.home-featuredproducts .product-image-container{
+	width: 190px !important;
+    margin: 5px auto !important;
+    display: block;
+}
+
+.sidebar .product-items .product-item-info .product-item-photo {
+    position: relative !important;
+}
+
+.home-featuredcars .link-inquire-car,
+.home-featuredcars .product-item-inner,
+.home-featuredproducts .product-item-inner {
+	display:none;
+}
+
+ .home-featuredcars .product-item-details {
+     text-align: center;
+	 width: 100%;
+}
+.home-featuredcars .product-item-link,
+.home-featuredproducts .product-item-link {
+     font-family: 'Raleway Bold';
+     font-size: 16px;
+}
+.home-featuredproducts .product-item-info {
+    width: 100% !important;
+}
+
+/*sidebar*/
+ .sidebar .products-grid.grid {
+     border-bottom: 2px solid #c81c1f;
+}
+.sidebar .product-image-wrapper{
+     padding-bottom: 100% !important;
+     border-bottom: 5px solid #FFF;
+}
+
+ .sidebar .products-grid .product-item-info:hover, .sidebar .products-grid .product-item-info.active{
+     background: none;
+     box-shadow: none;
+     border: none;
+     margin: unset;
+     padding: unset;
+}
+ .sidebar .products-grid .product-item-info:hover .product-image-wrapper{
+     border-bottom: 5px solid #c92726;
+}
+ .sidebar .product-inquire{
+     display:none;
+}
+ .sidebar .product-items .product-item-details {
+	 text-align: center;
+    width: 80%;
+    margin: 10px auto !important;
+}
+ .sidebar .products-grid .product-item-info:hover .product-item-photo, .sidebar .products-grid .product-item-info.active .product-item-photo {
+     top: 0;
+     left: 0;
+}
+ .sidebar .product-item-link {
+     font-family: 'Raleway Bold';
+     font-size: 16px;
+     color: #000;
+}
+
+ .sidebar .product-item-link:hover {
+     color: #ED1F24;
+}
+
+.home-ads img, .home-search input#search2, .home-cat, .home-cars {
+    width: 80%;
+    float: right;
+}
+
+ .home-search input#search2 {
+	 background: #fff;
+	 border: 1px solid #e62f2d;
+	 height: 35px;
+	 border-radius: 30px;
+	 font-weight: 400;
+	 padding: 10px 0;
+	 padding-left: 20px;
+	 font-size: 16px !important;
+}
+ .home-search .action.search:before{
+	 display:none  !important;
+}
+ .home-search .action.search > span{
+	 position:relative !important;
+}
+
+.home-search .action.search {
+    border-radius: 0 30px 30px 0 !important;
+    height: 35px;
+    width: 105px !important;
+    top: 0px !important;
+    background: #ed1f24 !important;
+    color: #f8f7f7;
+    font-size: 14px;
+    font-family: 'Muli SemiBold';
+}
+
+.home-search .action.search:before {
+	content: '' !important;
+}
+
+/*---------------------------*/
+ .owl-nav.disabled{
+     display: block !important;
+}
+ .owl-prev, .owl-next{
+     width: 10px;
+     top: -170px;
+     position: relative;
+     border: 1px solid #c92726;
+     padding: 5px;
+     color: #c92726;
+     font-weight: bold;
+     text-align: center;
+}
+ .owl-prev:hover, .owl-next:hover{
+     color: #FFF;
+     background: #c92726;
+     ;
+}
+ .owl-prev{
+     float: left;
+     left: -40px;
+}
+ .owl-next {
+     float: right;
+     right: -15px;
+}
+
+
+.sidebar-title {
+	color: #C81C1F;
+    text-align: center;
+    font-size: 21px;
+    margin-bottom: 15px;
+    font-family: 'Raleway Bold';
+    text-transform: uppercase;
+}
+
+.sidebar-title.newspromos:before {
+	-moz-osx-font-smoothing: grayscale;
+    content: url('../images/News_and_promos-icon.png');
+    position: relative;
+    top: 5px;
+    margin: 0px 10px;
+}
+
+.sidebar-title.featuredproducts:before {
+    /*-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 26px;
+    color: #C81C1F;
+    content: '\e625';
+    font-family: 'luma-icons';
+    vertical-align: middle;
+    overflow: hidden;
+    margin: 0px 10px;*/
+	-moz-osx-font-smoothing: grayscale;
+    content: url('../images/Featured_products-icon.png');
+    position: relative;
+    top: 5px;
+    margin: 0px 10px;
+
+}
+
+ .page-products .product-item-info {
+     padding: 0;
+     border: 1px solid #ffffff;
+     width: 100% !important;
+     text-align: center;
+}
+ .catalog-category-view .product-item-name, .catalog-category-view .product-item .price-box{
+     margin: 5px;
+     text-align: center;
+}
+ .catalog-category-view .product-image-wrapper{
+     padding-bottom: 110% !important;
+}
+ .catalog-category-view .products-grid .product-item-info:hover,
+ .catalog-category-view .products-grid .product-item-info.active{
+     border: 1px solid #e62f2d;
+     margin: 0;
+     padding: 0;
+}
+ .product-item-name, .product.name a {
+     font-weight: bold;
+}
+ .products-grid .product-item-name {
+     min-height: 35px;
+}
+ .price-container .price {
+     font-family: 'Muli Regular';
+     font-size: 14px;
+     color: #000;
+}
+
+ .price-container .price:hover {
+     color: #ED1F24;
+}
+ .catalog-category-view .product-image-photo{
+     width: 85%;
+}
+ .minicart-items .product-item-name{
+     text-align: left;
+}
+ .toolbar select {
+     background-color: #FFF;
+     box-shadow: none;
+     border-radius: 3px;
+     border: 1px solid #6d6d6d;
+}
+ .products-list .product-item-info {
+     display: block;
+     margin: 10px 0 !important;
+}
+ .products-list .product-item-photo{
+     padding: 0;
+}
+ .products-list .product-item-description{
+     display:none;
+}
+ .products-list .product-image-container{
+     width: 160px !important;
+}
+ .products-list .product-item-details{
+     padding: 20px;
+}
+ .products-list .product-item-name {
+     width: 50%;
+     text-align: left;
+     float: left;
+}
+ .products-list .price-box{
+     margin: 5px;
+     text-align: right;
+     width: 40%;
+     float: right;
+}
+ .products-list .action.primary, .products-list .product-item-info:hover .action.primary{
+     float: right !important;
+     width: 40% !important;
+     margin: 5px 0;
+}
+ .product-item .product-reviews-summary .reviews-actions{
+     display:none;
+}
+ .rating-summary .rating-result > span:before{
+     color: #ffda00;
+}
+ .checkout-index-index .nav-sections{
+     display:block;
+}
+ .checkout-index-index .column.main{
+     margin-top: 40px !important;
+}
+ .checkout-index-index .opc-block-summary, .opc-block-shipping-information {
+     background: #FFF;
+     padding: 10px 20px;
+     margin-bottom: 30px;
+     border-radius: 5px;
+     box-shadow: 0px 4px 12px 2px #ccc;
+}
+ .opc-block-summary {
+     background: #fff;
+     padding: 22px 10px;
+}
+ .opc-block-summary > .title {
+     display: block;
+     font-size: 14px;
+     color: #ed1f24;
+     font-weight: bold;
+     text-align: center;
+}
+ .opc-wrapper .step-title, .checkout-shipping-method .step-title {
+     border:none;
+     color: #e62f2d;
+     font-weight: bold;
+     font-size: 18px;
+     margin: 10px 50px;
+     padding: 0;
+}
+ .opc-wrapper .step-content {
+     padding: 0 85px;
+}
+ .opc-block-summary .items-in-cart > .title strong {
+     font-size: 14px;
+     font-weight: 600;
+}
+ .checkout-index-index .minicart-items .product > .product-image-container {
+     display:none;
+}
+ .checkout-index-index .minicart-items .product-item-details {
+     padding-left: 0;
+}
+ .checkout-index-index .minicart-items .product-item-name, .opc-block-summary .product-item .price {
+     font-size: 14px;
+     font-weight: 600;
+}
+ .content.minicart-items{
+     display: block !important;
+}
+ .checkout-index-index .minicart-items .product-item:not(:first-child) {
+     border:0;
+}
+ .checkout-index-index .minicart-items .product-item {
+     padding: 5px 0;
+}
+ .opc-wrapper .shipping-address-item.selected-item {
+     border-color: #ed1f24;
+}
+ .opc-wrapper .shipping-address-item.selected-item:after{
+     background: #ed1f24;
+}
+ .account .sidebar-additional {
+     margin-top: 0;
+}
+ .sidebar .product-items-names .product-item {
+     margin-bottom: 0;
+     padding: 15px;
+     background: #289bd8;
+}
+ .block-compare .product-item .product-item-name {
+     margin-left: 0;
+}
+ .sidebar .block-compare .product-item-link {
+     color: #FFF;
+}
+ .abs-remove-button-for-blocks:before{
+     content: '';
+}
+ .abs-remove-button-for-blocks:before, .sidebar .product-items .action.delete:before, .table-comparison .cell.remove .action.delete:before, .block-compare .action.delete:before, .filter-current .action.remove:before {
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     font-size: 10px;
+     line-height: 8px;
+     color: #ed1f24;
+     content: '\e616';
+     font-family: 'luma-icons';
+     background: #FFF;
+     padding: 4px;
+     border-radius: 30px;
+     float:right;
+     position: relative;
+     top: 15px;
+     right: 20px;
+}
+
+.catalog-product-compare-index .abs-remove-button-for-blocks:before {
+    font-size: 12px;
+    color: #757575;
+    content: '\e604';
+}
+
+ .block-title.order{
+     margin-bottom: 25px !important;
+}
+ .table-checkout-shipping-method tbody .col-price {
+     display:none;
+}
+ .items.payment-methods .step-title{
+     margin: 0;
+}
+ .product-info-main .product.attribute.sku, .product-info-main .field.qty{
+     display:none;
+}
+ .product-info-main .product-info-price{
+     border-bottom: 0;
+}
+ .product-info-main .product-info-price .price-box, .product-info-main .product-info-stock-sku{
+     display:block;
+     padding-left: 0;
+     text-align: left;
+}
+ a.action.towishlist, a.action.tocompare, .catalog-product-view .link-inquire-car {
+     font-size: 12px;
+     background: none;
+     color: #ed1f24;
+     border: 2px solid #ed1f24;
+     border-radius: 30px;
+     padding: 7px 30px;
+     text-transform: uppercase;
+     margin: 5px 0;
+}
+ .product-social-links .action.towishlist:hover, .product-social-links .action.tocompare:hover, #openModel:hover{
+     background: #ed1f24;
+     color: #fff;
+}
+.product-social-links, .product-add-form {
+     text-align: center !important;
+	 margin: 0 auto;
+     width: 240px;
+}
+ .filter .block-subtitle {
+     background: #444444;
+     padding: 15px;
+     color: #fff;
+     text-align: center;
+     text-transform: uppercase;
+}
+ .filter.active .filter-options, .filter-options {
+     background: #f7f7f7 !important;
+}
+ .filter-options-item{
+     border: 0;
+}
+ .textprice-slider {
+     border: 0 !important;
+     background: #fff;
+     color: #e62f2d;
+     font-weight: bold;
+     margin-bottom: 10px;
+     text-align: center;
+}
+ .ui-slider-handle{
+     background: #e62f2d;
+}
+ #openModel{
+     font-size: 12px;
+     background: none;
+     color: #666666;
+     border: 2px solid #ed1f24;
+     border-radius: 30px;
+     padding: 7px 50px;
+     text-transform: uppercase;
+     margin: 5px 0;
+     box-shadow: none;
+	 font-family: 'Muli Regular';
+}
+ .stock.available span:before {
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     font-size: 14px;
+     color: #666666;
+     content: 'Availability:';
+     margin-right: 10px;
+     text-transform: initial;
+}
+ .product-info-main .stock.available, .product-info-main .stock.unavailable {
+     margin: 30px 0;
+}
+ .stock.available {
+     color: #5fac3e;
+     font-size: 14px;
+}
+ .stock.available span:after {
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     font-size: 14px;
+     background: #60ac3e;
+     color: #fff;
+     margin-right: 10px;
+     text-transform: initial;
+     font-family: 'luma-icons';
+     content: '\e610';
+     margin: 0 10px;
+     padding: 5px;
+     border-radius: 11px;
+}
+ .catalog-product-view .price-final_price {
+     border-bottom: 2px solid #95989a;
+     width: auto !important;
+}
+
+.div-news .headline {
+    font-family: 'Muli Bold';
+    font-size: 16px;
+}
+
+.headline .date{
+	font-family: 'Muli Regular';
+}
+
+.div-news .content {
+    font-size: 14px;
+    margin: 5px 0 0 5px;
+}
+
+.div-news .link{
+    margin: 15px 0 0 5px !important;
+
+}
+
+.div-news .link a{
+    font-size: 14px !important;
+	color: #ED1F24;
+}
+
+img.img-promos,
+p.sidebar-ads img,
+img.img-news {
+    width: 100%;
+}
+
+.div-whoweare {
+    padding-top: 0 !important;
+}
+
+.div-whoweare, .div-missionandvision, .content-whatweoffer {
+    width: 68%;
+    margin: 0 auto;
+	padding: 40px 0;
+}
+
+.dv-srvc-page {
+    width: 70%;
+    margin: auto;
+}
+
+.services-content {
+    width: 50%;
+    margin: auto;
+}
+
+.div-services-inquire{
+	text-align: center;
+	background-color: #f7f7f7;
+	padding: 50px 0;
+	float: left;
+    width: 100%;
+}
+
+.header-services-inquire {
+	text-align: center;
+	font-size: 22px;
+	font-family: 'Raleway Bold';
+	color: #C81C1F;
+	text-transform: uppercase;
+}
+
+.inquire-desc {
+    font-size: 18px;
+    margin: 20px 0 30px;
+}
+
+.div-services-inquire form {
+	text-align: center;
+}
+
+.div-services-inquire button{
+	font-size: 12px;
+	background: none;
+	color: #ed1f24;
+	border: 2px solid #ed1f24;
+	border-radius: 30px;
+	padding: 7px 30px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+.services-inquire {
+	font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    width: 100px;
+    margin: 10px auto;
+}
+
+
+.services-inquire:hover{
+	background-color: #ed1f24;
+	color: #fff;
+}
+
+.services-inquire:hover a{
+	color: #fff;
+	text-decoration:none;
+}
+
+.cms-container{
+	padding: 50px 0;
+}
+
+.cms-header-name {
+    font-size: 22px;
+    font-family: 'Raleway Bold';
+}
+
+.catalog-category-view .action.towishlist,
+.catalog-category-view .action.tocompare,
+.catalog-category-view .action.toshare,
+.catalog-category-view .action.toreview  {
+	border: none;
+    margin: 1px 0px;
+    padding: 5px 5px;
+    width: 89px;
+    border-radius: 0;
+    font-size: 12px;
+    background: none;
+    color: #fff;
+}
+
+.catalog-category-view .action.towishlist:hover,
+.catalog-category-view .action.tocompare:hover,
+.catalog-category-view .action.toshare:hover,
+.catalog-category-view .action.toreview:hover {
+	color: #ed1f24 !important;
+}
+
+.catalog-category-view .products-grid .product-item-info:hover .action.towishlist,
+.catalog-category-view .products-grid .product-item-info:hover .action.tocompare,
+.catalog-category-view .products-grid .product-item-info:hover .action.toshare,
+.catalog-category-view .products-grid .product-item-info:hover .action.toreview
+{
+	background: #f7f7f7;
+	color: #a3a3a3;
+}
+
+.catalog-category-view .products-list .product-item-info .action.towishlist,
+.catalog-category-view .products-list .product-item-info .action.tocompare,
+.catalog-category-view .products-list .product-item-info .action.toshare,
+.catalog-category-view .products-list .product-item-info .action.toreview
+{
+    background: #f7f7f7;
+    color: #a3a3a3;
+    margin-right: 5px;
+}
+
+.catalog-category-view .products-list .actions-secondary{
+    display: inline-flex;
+    margin-top: 25px;
+}
+.catalog-category-view .actions-secondary {
+    min-height: 22px;
+}
+
+.catalog-category-view .actions-secondary>.action span{
+	position: unset;
+	margin: 0px;
+}
+
+.catalog-category-view .action.tocompare:before{
+	content: '';
+}
+
+.catalog-category-view .products-grid .product-item-info:hover .tocompare:hover:before,
+.catalog-category-view .products-list .product-item-info .tocompare:before  {
+    content: url('../images/compare-catalog-iconhover.png') !important;
+}
+
+.catalog-category-view .products-grid .product-item-info:hover .tocompare:before,
+.catalog-category-view .products-list .product-item-info .tocompare:before {
+    content: url('../images/compare-catalog-icon.png') !important;
+}
+
+.catalog-category-view .action.toshare:before{
+	content: '';
+}
+
+.catalog-category-view .products-grid .product-item-info:hover .toshare:hover:before,
+.catalog-category-view .products-list .product-item-info .toshare:hover:before  {
+    content: url('../images/share-catalog-iconhover.png') !important;
+}
+
+.catalog-category-view .products-grid .product-item-info:hover .toshare:before,
+.catalog-category-view .products-list .product-item-info .toshare:before {
+    content: url('../images/share-catalog-icon.png') !important;
+}
+
+.catalog-category-view .action.toreview:before{
+	content: '';
+}
+
+.catalog-category-view .products-grid .product-item-info:hover .toreview:hover:before,
+.catalog-category-view .products-list .product-item-info .toreview:before  {
+    content: url('../images/review-catalog-iconhover.png') !important;
+}
+
+.catalog-category-view .products-grid .product-item-info:hover .toreview:before,
+.catalog-category-view .products-list .product-item-info .toreview:before  {
+    content: url('../images/review-catalog-icon.png') !important;
+}
+
+.pages strong.page {
+    background: #ed1f24;
+	color: #fff;
+	padding: 0 10px;
+}
+
+.pages a.page {
+    color: #000;
+    padding: 0px 10px;
+    background: #f7f7f7;
+    font-weight: bold;
+}
+
+.pages a.page:visited {
+    color: #000;
+}
+
+.pages a.page:hover {
+    color: #ed1f24;
+}
+
+.pages .action.previous:visited:before,
+.pages .action.previous:before{
+    color: #ed1f24;
+}
+
+.pages .action.next:visited:before,
+.pages .action.next:before{
+    color: #000;
+}
+
+.pages .action, .pages .action:hover {
+    box-shadow: none;
+	background: none;
+	border: none;
+
+}
+
+.block-search .action.search {
+    background: #f00;
+    opacity: 1 !important;
+    right: 0;
+    top: 1px;
+    width: 25px;
+    border-radius: 0;
+}
+
+.lbl-popularcat, .lbl-topbrands, .lbl-featuredcars {
+    padding-left: 20%;
+    text-align: left;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: 'Raleway Bold';
+}
+
+.slick-prev, .slick-next{
+	height: 32px !important;
+    width: 35px !important;
+}
+
+.footer.content .links a:hover {
+    color: #e62f2d;
+    text-decoration: none;
+}
+
+/*My Account*/
+
+.account .sidebar-additional{
+	display:block;
+}
+.account .page-title-wrapper,
+.account .block.block-collapsible-nav {
+	display: none;
+}
+
+.account .page-main,
+.checkout-cart-index .page-main,
+.checkout-index-index .page-main{
+	background: #f7f7f7;
+}
+
+.account .column.main .block:not(.widget) .block-title,
+.account .legend{
+	border: 0;
+	margin: 0;
+}
+
+.acct-content .nav.items {
+	background: #FFF;
+}
+
+.acct-content .nav.item {
+	border-left: 2px solid #FFF;
+	padding: 5px 20px;
+	margin: 0;
+	color: #333333;
+}
+
+.nav.item a {
+	color: #333333;
+}
+
+.acct-content .nav.item.current {
+	border-left: 2px solid #ed1f24;
+}
+
+.nav.item.delimiter {
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.account .column.main .block:not(.widget) .block-title > strong,
+.account .legend > span {
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.account .column.main .block:not(.widget) .box-title > span {
+	font-size: 18px;
+    font-family: 'Raleway SemiBold';
+}
+
+.box-information .box-content p, .box-newsletter .box-content p, .box-billing-address .box-content address, .box-shipping-address .box-content address{
+	font-family: 'Muli SemiBold' !important;
+	font-size: 14px !important;
+}
+
+.box-address-billing .box-content, .box-address-shipping .box-content{
+	line-height: 35px;
+}
+
+
+.title.account-nav.acct-title:before {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 16px;
+	font-weight: bold;
+	color: #ed1f24;
+	content: 'My Account';
+	margin: 0px 20px;
+}
+
+.content.account-nav.acct-content, .box-information .box-content, .box-newsletter .box-content,
+.box-billing-address .box-content, .box-shipping-address .box-content,
+.fieldset > .field > .label, .fieldset > .fields > .field > .label, input, select {
+	font-size: 12px !important;
+}
+
+.account .column.main .block:not(.widget) .block-content .box{
+	width: 44% !important;
+	min-height: 165px;
+	background: #FFF;
+
+	padding: 25px 15px;
+	border-radius: 5px;
+	box-shadow: 0px 4px 12px 2px #ccc;
+}
+
+.sales-order-view .column.main .block:not(.widget) .block-content .box{
+	width: 44% !important;
+	margin: 10px;
+}
+
+.account .block .box-actions {
+    margin-top: 15px;
+}
+
+.account .dashboard-box-actions, .account .action.edit,
+.block-dashboard-orders .block-title.order .action.view	{
+	box-shadow: none;
+	background-image: none;
+	background-color: #f7f7f7;
+	border: none;
+	color: #a3a3a3;
+	/*padding: 5px 20px;*/
+	padding: 5px 0px;
+	font-size: 12px;
+	font-weight: 600;
+	box-sizing: unset;
+	text-transform: uppercase;
+}
+
+.account .dashboard-box-actions:hover{
+	background: #f7f7f7;
+	border: none;
+	color:#ee373b;
+}
+
+.account .dashboard-box-actions a{
+	color:#a3a3a3;
+	text-decoration: none;
+    padding: 5px 20px;
+}
+
+.account .dashboard-box-actions a:hover, .account .action.edit:hover{
+	color:#ed1f24;
+	text-decoration: none;
+}
+
+.account .block-title .action.edit,
+.block-dashboard-orders .block-title.order .action.view	{
+	background: #FFF;
+	padding: 2px 10px;
+	color: #a9a9a9;
+}
+
+.block-compare .block-title strong{
+	font-size: 16px;
+	font-weight: bold;
+	color: #ed1f24;
+	margin: 0px 20px;
+}
+
+.block-compare .block-content {
+    background: #fff;
+    padding: 15px;
+}
+
+[class*='block-compare'] {
+    display: block;
+}
+
+.block.block-reorder, .block.block-reviews-dashboard {
+    display: none;
+}
+
+/*contact us*/
+.inquiry-index-contactus .form.inquiry.car {
+    width: auto !important;
+    min-width: auto !important;
+}
+
+.header-contactus{
+    margin: 20px 0;
+	font-family: 'Muli Bold';
+	font-size: 24px;
+    text-align: left;
+    color: #C81C1F;
+}
+
+.div-contactus-intro {
+    font-size: 12px;
+    font-family: 'Muli Regular';
+    margin-bottom: 40px;
+}
+
+.contactus-details-ul {
+    list-style: none;
+    text-align: left;
+	padding: 0;
+}
+
+.contactus-details-p {
+    display: inline-flex;
+}
+
+.div-contactus {
+    margin: 50px 0;
+}
+
+.contactus-details-span {
+    margin: 10px 0 0 10px;
+    font-family: 'Muli Bold';
+}
+
+p.contactus-details-p2 {
+    margin: 10px 0 0 50px;
+    font-size: 14px;
+    width: 64%;
+}
+
+p.contactus-details-p.socialmedia {
+    margin: 20px 0;
+}
+
+p.contactus-details-icons a {
+    margin: 0 5px;
+}
+
+.action.submit.primary {
+    font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+	width: auto !important;
+}
+
+/* careers */
+.header-careers{
+    margin: 0 auto;
+	padding: 25px 0 0 0px;
+	color: #ed1f24;
+}
+.header-careers p{
+    font-size: 28px;
+    text-align: left;
+    color: #C81C1F;
+}
+
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+.div-careers-intro {
+    font-size: 16px;
+    padding: 0px 0 40px 0;
+    margin: 0 auto;
+    font-family: 'Muli Regular';
+}
+
+p.div-careers-intro-1{
+    margin-top: 10px;
+}
+
+p.div-careers-intro-2{
+    margin-top: 50px;
+}
+
+.inquiry-index-careers .column.main{
+    width: 100%;
+}
+
+
+.inquiry-index-careers .form.inquiry.car{
+    width: 30%;
+    min-width: 460px;
+	margin: 0 auto 30px;
+}
+
+button.action.submit.primary {
+    font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+button.action.submit.primary:hover{
+    background-color: #ed1f24;
+    color: #fff;
+}
+
+.form.inquiry.success{
+    box-shadow: 0 0 20px 0 #888888;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+.success-div{
+    text-align: center;
+    padding: 50px;
+}
+h3.success-title {
+    color: #C81C1F;
+}
+p.success-icon {
+    width: 20%;
+    margin: 0 auto;
+}
+
+p.success-label {
+    width: 75%;
+    margin: 0px auto;
+    font-family: 'Muli Bold';
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.checkout-index-index div[name="shippingAddress.city"],
+.checkout-index-index div[name="shippingAddress.subdistrict_id"],
+.checkout-index-index div[name="shippingAddress.zipcode"]
+ { display:none;}
+
+#product_addtocart_form .actions{
+  text-align:center;
+}
+
+#product-addtocart-button{
+	font-size: 12px;
+	background: none;
+	color: #575757;
+	border: 2px solid #ed1f24;
+	border-radius: 30px;
+	padding: 7px 30px;
+	text-transform: uppercase;
+	margin: 0;
+	line-height: 1.2em;
+	width: 100%;
+	max-width: 210px;
+	font-family: 'Muli Regular';
+}
+
+.bundle-options-container .block-bundle-summary .box-tocart, .box-tocart {
+    margin: 0;
+    text-align: center;
+}
+
+a.link-inquire-car {
+    background: #ed1f24;
+    border: 1px solid #ed1f24;
+    font-size: 12px;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    padding: 7px 24px;
+    box-sizing: border-box;
+    vertical-align: middle;
+}
+
+
+ @media only screen and (min-device-width: 320px) and (max-device-width: 780px) and (orientation: landscape) {
+}
+ @media only screen and (max-width: 479px) {
+}
+ @media only screen and (max-width: 639px) {
+    .block-search {
+        margin-top: 0px;
+    }
+    .product-social-links .action.tocompare{
+        display: inline-block;
+    }
+
+}
+@media(max-width: 2732px){
+    .minicart-wrapper{
+        right: 13%;
+    }
+    .home-subcat{
+/*        min-height: 790px;*/
+    }
+}
+@media(max-width: 1550px){
+    .minicart-wrapper{
+        right: 7%;
+    }
+
+	.home-subcat{
+/*        min-height: 650px;*/
+    }
+}
+@media (max-width: 1440px){
+    .minicart-wrapper {
+        right: 4%;
+    }
+
+
+}
+
+@media(max-width: 1370px){
+    .minicart-wrapper{
+        right: 0%;
+    }
+    .action.showcart{
+        position: relative;
+        left: -13px;
+    }
+}
+@media(max-width: 1280px){
+    .minicart-wrapper{
+        right: -3%;
+    }
+    .action.showcart {
+        position: relative;
+        left: -12px;
+    }
+}
+ @media only screen and (max-width: 1140px) {
+
+	 .missionandvision-icon{
+		 padding: 50px 27px;
+
+	 }
+    .action.showcart {
+        position: relative;
+        left: 10px;
+    }
+    .paylist{
+        width: 168px;
+    }
+
+    .payments-content, .payments-desc, .terms-content{
+        width: 100%;
+    }
+    .header.content{
+        width: 80%;
+        margin-bottom: 10px;
+    }
+    .footer.content .block{
+        float: left !important;
+    }
+    .block.newsletter{
+        width: 50% !important;
+    }
+    .breadcrumbs {
+	    padding: 10px 8% !important;
+	}
+	.page-layout-1column .column.main, .checkout-cart-index .page-title-wrapper, .page.messages, .page-layout-1column .toolbar-products{
+		width: 100% !important;
+	}
+	.div-careers-intro,.div-contactus-intro{
+	    width: 100% !important;
+	}
+	.list-subcat {
+	    padding: 3px !important;
+	    font-size: 9px !important;
+	}
+	.page-layout-2columns-left .column.main {
+	    width: 72% !important;
+	    margin-right: 7px !important;
+	}
+	.page-layout-2columns-left .sidebar {
+	    margin-left: 15px !important;
+	    width: 25% !important;
+	}
+    /*
+	.catalog-product-view .product.media{
+		margin-left: 15px !important;
+	}*/
+    .header.panel > .header.contacts{
+        margin-left: 0% !important;
+    }
+    .support-image,.newspromos-image,.services-image{
+        background-size: cover !important;
+        background-position: right;
+    }
+    .minicart-wrapper{
+        right: 18px !important;
+    }
+    .header.panel > .header.links {
+        margin-left: 34px;
+    }
+    .list-subservices a,.list-subsupport a {
+        font-size: 9px;
+    }
+    .list-subservices, .list-subsupport{
+        padding: 4px 5px;
+        text-align: center;
+    }
+    .sub-services{
+        width: 90%;
+    }
+    .sub-newspromos{
+        width: 60%;
+    }
+    .page-layout-1column .toolbar-products{
+        position: relative !important;
+    }
+}
+@media(max-width: 1024px){
+    .action.showcart {
+        left: -5px;
+    }
+    .sub-newspromos{
+        width: 84%;
+    }
+    .page-layout-1column .column.main, .checkout-cart-index .page-title-wrapper, .page.messages, .page-layout-1column .toolbar-products{
+        padding: 0% 5%;
+    }
+
+	.cms-aboutus .page-layout-1column .column.main{
+		padding: 0 !important;
+	}
+
+	.div-whoweare, .div-missionandvision, .content-whatweoffer,
+	.cms-main-container, p.inquire-desc{
+		width: 80% !important;
+		margin: auto !important;
+	}
+
+	.cms-aboutus .column.main{
+		padding: 0 !important;
+	}
+
+	 .lbl-popularcat, .lbl-topbrands, .lbl-featuredcars {
+		padding-left: 4% !important;
+	 }
+
+
+}
+ @media only screen and (max-width: 800px) {
+
+	 .missionandvision-icon{
+		padding: 50px 40px;
+	 }
+
+    .aboutus-image{
+        background-position: right;
+        background-size: cover !important;
+    }
+    .news-lbl.Promos,.news-lbl.Events,.news-lbl.News {
+        background: linear-gradient(120deg, #c81c1f 50%, #fff 35%);
+    }
+    .lbl-news.Promos,.lbl-news.Events,.lbl-news.News {
+        width: 30%;
+    }
+    html,body{
+        overflow-x: hidden;
+    }
+    .page-layout-1column .column.main, .checkout-cart-index .page-title-wrapper, .page.messages, .page-layout-1column .toolbar-products{
+        width: 100% !important;
+        padding: 0% 5%;
+    }
+    .blog-category-view .category-content, .post-list-wrapper{
+        width: 100%;
+    }
+    .post-list li{
+        width: 100% !important;
+        padding: 0px !important;
+    }
+    .blog-category-view .post-holder{
+        padding: 0px !important;
+    }
+    .action.showcart {
+        left: -33px;
+    }
+    .sub-services,.sub-cat{
+        width: 100%;
+        list-style: none;
+    }
+    .suppport-submenu{
+        height: auto;
+    }
+    .abs-shopping-cart-items-desktop, .block-cart-failed, .cart-container .form-cart, .cart-container .cart-gift-item,.cart-summary{
+        width: 100% !important;
+    }
+    .header.contacts li,.header.panel > .header.links > li.welcome, .header.panel > .header.links > li > a{
+        font-size: 12px;
+    }
+    .header .block-search{
+        right: -248px;
+    }
+    .paylist {
+        width: 43%;
+    }
+ 	.ul-missionvision-icons{
+ 		display: block !important;
+ 	}
+
+     .navigation {
+         padding-left: 0px;
+    }
+    .navigation .level0 > .level-top{
+     font-family: 'Raleway Bold';
+         color: #444444;
+    }
+
+	#search_mini_form .label {
+		border-radius: 0 !important;
+		padding: 2px 8px;
+	}
+
+	.block-search .label{
+		position: absolute;
+		right: 14px;
+		margin-top: 15px;
+		z-index: 100;
+		background: #ed1f24 !important;
+		padding: 3px 8px;
+		border-radius: 0 30px 30px 0;
+     }
+
+	.block-search .label:hover:before,.block-search .label:before{
+		 color: #fff;
+	 }
+
+     .block-search input{
+          left:0px;
+          margin: 15px 0;
+          position: relative;
+          font-family: 'Muli Regular', 'Open Sans';
+         font-size: 16px;
+         color: #6F6F6F;
+     }
+     .home-lbl {
+         padding: 10px;
+         margin: 20px 0 10px 0;
+         background: linear-gradient(120deg, #c81c1f 80%, #fff 50%);
+     }
+
+     .sub-categories a {
+         color: #000000;
+         font-size: 16px;
+         display: table-cell;
+         vertical-align: middle;
+         font-family: 'Muli Regular';
+         padding-bottom: 5px;
+     }
+     .shop-by-all-categories{
+          margin-bottom: 15px;
+     }
+     .home-brands {
+         width: 25%;
+         float: left;
+         height: 100px;
+     }
+
+     .home-featuredcars .product-item-link,.price-container .price{
+          font-size: 14px;
+     }
+
+     .login-container .action.login.primary, .login-container .action.create.primary, .customer-account-create .action.submit.primary, .customer-account-forgotpassword .action.submit.primary, .featuredcars-seeall a, .form-edit-account .action.primary, .form-address-edit .action.primary, .form-newsletter-manage .action.primary, .action.primary.checkout, .methods-shipping .actions-toolbar .action.primary, .opc-wrapper .action-show-popup, .sidebar .action.compare.primary, .checkout-onepage-success .action.primary.continue, .inquiry-index-index .action.submit.primary, .inquiry-index-services .action.submit.primary, .inquiry-index-rentals .action.submit.primary{
+         font-size: 12px;
+         background: none;
+         color: #ed1f24;
+         border: 2px solid #ed1f24;
+         border-radius: 30px;
+         padding: 7px 30px;
+         text-transform: uppercase;
+         margin: 0;
+         box-shadow: none;
+     }
+     .featuredcars-seeall{
+          color: #000;
+          text-align: center;
+          margin-top: 25px;
+     }
+
+     .sidebar-main{
+          width: 100%;
+     }
+
+     .fproducts .owl-prev, .fproducts .owl-next {
+         top: -170px;
+     }
+
+     .header-srvc p {
+         font-family: 'Raleway ExtraBold';
+         font-size: 22px;
+         text-align: center;
+         padding: 40px 0;
+     }
+     .services-buysell{
+          padding:0px 15px;
+          text-align: center;
+     }
+     .buysell-lbl {
+         color: #C81C1F;
+         text-align: center;
+         font-size: 36px;
+         font-family: 'Raleway Bold';
+     }
+     .navigation .level0 > .level-top, .navigation2 .level-top{
+        font-size: 12px !important;
+     }
+     .navigation ul{
+        padding-top: 15px !important;
+     }
+     .shopautoparts,.shopcars{
+        background-size: cover !important;
+        background-position: center !important;
+     }
+     .shoplink-title,.shoplink-desc{
+        padding: 25px 35px 0 !important;
+     }
+     .shoplink-title{
+        font-size: 28px !important;
+     }
+     .page-layout-2columns-right .column.main,.page-layout-2columns-right .sidebar-main {
+        width: 100% !important;
+        float: left !important;
+    }
+    .home-ads img, .home-search input#search2, .home-cat, .home-cars{
+        width: 100% !important;
+		float: none;
+    }
+    .categories {
+        height: 650px;
+    }
+    .column.main{
+        padding: 0px 15px;
+    }
+    .dv-srvc{
+        display: block !important;
+    }
+    .div-services,.services-buysell{
+        width: 100% !important;
+        padding: 0px !important;
+    }
+    .services-buysell{
+        border-left: none!important;
+        border-top: 2px solid #b1b1b1;
+    }
+    .div-news{
+        text-align: center;
+    }
+    .sub-support,.sub-cat,.sub-newspromos{
+        width: 100%;
+        padding: 0px;
+    }
+    .list-subsupport{
+       padding: 4px 7px;
+    }
+    .list-subsupport,.list-subservices,.list-subcat,.list-newspromos {
+        padding: 0px 15px !important;
+        max-width: 100% !important;
+        background: #313131;
+        border-bottom: 1px solid #100707;
+        height: 40px !important;
+        margin-bottom: 0px !important;
+        width: 100% !important;
+    }
+    .list-subsupport a,.list-subservices a,.list-subcat a,.list-newspromos a{
+        font-size: 14px !important;
+        height: 40px !important;
+        text-transform: uppercase;
+        display: table-cell;
+        vertical-align: middle;
+        color: #FFF !important;
+        font-family: 'Raleway SemiBold';
+        text-decoration: none;
+    }
+    .list-subcat:hover {
+        background: #ed1f24;
+    }
+    .div-submenu{
+        display: none;
+    }
+    .div-submenu-mobile{
+        display: block !important;
+    }
+    .category-cars .sub-cat{
+        margin: 0px;
+    }
+    .ul-services-page{
+        display: block !important;
+    }
+    p.service-desc{
+        min-height: 100px !important;
+    }
+    .category-cms, .category-image, .category-description{
+        margin-bottom: 0px;
+    }
+    .minicart-wrapper .action.showcart .counter.qty{
+        margin: 0px;
+    }
+    .action.showcart {
+        left: -32px;
+    }
+    li.li-services-page {
+        width: 27%;
+        margin: 15px;
+        float: left;
+        min-height: 300px;
+    }
+    .dv-srvc-page,.services-content{
+        width: 100%;
+    }
+    .ul-services-page{
+        padding: 0px 10%;
+    }
+    .header .block-search {
+        margin-top: 10px;
+    }
+}
+@media only screen and (max-width: 767px){
+	.sales-order-view .column.main .block:not(.widget) .block-content .box {
+		width: 40% !important;
+		margin: 10px;
+		float: left;
+	}
+
+	.navigation2 {
+		display: none !important;
+	}
+
+	.navigation {
+		display: block !important;
+	}
+
+    .block-search .control{
+        border-top: none;
+    }
+    .cms-privacy-policy-disclaimer .page-main, .cms-privacy-of-children .page-main, .cms-personal-information-gathering .page-main, .cms-access-and-use-of-personal-information .page-main, .cms-consent-withdrawal .page-main, .cms-changes-on-your-personal-details .page-main, .cms-your-personal-information-s-security .page-main, .cms-changes-to-the-privacy-policy .page-main, .cms-disclaimer .page-main, .cms-computer-data-gathering .page-main{
+        background: #F7F7F8 !important;
+    }
+    .minicart-wrapper .block-minicart li{
+        width: 100% !important;
+    }
+    .minicart-items-wrapper{
+        height: auto !important;
+    }
+    .action.showcart {
+        left: 15px;
+    }
+    .home-subcat {
+        min-height: 1px;
+    }
+    li.li-services-page {
+        width: 40%;
+        margin: 15px;
+        float: left;
+        min-height: 350px;
+        margin-bottom: 15px;
+    }
+    p.service-desc {
+        min-height: 105px;
+    }
+    .logo img,.service-icon {
+        height: 100px !important;
+        width: auto !important;
+    }
+    .logo{
+        margin: -25px 0 -28px 40px;
+    }
+    .shoplink-now a{
+        color: #fff;
+    }
+    .shoplink-now {
+        background-color: #ed1f24;
+        width: 95px;
+        padding: 5px 14px;
+        border: 2px solid #ed1f24;
+        border-radius: 30px;
+        /*position: relative;*/
+        left: 100px;
+        text-align: center;
+        margin: 0 auto !important;
+    }
+    .shoplink-title {
+        font-family: 'Muli ExtraBold';
+        color: #FFF;
+        font-size: 28px !important;
+        font-weight: bold;
+        padding: 35px 95px 0 !important;
+        text-align: center;
+    }
+    .shoplink-desc {
+        font-weight: 100;
+        font-size: 14px !important;
+        color: #FFF;
+        padding: 0px 15px !important;
+        margin-bottom: 20px;
+        width: 100%;
+        text-align:center;
+    }
+    .top-container{
+        padding: 0px;
+    }
+    .shopautoparts {
+        background: url(../images/AutoParts-banner.png) no-repeat;
+        background-size: cover;
+        padding: 5%;
+    }
+    .shopcars {
+        background: url(../images/Cars-banner.png) no-repeat;
+        background-size: cover;
+        padding: 5%;
+    }
+
+    .div-buysell-desc,.div-buysell-imge,.div-partsinstallation-desc,.div-carcaredetailing-desc,.div-partsfinder-desc,.div-partsfinder-imge,.div-carfinder-imge,.div-carfinder-desc{
+        width: 100% !important;
+        padding: 3% 0px !important;
+    }
+    .div-buysell-imge img,.div-carfinder-imge img,.div-partsinstallation-imge,.div-partsinstallation-imge img,.div-carcaredetailing-imge img ,.div-carcaredetailing-imge img,.div-partsfinder-imge img{
+        width: 100% !important;
+    }
+    .div-carcaredetailing-imgdesc{
+        padding: 0px !important;
+        display: block !important;
+    }
+    ul.ul-support{
+        list-style: none;
+        padding: 0px;
+    }
+    ul.ul-support li a{
+        margin-left: 15px;
+        color: #000000;
+    }
+    h1.page-title{
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        margin-top: 15px;
+    }
+    .home-search{
+        right: 0px;
+    }
+    .header.wishcompare{
+        top: 7px;
+        position: absolute;
+        right: 75px;
+    }
+
+    .paylist {
+        width: 40%;
+    }
+	.submenu-shopnow-link {
+	    padding: 5px 15px;
+	    margin: 0 5px;
+	    border: 2px solid #ed1f24;
+	    border-radius: 30px;
+	    position: relative;
+	    top: 10px;
+	    text-align: center;
+	}
+	.category-cms, .category-image, .category-description{
+		color: #fff;
+    	margin-top: 15px;
+    	padding:15px;
+	}
+     .categories {
+        width: 48%;
+        float: left;
+        height: auto;
+        margin-right: 11px;
+    }
+     .home-brands {
+         width: 50%;
+         float: left;
+         height: 100px;
+     }
+     .header.contacts{
+        width: auto;
+        padding-left: 0px;
+        margin-bottom: 15px;
+        margin-top: 8px;
+     }
+     .wishcompare{
+        margin-top: 6px !important;
+     }
+     .showcart{
+        margin-top: 8px;
+        margin-left: 8px;
+     }
+
+     .home-cars .product-item-info{
+        width:
+     }
+
+    .home-subcat{
+        width: 100%;
+    }
+    .navigation .level0 > .level-top{
+     font-family: 'Raleway Bold';
+         font-size: 16px !important;
+         color: #444444;
+    }
+    .sub-categories {
+        background: #f8f7f7;
+        padding: 10px;
+        height: 45px;
+        margin-bottom: 8px;
+    }
+    .block.newsletter{
+        width: 100% !important;
+    }
+    .filter-title strong{
+    	display: none;
+    }
+    .page-products .sorter{
+    	position: relative;
+    }
+    .div-carmaintenance-imge{
+    	width: 100% !important;
+    	text-align: center;
+    }
+    .div-carmaintenance-desc {
+	    width: 100% !important;
+	    padding: 0px !important;
+	}
+    .header.panel > .header.contacts{
+        margin-left: 0px !important;
+    }
+
+    #maincontent{
+        float: left;
+        width: 100%;
+        padding: 0px;
+    }
+    .ul-support {
+        background: #fff;
+    }
+    .page-footer {
+        margin-top: 0px;
+    }
+    .li-icons{
+        text-align: center;
+        display: block;
+    }
+    .ul-services{
+        list-style: none;
+        padding: 0px 15px;
+    }
+    p.service-icon,p.lbl-service {
+        text-align: center;
+    }
+    p.lbl-service{
+        font-family: 'Raleway Bold';
+        font-size: 20px;
+        text-align: center;
+        min-height: 60px;
+        margin: 10px 0;
+    }
+    .header.content{
+        width: 93%;
+    }
+    .header.content .nav-toggle{
+        text-align: right;
+        right: 15px;
+    }
+    .page-header{
+        border-bottom: none;
+    }
+    body{
+        overflow-y: hidden;
+    }
+
+	.categories {
+		height: 600px;
+	}
+
+    .div-noreviews h2, .div-nowishlist h2, .div-nopayments h2, .trackmyorder-title {
+        display: none;
+    }
+
+    .orders-img-p p, .wishlist-img-p p, .payments-img-p p, .reviews-img-p p {
+    font-family: 'Raleway Bold';
+    color: #646464;
+    font-size: 18px;
+    }
+
+    .account .page-main, .checkout-cart-index .page-main, .checkout-index-index .page-main {
+        background: #f7f7f7;
+    }
+
+    .wishlist-img-p, .payments-img-p, .reviews-img-p {
+    text-align: center;
+    padding: 40px;
+    }
+
+    .fieldset.newsletter-additional {
+    box-shadow: 0 0 20px 0 #888888;
+    background: #fff;
+    border-radius: 5px;
+    }
+
+    .newsletter-container {
+        padding: 40px;
+    }
+
+    .newsletter-img {
+        float: left;
+        margin-right: 30px;
+    }
+
+    .newsletter-desc span {
+        font-family: 'Raleway Bold';
+        font-size: 18px;
+        color: #646464;
+    }
+
+    .newsletter-desc p {
+        font-family: 'Raleway SemiBold';
+        font-size: 12px;
+        margin-top: 15px;
+        color: #646464;
+    }
+
+    .inquiry-index-contactus .page-main, .inquiry-index-careers .page-main,  .inquiry-index-support .page-main,
+    .inquiry-index-checkticket .page-main, .inquiry-index-notexist .page-main {
+        background-color: #f7f7f7;
+    }
+
+	.inquiry-index-careers .form.inquiry.car {
+		width: 100%;
+		min-width: unset !important;
+		margin: 0 auto 30px;
+	}
+
+
+}
+@media only screen and (max-width: 639px){
+
+	.block.account-nav.acct, .block.block-compare {
+		width: 242px;
+	}
+
+	.home-ads img{
+		height: 50px;
+	}
+
+    .aboutus-name {
+        padding: 35px 30% 0;
+    }
+    .services-buysell-page-img {
+         float: none;
+        text-align: center;
+    }
+    .services-buysell-page-desc {
+        width: auto;
+        float: left;
+        padding: 0 5%;
+        text-align: center;
+    }
+    li.li-services-page {
+        width: 100%;
+        margin: 0 0 15px 0;
+    }
+    .logo {
+        margin-bottom: -38px;
+        margin-top: -20px;
+    }
+
+    #search_mini_form .search .label {
+    margin-top: 22px;
+    }
+    .header.wishcompare {
+        float: right;
+        position: relative;
+        top: 0px;
+        right: 50px;
+        margin: -5px 0px !important;
+    }
+    .header.panel > .header.contacts{
+        margin: 0px;
+        float: left;
+    }
+    .categories {
+        width: 100%;
+        float: left;
+        height: auto;
+        margin-right: 11px;
+    }
+     .home-brands {
+         width: 50%;
+         float: left;
+         height: 100px;
+     }
+     .panel.header{
+        padding-top:15px;
+     }
+     .minicart-wrapper {
+        display: inline-block;
+        float: right;
+        position: absolute;
+        margin-left: 205px;
+        right: 28px !important;
+        top: -100px !important;
+    }
+
+    .li-icons {
+        float: left;
+        width: 100%;
+        text-align: left;
+    }
+    .ul-icons{
+        display: block;
+    }
+    .lbl-popularcat, .lbl-topbrands, .lbl-featuredcars {
+        width: 84%;
+    }
+
+	.cms-image-container {
+		width: 70%;
+		margin: 0 auto 10px;
+	}
+	.cms-container {
+		padding: 30px 0;
+	}
+
+}
+@media only screen and (max-width: 480px){
+    .shopautoparts,.shopcars{
+        padding: 10% 0;
+    }
+    .shoplink-title {
+        font-family: 'Muli ExtraBold';
+        color: #FFF;
+        font-size: 28px !important;
+        font-weight: bold;
+        padding: 0px 0px 0 !important;
+        text-align: center;
+    }
+	.ul-missionvision-icons{
+		padding: 0px !important;
+	}
+	.ul-steps{
+		display: block !important;
+	}
+	.missionvision-icons{
+		margin: 30px auto !important;
+	}
+     .categories {
+         width: 100%;
+         float: left;
+         height: auto !important;
+     }
+     .categories img {
+        width: 100%;
+        height: 135px;
+        object-fit: cover;
+        object-position: bottom;
+    }
+     .home-brands {
+         width: 50%;
+         float: left;
+         height: 100px;
+     }
+
+     .div-news img{
+          width: 100%;
+     }
+     .subcat-container{
+        display: none !important;
+    }
+    .subcat-container.active{
+        display: block !important;
+    }
+    .sub-categories {
+        background: #f8f7f7;
+        padding: 10px;
+        height: 40px;
+        margin-bottom: 8px;
+    }
+    .sub-categories a{
+        margin-left: 10px;
+    }
+    .li-icons{
+        display: inline-flex;
+    }
+
+    .sidebar-main{
+        padding: 0px 15px;
+    }
+
+    #trackorder-fieldset {
+        padding: 20px 55px 100px !important;
+    }
+
+
+
+    .form.inquiry.success{
+        min-width: 310px !important;
+    }
+}
+@media(max-width: 479px){
+    .minicart-items .product-item-details {
+        float: left;
+        padding-left: 0px;
+    }
+    /* .header.contacts li, .header.panel > .header.links > li.welcome, .header.panel > .header.links > li > a { */
+        /* font-size: 10px; */
+    /* } */
+    .header.contacts li{
+        margin: 0px;
+    }
+    .action.showcart {
+        left: 7px;
+    }
+}
+
+ @media (min-width: 640px) {
+     .products-grid .product-item-actions {
+         margin: 0;
+    }
+     .product-item-actions .actions-primary {
+         display: block;
+    }
+     .page-products .products-grid .product-item-inner:before{
+         height: unset;
+         top: unset;
+    }
+     .review-toolbar {
+         margin: 0 0 0;
+    }
+     .page-header .header.panel {
+         padding: 8px 15px;
+    }
+     .products-grid .product-item-inner{
+         box-shadow: 3px 3px 4px 0 rgba(0, 0, 0, 0.3);
+         border: 1px solid #bbbbbb;
+    }
+
+}
+
+@media (max-width: 320px){
+	.minicart-wrapper {
+		top: -94px !important;
+	}
+		#search_mini_form .search .label {
+		margin-top: 35px;
+	}
+
+	.sales-order-view .column.main .block:not(.widget) .block-content .box{
+		width: 80% !important;
+	}
+}
+
+.page-products .columns{
+    width: 100% !important;
+	z-index: -0 !important;
+}
+
+@media(max-width: 1526px){
+    /* #product-addtocart-button{ */
+        /* width: 100%; */
+        /* max-width: 210px; */
+        /* color: white; */
+        /* background: #006bb4; */
+        /* border: 1px solid #006bb4; */
+    /* } */
+    .catalog-product-view .prod-desc-content{
+            margin-left: 12% !important;
+            width: 100% !important;
+            margin-bottom: 14px;
+    }
+    .catalog-product-view .prod-desc-ads{
+        width: 100%;
+       margin-left: 12% !important;
+       float: left;
+    }
+    /* .bundle-options-container .block-bundle-summary .box-tocart, .box-tocart{ */
+            /* margin: 0; */
+            /* text-align: center; */
+    /* } */
+    .product-info-main .stock.available, .product-info-main .stock.unavailable{
+        margin:15px 0;
+    }
+    .product-info-main .product-info-stock-sku{
+        margin-bottom: 0;
+    }
+}
+
+.product-inquire {
+    float: left;
+    width: 100%;
+    position: relative;
+    margin: 20px 0;
+}
+
+.catalog-product-view .link-inquire-car {
+    width: 80%;
+    text-align: center;
+    float: left;
+}
+@media only screen and (max-width: 767px){
+    .catalog-product-view .prod-desc-ads {
+        width: 100% !important;
+    }
+    .catalog-product-view .prod-desc-content{
+        margin-left: 0 !important;
+    }
+    .prod-desc-ads > div{
+       margin: 18px 0;
+    }
+}
+
+
+@media only screen and (max-width: 64em) {
+
+.catalog-category-view .products-grid .product-item-info .action.towishlist,
+ .catalog-category-view .products-grid .product-item-info .action.tocompare,
+ .catalog-category-view .products-grid .product-item-info .action.toshare,
+ .catalog-category-view .products-grid .product-item-info .action.toreview{
+    background: #f7f7f7 !important;
+    color: #a3a3a3 !important;
+
+ }
+
+.catalog-category-view .action.toshare:before{
+    width:18px;
+    opacity:1;
+    }
+
+.catalog-category-view .action.toreview:before{
+content: url(../images/review-catalog-icon.png)!important;
+width:18px;
+opacity:1;
+}
+.catalog-category-view .action.tocompare:before {
+content: url(../images/compare-catalog-icon.png)!important;
+width:18px;
+opacity:1;
+}
+
+.catalog-category-view .products-grid .product-item-info .toshare:before,
+.catalog-category-view .products-list .product-item-info .toshare:before{content: url(../images/share-catalog-icon.png) !important;/* z-index: 9999; *//* opacity: 1; *//* color: red; *//* position: relative; */}
+.product-item-actions{
+    display: block;
+}
+
+}
+

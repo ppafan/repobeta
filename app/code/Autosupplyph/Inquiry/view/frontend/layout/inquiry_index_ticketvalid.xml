@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <title>Check Ticket Status</title>
+    </head>
+    <body>
+        <referenceBlock name="breadcrumbs">
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Home</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Home</item>
+                    <item name="label" xsi:type="string">Home</item>
+                    <item name="link" xsi:type="string">{{baseUrl}}</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Open A Ticket</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Open A Ticket</item>
+                    <item name="label" xsi:type="string">Open A Ticket</item>
+                    <item name="link" xsi:type="string">/inquiry/index/support?success=</item>
+                </argument>
+            </action>
+            <action method="addCrumb">
+                <argument name="crumbName" xsi:type="string">Check Ticket Status</argument>
+                <argument name="crumbInfo" xsi:type="array">
+                    <item name="title" xsi:type="string">Check Ticket Status</item>
+                    <item name="label" xsi:type="string">Check Ticket Status</item>
+                </argument>
+            </action>
+        </referenceBlock>
+        <referenceContainer name="page.top">
+            <container name="support.view.container" htmlTag="div" htmlClass="support-view" before="breadcrumbs">
+                <block class="Magento\Framework\View\Element\Template" name="support.image" template="Autosupplyph_Support::support_header.phtml"/>
+            </container>
+        </referenceContainer>     
+        <referenceContainer name="content">
+            <block class="Autosupplyph\Inquiry\Block\Checkticket" name="inquiry.ticketvalid" template="Autosupplyph_Inquiry::ticketvalid_inquiry.phtml"/>
+        </referenceContainer>
+    </body>
+</page>

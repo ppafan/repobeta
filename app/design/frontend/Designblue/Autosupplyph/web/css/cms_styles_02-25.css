@@ -1,0 +1,892 @@
+.cms-privacy-policy-disclaimer .columns, 
+.cms-privacy-of-children .columns, 
+.cms-personal-information-gathering .columns, 
+.cms-access-and-use-of-personal-information .columns, 
+.cms-consent-withdrawal .columns, 
+.cms-changes-on-your-personal-details .columns, 
+.cms-your-personal-information-s-security .columns, 
+.cms-changes-to-the-privacy-policy .columns, 
+.cms-disclaimer .columns, 
+.cms-computer-data-gathering .columns {
+    margin: 40px 0;
+}
+
+.support-image {
+    height: 107px;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    margin: 0;
+    background: url('../images/support_banner.png') no-repeat
+}
+
+.support-name {
+	font-family: 'Raleway ExtraBold';
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 20px 140px 0;
+}
+
+.suppport-submenu {
+    background: #313131;
+    width: 100%;
+    height: 50px;
+}	
+.sub-support {
+    padding: 0;
+    list-style: none;
+    background: #313131;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.list-subsupport {
+	float: left;
+    margin: 0;
+    min-width: 30px;
+    max-width: 160px;
+    padding: 4px 20px;
+    height: 40px;
+    border-right: 2px solid #1a1a1a;
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.list-subsupport a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 40px;
+    color: #FFF !important;
+	font-family: 'Raleway SemiBold';
+	font-size: 12px;
+}
+
+.list-subsupport:hover, .list-subsupport.active{
+    background: #ed1f24;
+}
+
+.list-subsupport a:hover {
+    text-decoration: none;
+	color: #FFF;
+}
+
+.support-index-faqs .page-title-wrapper,
+.support-index-payments .page-title-wrapper,
+.support-index-warranty .page-title-wrapper,
+.support-index-terms .page-title-wrapper,
+.support-index-shipping .page-title-wrapper {
+    width: 68%;
+    margin: 0 auto;
+    text-align: center;
+}
+.support-index-faqs .page-title,
+.support-index-payments .page-title,
+.support-index-warranty .page-title,
+.support-index-terms .page-title,
+.support-index-shipping .page-title {
+    color: #000;
+    font-family: 'Raleway Bold';
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 40px 0 0;
+}
+
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto 40px;
+    width: 5%;
+}
+
+.support-index-faqs .page-main,
+.support-index-payments .page-main,
+.support-index-warranty .page-main,
+.support-index-terms .page-main,
+.support-index-shipping .page-main {
+    background: #f7f7f7;
+}
+
+.faqs-title,
+.delivery-title {
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+}
+
+.faqs-content,
+.delivery-content {
+    padding: 20px 0;
+}
+
+.specs-title{
+    padding: 20px 0;
+    margin-bottom: 10px;
+    background: #f7f7f7;
+}
+
+.specs-content {
+    margin-left: 50px;
+}
+
+.prod-specs-trigger{
+    margin-left: 50px;
+}
+
+.prod-specs-trigger img{
+    float: right;
+    margin-right: 20px;
+}
+
+.payments-content,
+.payments-desc,
+.terms-content
+ {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.payments-list {
+	width: 100%;
+    margin: 0 auto;
+}
+
+.paylist {
+	width: 140px;
+    margin: 30px 10px;
+    padding: 17px 10px;
+    box-shadow: 0 0 20px 0 #888888;
+    background: #fff;
+    border-radius: 5px;
+    float: left;
+}
+
+.paylist p {
+	font-size: 12px;
+    text-align: center;
+}
+
+.payment-img{
+	height: 75px;
+}
+
+.payment-type {
+    height: 40px;
+}
+
+.terms-title{
+	color: #ed1f24;
+}
+
+.lbl-delivery {
+    color: #ed1f24;
+    font-family: 'Raleway Bold';
+    font-size: 26px;
+    margin: 30px 0;
+}
+
+.steps {
+    text-align: center;
+    background: #fff;
+    margin: 15px 0 15px 0;
+}
+
+.ul-steps {
+    list-style: none;
+    display: inline-flex;
+    padding: 20px 0 0 0;
+    margin: 20px 0 0 0;
+}
+
+.li-steps {
+    text-align: center;
+    width: 80%;
+    padding: 25px;
+}
+
+.trackorders p {
+    font-size: 14px;
+}
+
+.ul-icons {
+    list-style: none;
+    display: inline-flex;
+    margin: 0px;
+}
+
+.li-icons {
+    display: inline-flex;
+    padding: 20px 15px 0px 10px;
+}
+p.p-icons {
+    margin: 15px;
+}
+
+.aboutus-image {
+    height: 107px;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    margin: 0;
+    background: url('../images/aboutus_banner.png') no-repeat;
+}
+
+.aboutus-name {
+    font-family: 'Raleway ExtraBold';
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 20px 140px 0;
+}
+
+.inquiry-index-contactus .page-title-wrapper,
+.inquiry-index-careers .page-title-wrapper,
+.category-general-merchandise .submenu-shopnow,
+.category-cars .submenu-shopnow-link.cars,
+.category-parts .submenu-shopnow-link.parts,
+inquiry-index-advertise .page-title-wrapper{
+	display:none;
+}
+
+.category-cars .sub-cat {
+    margin-left: 150px;
+}
+
+.category-cars .list-subcat {
+    padding: 5px 30px;
+}
+
+.category-parts .list-subcat {
+	padding: 5px 9px;
+}
+
+.category-general-merchandise .list-subcat {
+	padding: 5px 20px;
+}
+
+/*sub cat*/
+.subcat2 {
+    position: absolute;
+    right: 9%;
+    margin-top: 40px;
+    z-index: 9;
+}
+
+ul.subcat-more {
+    background: #2f3031;
+    padding: 0;
+    list-style: none;
+}
+
+.list-subcat2 {
+    margin: 0;
+    width: auto;
+    padding: 8px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.list-subcat2 a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 30px;
+    color: #FFF;
+}
+
+.list-subcat2:hover {
+    background: #e62f2d;
+}
+
+.list-subcat2 a:hover {
+    text-decoration: none;
+	color: #FFF;
+}
+
+.services-image {
+    height: 107px;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    margin: 0;
+    background: url('../images/services_banner.png') no-repeat;
+}
+
+.services-name {
+    font-family: 'Raleway ExtraBold';
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 20px 140px 0;
+}
+
+.services-desc {
+    font-size: 12px;
+    color: #fff;
+    width: 218px;
+    padding: 0 140px;
+}
+
+.services-submenu {
+    background: #313131;
+    width: 100%;
+    height: 50px;
+}
+
+.sub-services {
+    padding: 0;
+    list-style: none;
+    background: #313131;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.list-subservices {
+   float: left;
+    margin: 0;
+    min-width: 30px;
+    max-width: 85px;
+    padding: 4px 10px;
+    height: 40px;
+    border-right: 2px solid #1a1a1a;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.list-subservices a {
+	display: table-cell;
+    vertical-align: middle;
+    height: 39px;
+    color: #FFF !important;
+    font-family: 'Raleway SemiBold';
+    font-size: 12px;
+}
+
+.list-subservices:hover, .list-subservices.active {
+    background: #ed1f24;
+}
+
+.list-subservices a:hover {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.newspromos-image {
+    height: 107px;
+    background-size: 100% !important;
+    background-repeat: no-repeat !important;
+    margin: 0;
+    background: url('../images/newspromos_banner.png') no-repeat
+}
+
+.newspromos-name {
+    font-family: 'Raleway ExtraBold';
+    color: #FFF;
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 20px 140px 0;
+}
+
+.newspromos-submenu {
+    background: #313131;
+    width: 100%;
+    height: 50px;
+}	
+.sub-newspromos {
+    padding: 0;
+    list-style: none; 
+    background: #313131;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.list-newspromos {
+    float: left;
+    margin: 0;
+    padding: 4px 50px;
+    height: 40px;
+    border-right: 2px solid #1a1a1a;
+    text-align: left;
+    font-size: 10px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+}
+
+.list-newspromos a {
+    display: table-cell;
+    vertical-align: middle;
+    height: 40px;
+    color: #FFF !important;
+	font-family: 'Raleway SemiBold';
+	font-size: 14px;
+}
+
+.list-newspromos:hover, .list-newspromos.active{
+    background: #ed1f24;
+}
+
+.list-newspromos a:hover {
+    text-decoration: none;
+	color: #FFF;
+}
+
+li.item.blog{
+    display:none !important;
+}
+
+.dash, .item.post-categories, .item.post-author,
+.item.post-posed-date .label{
+	display:none;
+}
+
+.blog-category-view .column.main {
+    width: 100% !important;
+    float: left;
+}
+.blog-category-view .category-content,
+.post-list-wrapper {
+    width: 68%;
+    margin: auto;
+}
+
+.blog-category-view .message.info {
+    float: none;
+    width: 68%;
+    margin: 20px auto;
+}
+
+.news-lbl {
+    padding: 10px;
+    margin: 20px 0 10px 0;
+    background: linear-gradient(120deg, #c81c1f 30%, #fff 30%);
+}
+
+.lbl-news {
+    width: 26%;
+    text-align: right;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 22px;
+    font-family: 'Raleway ExtraBold';
+}
+
+.post-holder:hover {
+    box-shadow: unset !important;
+    position: relative;
+    z-index: 2;
+}
+
+.blog-category-view .post-holder {
+    background: none !important;
+    padding: 10px !important;
+    width: 45%;
+    float: left;
+}
+
+.post-content .post-description .post-ftimg-hld {
+    width: 150px;
+}
+
+.post-title {
+    margin: 0;
+}
+
+a.post-item-link {
+    color: #000 !important;
+    font-size: 18px;
+    font-family: 'Muli ExtraBold';
+}
+
+.post-info.clear {
+    font-size: 14px;
+}	
+
+.post-list .post-content .post-read-more {
+    float: left !important;
+}
+
+.news-lbl.Promos{
+	background: linear-gradient(120deg, #c81c1f 35%, #fff 35%);
+}
+
+.lbl-news.Promos {
+    width: 31%;
+}
+
+.lbl-news.Events {
+    width: 27%;
+}
+
+.blog-post-view .page-layout-2columns-right .column.main { 
+    width: 65%;
+    margin: 30px 0;
+    margin: auto !important;
+    float: none;
+}
+
+.blog-post-view .column.main {
+	width: 100%  !important;
+    margin: 0 !important;
+}
+
+.blog-post-view .post-holder{
+	background: none;
+	padding: 0 !important;
+}
+
+.post-nextprev-hld.clearfix, .block.comments {
+    display: none;
+}
+
+.blog-post-view .post-content {
+    width: 68%;
+    margin: 0 auto;
+}
+
+ol.block-content {
+    width: 68%;
+    margin: 0 auto;
+	list-style: none;
+}
+
+.blog-post-view .block-content .item {
+    background: none !important;
+    padding: 10px !important;
+    width: 45%;
+    float: left;
+}
+
+.post-img {
+    float: left;
+    margin: 0 15px 0 15px;
+    width: 33%;
+}
+
+.blog-post-view .block-title.title{
+	padding: 10px;
+    margin: 20px 0 10px 0;
+	background: linear-gradient(120deg, #c81c1f 35%, #fff 35%);
+}
+
+.blog-post-view .lbl-postview{
+    width: 29%;
+    text-align: right;
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Raleway ExtraBold';
+}
+.blog-post-view .lbl-postview strong {
+    font-size: 22px !important;
+}
+
+.post-social {
+    border-bottom: 1px solid #ccc;
+    width: 68%;
+    margin: 20px auto;
+    border-top: 1px solid #ccc;
+}
+
+.post-social ul {
+    list-style: none;
+    width: 100%;
+    margin: 0 auto !important;
+    display: inline-flex;
+    text-align: center;
+    padding: 0;
+}
+.post-social ul li {
+    padding: 10px;
+    margin: 0;
+}
+li.lbl-social {
+    color: #c92726;
+    margin-left: 34% !important;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 25px 10px !important;
+}
+
+.cms-community .page-main {
+    background: url('../images/community-BGart.png') no-repeat;
+	background-color: #f7f7f7;
+    background-repeat: no-repeat;
+    background-size: 31%;
+    background-position-x: 50%;
+    background-position-y: 30%;
+    min-height: 450px;
+}
+.community-desc {
+    text-align: center;
+    position: relative;
+    top: 255px;
+}
+
+.title-commnuity {
+    font-size: 24px;
+    font-family: 'Muli ExtraBold';
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+a.link-notfound{
+	text-transform: uppercase;
+	text-decoration:none;
+}
+
+a.link-notfound:hover{
+	background: #ed1f24;
+	color:#fff;
+}
+
+.category-car-rentals .category-view {
+    display: none;
+}
+
+.page-title-wrapper h1{
+	margin-bottom: 0px;
+}
+
+/*about us*/
+.cms-shipping-delivery .page-main{
+    background: #f7f7f7;
+}
+.div-aboutus-intro {
+    font-size: 16px;
+    padding: 15px 0;
+    margin: 0 auto;
+    font-family: 'Muli Regular';
+}
+
+.header-aboutus p {
+    text-align: center;
+    font-size: 26px;
+    font-family: 'Raleway ExtraBold';
+    color: #000000;
+}
+
+.aboutus-cms-title {
+    color: #ed1f24;
+}
+
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+.trackorders p{
+	font-size: 14px;
+}
+
+.steps {
+    text-align: center;
+    background: #fff;
+    margin: 15px 0 15px 0;
+}
+
+.ul-steps{
+	list-style: none;
+    display: inline-flex;
+    padding: 20px 0 0 0;
+    margin: 20px 0 0 0;
+
+}
+
+li.li-steps {
+    text-align: center;
+    width: 80%;
+    padding: 25px;
+}
+
+p.lbl-steps {
+    font-size: 18px;
+	font-family: 'Muli Bold';
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.steps-desc a {
+    color: #000;
+}
+
+.trackorders{
+	margin-top: 30px;
+}
+
+.ul-icons{
+    list-style: none;
+    display: inline-flex;
+    margin: 0px;
+
+
+}
+
+.li-icons{
+	display: inline-flex;
+    padding: 20px 15px 0px 10px;
+}
+
+p.p-icons {
+    margin: 15px;
+}
+
+.dv-aboutus {
+    padding-bottom: 25px;
+}
+.dv-delivery {
+    padding-top: 25px;
+}
+
+.div-delivery {
+    margin: 20px 0 20px 0;
+}
+
+.div-delivery-line {
+    border-top: grey 1px solid;
+}
+
+p.delivery-title {
+    font-size: 16px;
+}
+
+#securityisfirst{
+	color: #ff0000; font-family: 'Muli Bold';
+}
+.div-whatweoffer {
+    width: 100%;
+    background: #f7f7f7;
+}
+
+.div-offerings-icon{
+    margin: 15px 0 15px 0;
+}
+p.offerings-icon {
+    min-height: 180px;
+}
+
+
+h3#mandv{
+    font-family: 'Raleway Semibold';
+}
+.div-missionvision-icons{
+	text-align: center;
+}
+.ul-missionvision-icons{
+    list-style: none;
+    display: inline-flex;
+}
+.missionvision-icons{
+	padding: 30px 50px;
+    box-shadow: 0 0 20px 0 #888888;
+    background: #f7f7f7;
+    border-radius: 5px;
+    margin: 50px;
+}
+
+.mandv-links{
+	font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.mandv-links:hover{
+    background-color: #ed1f24;
+    color: #fff;
+}
+
+/*services*/
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+.header-srvc-page p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 0;
+}
+
+
+.ul-services-page{
+    list-style: none;
+}
+
+li.li-services-page {
+    width: 30%;
+    margin: 15px;
+    float: left;
+}
+
+p.service-desc {
+    text-align: left;
+    min-height: 100px;
+}
+
+p.services-redirect {
+    text-align: center;
+    margin-top: 30px;
+}
+
+a.services-redirect{
+    font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.services-buysell-page {
+    background: #f7f7f7;
+    margin: 35px 0 0;
+    padding: 40px 0px;
+    width: 100%;
+    float: left;
+}
+
+.services-buysell-page-img {
+	margin: 10px 40px;
+    float: left;
+}
+
+.services-buysell-page-desc {
+	width: 45%;
+    float: left;
+}
+
+.buysell-lbl-page {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.buysell-desc-page {
+    font-size: 12px;
+    padding: 10px 0 60px 0;
+}
+
+.cms-services .column.main,
+.cms-aboutus .column.main {
+    width: 100% !important;
+    padding: 0 !important;
+}
+
+#shareto{
+	left: auto !important;
+    right: 0 !important;
+}
+
+#shareto .social ul.share-list li{
+	float: right !important;
+}

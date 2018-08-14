@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="content">
+            <block class="Autosupplyph\Categories\Block\CategoriesCollection" name="categoriescollection" template="Autosupplyph_Categories::storecategories.phtml"/>
+		</referenceContainer>
+		
+		<!-- <referenceContainer name="content.bottom"> -->
+			<!-- <block class="Mageplaza\Productslider\Block\FeaturedProducts" name="product.slider.featuredcars" template="featuredcars.phtml"> -->
+				  <!-- <arguments> -->
+					<!-- <argument name="products_count" xsi:type="number">8</argument> -->
+					<!-- <argument name="margin" xsi:type="string">5</argument> -->
+					<!-- <argument name="heading" xsi:type="string">Featured Products</argument> -->
+					<!-- <argument name="description" xsi:type="string"></argument> -->
+					<!-- <argument name="dots" xsi:type="boolean">true</argument> -->
+				  <!-- </arguments> -->
+			<!-- </block> -->
+        <!-- </referenceContainer> -->
+		
+		<!-- <referenceContainer name="sidebar.main">             
+			<block class="Mageplaza\Productslider\Block\FeaturedProducts" name="product.slider.featuredproducts" template="featuredproducts.phtml"> 
+				<arguments> 					 
+					<argument name="products_count" xsi:type="number">4</argument> 					 
+					<argument name="margin" xsi:type="string">5</argument> 					 
+					<argument name="heading" xsi:type="string">Featured Products</argument> 					 
+					<argument name="description" xsi:type="string"></argument> 					 
+					<argument name="dots" xsi:type="boolean">true</argument> 				   
+				</arguments> 			 
+			</block>          
+		</referenceContainer>-->
+
+    </body>
+</page>

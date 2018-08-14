@@ -1,0 +1,140 @@
+<?php
+
+    $showsuccessmessage = 0;
+    $ifsuccess = $_GET['success'];
+
+    if($ifsuccess == true){
+        $showsuccessmessage = 1;
+    }
+
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<div class="header-careers"><p>Careers</p>
+</div>
+
+<div class="div-careers-intro">
+<p class="div-careers-intro-1">We encourage auto-related businesses and entrepreneurs to be our partner and be aprt of our family. Join our success and enjoy equal opportunities. Your growth heere as a competitive entrepreneur is our achievement and you will never have to lose your passion for we are all dedicated to accomplishing the challenges and share the triumph that this business will bring us. <br/>
+</p>
+</div>
+<div class="dv-careers">
+
+
+
+<?php if($showsuccessmessage == 1){ ?>
+<form class="form inquiry success form-inquiry-car">
+    <fieldset class="fieldset inquiry car">
+    <div class="success-div">
+        <p class="success-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Form_sent-icon.png" /></p>
+        <h3 class="success-title">Thank you!</h3>
+        <p class="success-label">Your message has been sent. Please expect our response shortly.</p>
+    </div>
+    </fieldset>
+</form>
+<style>
+.g-recaptcha{
+    display: none;
+}
+</style>
+<?php }else{ ?>
+
+<form class="form inquiry car form-inquiry-car"
+
+action="<?php echo $block->getFormAction() ?>"
+
+method="post"
+
+id="inquirycar-form"
+
+data-mage-init='{"validation":{}}'>
+
+    <fieldset class="fieldset inquiry car">
+
+        <div class="field field-fullname required">
+
+            <label class="label" for="fullname">
+
+                <span>Full Name</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="fullname" name="fullname" value="" title="Full Name" class="input-text required-entry"  data-validate="{required:true}">
+
+            </div>
+
+        </div>
+
+
+        <div class="field field-email required">
+
+            <label class="label" for="email">
+
+                <span>Email</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="email" name="email" value="" title="Email Address" class="input-text required-entry"  data-validate="{required:true, 'validate-email':true}">
+
+            </div>
+
+        </div>
+
+        <div class="field field-mobile required">
+
+            <label class="label" for="mobile">
+
+                <span>Phone Number</span>
+
+            </label>
+
+            <div class="control">
+
+                <input type="text" id="mobile" name="mobile" value="" title="Contact Number" class="input-text required-entry"  data-validate="{required:true}">
+
+            </div>
+
+        </div>
+
+        <div class="field field-message required">
+            <label class="label" for="message">
+                <span>Your Message</span>
+            </label>
+
+            <div class="control">
+                <textarea id="message" name="message" value="" title="message" class="input-text required-entry"  data-validate="{required:true}" rows="7"></textarea>
+            </div>
+        </div>
+
+        <center>
+        
+            <?php echo $this->getLayout()->createBlock("Monashee\Recaptcha\Block\Recaptcha")->setTemplate("Monashee_Recaptcha::recaptcha.phtml")->toHtml();?>
+        
+        </center>
+
+    </fieldset>
+
+
+
+    <div class="actions-toolbar">
+
+        <div class="primary">
+
+            <button type="submit" class="action submit primary" title="Send"><span>Send</span></button>
+
+        </div>
+
+    </div>
+<?php } ?>
+</form>
+    
+</div>

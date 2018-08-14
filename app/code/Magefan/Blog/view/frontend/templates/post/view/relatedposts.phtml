@@ -1,0 +1,56 @@
+<?php
+/**
+ * Copyright © Magefan (support@magefan.com). All rights reserved.
+ * See LICENSE.txt for license details (http://opensource.org/licenses/osl-3.0.php).
+ *
+ * Glory to Ukraine! Glory to the heroes!
+ */
+?>
+<?php
+/**
+ * Blog related posts template
+ *
+ * @var $block \Magefan\Blog\Block\Post\View\RelatedPosts
+ */
+
+?>
+
+<?php if ($block->displayPosts()) { ?>
+    <?php $_postCollection = $block->getPostCollection(); ?>
+    <?php if ($_postCollection->count()) { ?>
+    <div class="block related">
+        <div class="block-title title">
+			<div class="lbl-postview">
+            <strong id="block-relatedposts-heading" role="heading" aria-level="2">
+                <?php echo __('Related Articles') ?>
+            </strong>
+			</div>
+        </div>
+        <ol class="block-content">
+            <?php foreach ($_postCollection as $_post) { ?>
+			
+			<?php 
+				$publishtime = $_post->getPublishTime();
+			
+
+			?>
+                <li class="item">
+					<div class="post-img">
+					<img src="<?php echo $featuredImage = $_post->getFeaturedImage(); ?>">
+					</div>
+					<div class="post-details">
+						<a class="post-item-link"
+						   href="<?php echo $_post->getPostUrl() ?>">
+							<?php echo $block->escapeHtml($_post->getTitle()); ?>
+						</a>
+						<br/>
+						<a class="post-read-more" href="<?php echo $_post->getPostUrl(); ?>" title="<?php echo $_post->getTitle(); ?>">
+							Read more »				
+						</a>
+					</div>
+                </li>
+            <?php } ?>
+        </ol>
+    </div>
+    <?php } ?>
+<?php } ?>

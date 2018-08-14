@@ -1,0 +1,74 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<div class="header-rentalsandleasing"><p>NEWS</p>
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="dv-rentalsandleasing">
+<p class="div-rentalsandleasing-intro">Read the latest auto-related news all around the world. Autosupply.ph is here to present you the freshest articles from the famous car brands to the freshest trends in auto industry.<br/>
+
+</p>
+
+<p class="div-rentalsandleasing-intro">We'll give you the auto-related viral links that everybody's talking about and some important reviews that you have to know when you decide to buy your own car.<br/>
+
+</p>
+	
+</div>
+
+<style>
+.header-rentalsandleasing p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+
+.div-rentalsandleasing-imge {
+    width: 50%;
+}
+
+.div-rentalsandleasing-desc {
+    width: 50%;
+    padding: 0px 0 0 60px;
+}
+
+#rentalsandleasing-desc-title{
+    font-size: 19px;
+    font-weight: 600;
+    padding: 40px 0;
+}
+
+.div-rentalsandleasing-inquire{
+	text-align: center;
+}
+
+.header-rentalsandleasing-inquire p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ed1f24;
+}
+
+.div-rentalsandleasing-inquire p {
+	padding: 10px 0 20px 0;
+}
+
+.div-rentalsandleasing-intro {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 40px 0;
+}
+
+
+</style>

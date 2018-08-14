@@ -1,0 +1,86 @@
+<?php
+$_helper = $this->helper('Acommerce\Address\Helper\Data');
+?>
+
+<script type="text/javascript">
+    var addresses = <?php echo $_helper->getCustomerAddresses(); ?>;
+    setInterval(initSelectChange, 1000);
+
+    function initSelectChange() {
+        require([
+            'jquery'
+        ], function($) {
+            var setZip = function (ob){
+                eid = ob.data('eid');
+                if($(ob).val()){
+                    $('input[name="address['+eid+'][postcode]"]').val($(ob).find('option:selected').text());
+                }else{
+                    $('input[name="address['+eid+'][postcode]"]').val($(ob).val());
+                }
+
+                $('input[name="address['+eid+'][postcode]"]').trigger('change');
+            }
+
+            var setSubdistrict = function(ob){
+                eid = ob.data('eid');
+                if($(ob).val()){
+                    $('input[name="address['+eid+'][subdistrict]"]').val($(ob).find('option:selected').text());
+                }else{
+                    $('input[name="address['+eid+'][subdistrict]"]').val($(ob).val());
+                }
+
+                $('input[name="address['+eid+'][subdistrict]"]').trigger('change');
+            }
+
+            var setCity = function(ob){
+                eid = ob.data('eid');
+                if($(ob).val()){
+                    $('input[name="address['+eid+'][city]"]').val($(ob).find('option:selected').text());
+                }else{
+                    $('input[name="address['+eid+'][city]"]').val($(ob).val());
+                }
+
+                $('input[name="address['+eid+'][city]"]').trigger('change');
+            }
+
+
+            for(var i in addresses){
+                if(addresses[i].appliedchange=='0' ){
+                    if($('input[name="address['+i+'][postcode]"]').length){
+                        $('select[name="address['+i+'][zipcode]"]').data('eid',i)
+                        $('select[name="address['+i+'][zipcode]"]').change(function(){
+                            setZip($(this));
+                        })
+                        if($('input[name="address['+i+'][postcode]"]').val()){
+                            $('select[name="address['+i+'][zipcode]"]').val($('input[name="address['+i+'][postcode]"]').val()).trigger('change');
+                        }
+                        $('input[name="address['+i+'][postcode]"]').parents('.admin__field').hide();
+                    }
+                    if($('input[name="address['+i+'][subdistrict]"]').length){
+                        $('select[name="address['+i+'][subdistrict_id]"]').data('eid',i)
+                        $('select[name="address['+i+'][subdistrict_id]"]').change(function(){
+                            setSubdistrict($(this));
+                        })
+                        $('input[name="address['+i+'][subdistrict]"]').parents('.admin__field').hide();
+                    }
+                    if($('input[name="address['+i+'][city]"]').length){
+                        $('select[name="address['+i+'][city_id]"]').data('eid',i)
+                        $('select[name="address['+i+'][city_id]"]').change(function(){
+                            setCity($(this));
+                        })
+                        $('input[name="address['+i+'][city]"]').parents('.admin__field').hide();
+                    }
+                    if($('select[name="address['+i+'][country_id]"]').length && $('select[name="address['+i+'][country_id]"]').val() == ""){
+                        $('select[name="address['+i+'][country_id]"]').val("PH").trigger('change');
+                    }
+                    if($('select[name="address['+i+'][region_id]"]').length){
+                        addresses[i].appliedchange = 1;
+                    }
+                }
+            }
+
+
+        });
+    }
+
+</script>

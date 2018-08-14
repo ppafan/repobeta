@@ -1,0 +1,117 @@
+<?php
+if ($block->getEnableTrackOrder()) {
+?>
+<div class="mcs-track" id="mcs_track">
+    <h2 class="trackmyorder-title"><?php /* @noEscape */ echo __('Track My Order'); ?></h2>
+    <div class="div-careers-intro">
+        <p class="div-careers-intro-1">Welcome to our Order Tracking Page.
+        </p>
+
+        <p class="div-careers-intro-1">
+        Please fill up the information boxes to quickly track the status of your order. <br/>
+        If in the event that you don't have the order number, please refer to the confirmation email that we have sent to your email address. <br/>
+        For more inquiries, do not hesitate to “Contact Us” so we can assist you with your concern. 
+        Thank you.
+        </p>
+    </div>
+    <form class="form track-order"
+          name="track_order"
+          action="<?php /* @noEscape */ echo $block->getAjaxUrl(); ?>"
+          id="track_order"
+          method="post"
+          data-hasrequired="<?php /* @noEscape */ echo __('* Required Fields') ?>"
+          data-mage-init='{"validation":{}}'>
+        <fieldset class="fieldset" id="trackorder-fieldset">
+            <div class="field order required">
+                <label class="label" for="name">
+                    <span><?php /* @noEscape */ echo __('Order Number') ?></span>
+                </label>
+                <div class="control">
+                    <input name="order" id="order_id" title="<?php /* @noEscape */ echo __('Order Number') ?>"
+                    value="<?php if ($block->getRequest()->getParam('ord')) {/* @noEscape */ echo $block->getRequest()->getParam('ord');} ?>"
+                        class="input-text" type="text" data-validate="{required:true}"/>
+                </div>
+            </div>
+            <div class="field email required">
+                <label class="label" for="email">
+                    <span><?php /* @noEscape */ echo __('Email Address') ?></span>
+                </label>
+                <div class="control">
+                    <input name="email" id="email_order" title="<?php /* @noEscape */ echo __('Email Address') ?>"
+                    value="<?php if ($block->getRequest()->getParam('email')) { /* @noEscape */ echo $block->getRequest()->getParam('email');} ?>"
+                    class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+
+            <!-- Google Recaptcha -->
+
+        <?= $block->getChildHtml('form_additional_info') ?>
+            <!-- Google Recaptcha -->
+            
+        </fieldset>
+        <div class="actions-toolbar">
+            <div class="primary">            
+                <button type="submit" title="<?php /* @noEscape */ echo __('Track') ?>"
+                class="action submit primary track-info">
+                    <span><?php /* @noEscape */ echo __('Track') ?></span>
+                </button>
+            </div>
+        </div>
+    </form>
+</div>
+<div id="mcs-tracking-info"></div>
+<style>
+.trackmyorder-title{
+    font-family: 'Raleway Bold';
+}
+
+
+#trackorder-fieldset{
+    background: #FFF;
+    margin-top: 30px;
+    padding: 20px 30px 100px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 12px 2px #ccc;
+    width: 59%
+}
+
+#order_id, #email_order {
+    width: 80%;
+}
+
+button.action.submit.primary.track-info {
+    font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+    box-shadow: none;
+}
+
+button.action.submit.primary.track-info:hover {
+    background-color: #ed1f24;
+    color: #fff;
+}
+
+.g-recaptcha {
+    margin: 0px 30px;
+    position: relative;
+    top: -165px;
+}
+
+</style>
+<script type="text/javascript">
+//<![CDATA[
+require(
+    ['jquery','mcs'],
+    function($,mcs){
+        var ajaxurl = '<?php /* @noEscape */ echo $block->getAjaxUrl() ?>';
+        mcs.mcsData(ajaxurl);
+    }
+);
+// ]]>
+</script>
+<?php } ?>

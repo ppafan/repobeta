@@ -1,0 +1,44 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Customer\Block\Newsletter $block */
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<?= $block->getChildHtml('form_before') ?>
+    <form class="form form-newsletter-manage" action="<?= $block->escapeUrl($block->getAction()) ?>" method="post" id="form-validate">
+        <fieldset class="fieldset">
+            <?= $block->getBlockHtml('formkey') ?>
+            <legend class="legend"><span class="subscriptionoption"><?= $block->escapeHtml(__('Subscription option')) ?></span></legend><br>
+            <div class="field choice">
+                <input type="checkbox" name="is_subscribed" id="subscription" value="1" title="<?= $block->escapeHtmlAttr(__('General Subscription')) ?>"<?php if ($block->getIsSubscribed()): ?> checked="checked"<?php endif; ?> class="checkbox">
+                <label for="subscription" class="label"><span><?= $block->escapeHtml(__('Subscribe to Auto Supply PH Newsletter')) ?></span></label>
+            </div>
+            <?php /* Extensions placeholder */ ?>
+            <?= $block->getChildHtml('customer.form.newsletter.extra') ?>
+        </fieldset>
+		
+		<fieldset class="fieldset newsletter-additional">
+            <div class="newsletter-container">
+    			<div class="newsletter-img"><img src="<?php echo $mediaUrl?>wysiwyg/Newsletter-icon.png" /></div>
+    			<div class="newsletter-desc">
+    				<span class="newsletter-desc-title">Better to subscribe than get left behind!</span>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultrices nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
+    			</div>
+            </div>
+		</fieldset>
+		
+        <div class="actions-toolbar">
+            <div class="primary"><button type="submit" title="<?= $block->escapeHtmlAttr(__('Save')) ?>" class="action save primary"><span><?= $block->escapeHtml(__('Save Changes')) ?></span></button></div>
+            <div class="secondary"><a class="action back" href="<?= $block->escapeUrl($block->getBackUrl()) ?>"><span><?= $block->escapeHtml(__('Back')) ?></span></a></div>
+        </div>
+    </form>
+<?php /* Extensions placeholder */ ?>
+<?= $block->getChildHtml('customer.form.newsletter.extra2') ?>

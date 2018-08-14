@@ -1,0 +1,38 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+$baseUrl = $currentStore->getBaseUrl();
+
+?>
+
+<div class="header-bottom">&nbsp;</div>
+
+<div class="payments-content">
+	<p class="payments-desc">
+		We give priority to the importance of the security while shopping here on our website so we provide a broad range of secure payment options including cash-on-delivery, where a payment can only be done after receiving the package. 
+	</p>
+	
+	<div class="payments-list">
+		<div class="paylist">
+			<p class="payment-img"><img src="<?php echo $mediaUrl?>wysiwyg/Credit_Cards-icon.png" /></p>
+			<p class="payment-type">Credit Card</p>
+		</div>
+		
+		<div class="paylist">
+			<p class="payment-img"><img src="<?php echo $mediaUrl?>wysiwyg/Debit_cards-icon.png" /></p>
+			<p class="payment-type">Debit Card / Net Banking</p>
+		</div>
+		
+		<div class="paylist">
+			<p class="payment-img"><img src="<?php echo $mediaUrl?>wysiwyg/E-wallet_payments-icon.png" /></p>
+			<p class="payment-type">E-Wallet payments <br> (Globe G-Cash, Smart Money)</p>
+		</div>
+		
+		<div class="paylist">
+			<p class="payment-img"><img src="<?php echo $mediaUrl?>wysiwyg/Over-the-counter-icon.png" /></p>
+			<p class="payment-type">Over-the-Counter <br> Cash Payments</p>
+		</div>
+	</div>
+</div>

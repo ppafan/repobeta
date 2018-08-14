@@ -1,0 +1,283 @@
+<?php
+    $showsuccessmessage = 0;
+    $ifsuccess = $_GET['success'];
+
+    if($ifsuccess == true){
+        $showsuccessmessage = 1;
+    }
+
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+$baseUrl = $currentStore->getBaseUrl();
+
+?>
+
+<div class="header-carmaintenance"><p>ADVERTISE WITH US</p>
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="div-advertise-intro">
+<p class="div-advertise-intro-1">Over a million and more buyers from a small-to-medium auto-related enterprises all over the city rely online to discover, compare and purchase the products and services they need for their business. <br/>
+
+</p>
+<p class="div-advertise-intro-1">
+Autosupply.ph will give you that potential to have a continuous and unlimited purchase transactions through its period of operations. <br/>
+</p>
+<p class="div-advertise-intro-1">
+Make your business gain more popularity and skyrocket the size of your network. Simply fill out this form and we will give everything you need to know through E-mail or phone call to advertise your products on our platform. <br/>
+</p>
+<p class="div-advertise-intro-2">
+Are you ready to reach our audience? Get in touch and Advertise with us now!
+</p>
+</div>
+<div class="dv-advertise">
+
+
+<?php if($showsuccessmessage == 1){ ?>
+<form class="form inquiry success form-inquiry-car">
+    <fieldset class="fieldset inquiry car">
+    <div class="success-div">
+        <p class="success-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Form_sent-icon.png" /></p>
+        <h3 class="success-title">Thank you!</h3>
+        <p class="success-label">Your message has been sent. Please expect our response shortly.</p>
+    </div>
+    </fieldset>
+</form>
+<style>
+.g-recaptcha{
+    display: none;
+}
+</style>
+<?php }else{ ?>
+
+
+<form class="form inquiry car form-inquiry-car"
+
+action="<?php echo $block->getFormAction() ?>"
+
+method="post"
+
+id="inquirycar-form"
+
+data-mage-init='{"validation":{}}'>
+
+    <fieldset class="fieldset inquiry car">
+
+        <div class="field field-fullname required">
+
+            <label class="label" for="fullname">
+
+                <span>Full Name</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="fullname" name="fullname" value="" title="Full Name" class="input-text required-entry"  data-validate="{required:true}">
+
+            </div>
+
+        </div>
+
+
+
+        <div class="field field-company required">
+
+            <label class="label" for="company">
+
+                <span>Company</span>
+
+            </label>
+
+            <div class="control">
+
+                <input type="text" id="company" name="company" value="" title="Company" class="input-text required-entry"  data-validate="{required:true}">
+
+            </div>
+
+        </div>
+
+
+
+        <div class="field field-email required">
+
+            <label class="label" for="email">
+
+                <span>Email Address</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="email" name="email" value="" title="Email Address" class="input-text required-entry"  data-validate="{required:true, 'validate-email':true}">
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="field field-mobile required">
+
+            <label class="label" for="mobile">
+
+                <span>Contact Number</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="mobile" name="mobile" value="" title="Contact Number" class="input-text required-entry"  data-validate="{required:true}">
+
+            </div>
+
+        </div>
+
+        <center>
+        
+            <?php echo $this->getLayout()->createBlock("Monashee\Recaptcha\Block\Recaptcha")->setTemplate("Monashee_Recaptcha::recaptcha.phtml")->toHtml();?>
+        
+        </center>
+
+    </fieldset>
+
+
+
+    <div class="actions-toolbar">
+
+        <div class="primary">
+
+            <button type="submit" class="action submit primary" title="Send"><span>Send</span></button>
+
+        </div>
+
+    </div>
+<?php } ?>
+</form>
+    
+</div>
+
+<style>
+
+.page-title-wrapper span{
+    display: none;
+}
+.header-carmaintenance p {
+    font-family: 'Raleway Bold';
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+/*.dv-advertise{
+    display: none;
+}*/
+
+.div-advertise-intro {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 40px 0;
+    width: 68%;
+    margin: 0 auto;
+}
+
+p.div-advertise-intro-1{
+    margin-top: 10px;
+}
+
+p.div-advertise-intro-2{
+    margin-top: 50px;
+}
+
+.inquiry-index-advertise .column.main{
+    width: 100%;
+}
+
+
+.inquiry-index-advertise .form.inquiry.car{
+    width: 30%;
+    min-width: 460px;
+    margin: 0 auto;
+}
+
+button.action.submit.primary {
+    font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+button.action.submit.primary:hover{
+    background-color: #ed1f24; 
+    color: #fff;
+}
+
+.form-inquiry-car {
+    padding: 10px 0 100px 0;
+}
+
+/*.g-recaptcha {
+    width: 22%;
+    margin: 0 auto;
+    position: relative;
+    top: -170px;
+}*/
+
+.actions-toolbar{
+    position: relative;
+    top: 80px;
+}
+
+.form.inquiry.success{
+    box-shadow: 0 0 20px 0 #888888;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+.success-div{
+    text-align: center;
+    padding: 50px;
+}
+h3.success-title {
+    color: #C81C1F;
+}
+p.success-icon {
+    width: 20%;
+    margin: 0 auto;
+}
+
+p.success-label {
+    width: 75%;
+    margin: 0px auto;
+    font-family: 'Muli Bold';
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+</style>

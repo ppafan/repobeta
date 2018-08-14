@@ -1,0 +1,95 @@
+<script>
+    window.cityJson = <?php /* @escapeNotVerified */ echo $this->helper('Acommerce\Address\Helper\Data')->getCityJson() ?>;
+    window.subdistrictJson = <?php /* @escapeNotVerified */ echo $this->helper('Acommerce\Address\Helper\Data')->getSubdistrictJson() ?>;
+    window.postcodeJson = <?php /* @escapeNotVerified */ echo $this->helper('Acommerce\Address\Helper\Data')->getPostcodeJson() ?>;
+    require(['jquery'],function($){
+        $(document).ready(function(){
+            $(document).on('change', '#region_id', function() {
+                var region_id = $(this).val(),
+                    listCities = window.cityJson[region_id];
+                $('#city_id').find('option:not(:first)').remove();
+                if(listCities){
+                    $.each(listCities, function(index, value) {
+                        $('#city_id')
+                            .append($("<option></option>")
+                                .attr("value",index)
+                                .text(value));
+                    });
+                }
+            });
+            $(document).on('change', '#city_id', function() {
+                var city_id = $(this).val(),
+                    listSubdistrict = window.subdistrictJson[city_id];
+                $('#subdistrict_id').find('option:not(:first)').remove();
+                if(listSubdistrict){
+                    $('#city').val($(this).find('option:selected').text());
+                    $.each(listSubdistrict, function(index, value) {
+                        $('#subdistrict_id')
+                            .append($("<option></option>")
+                                .attr("value",index)
+                                .text(value));
+                    });
+                }
+            });
+            $(document).on('change', '#subdistrict_id', function() {
+                var subdistrict_id = $(this).val(),
+                    listPostcode = window.postcodeJson[subdistrict_id];
+                $('#zipcode').find('option:not(:first)').remove();
+                if(listPostcode){
+                    $('#subdistrict').val($(this).find('option:selected').text());
+                    $.each(listPostcode, function(index, value) {
+                        $('#zipcode')
+                            .append($("<option></option>")
+                                .attr("value",value)
+                                .text(value));
+                    });
+                }
+            });
+            $(document).on('change', '#zipcode', function() {
+                $('#zip').val($(this).find('option:selected').text());
+            });
+            if($('#city_id').attr('defaultvalue')){
+                var region_id = $('#region_id').attr('defaultvalue'),
+                    listCities = window.cityJson[region_id];
+                $('#city_id').find('option:not(:first)').remove();
+                if(listCities){
+                    $.each(listCities, function(index, value) {
+                        $('#city_id')
+                            .append($("<option></option>")
+                                .attr("value",index)
+                                .text(value));
+                    });
+                    $("#city_id option[value='"+$('#city_id').attr('defaultvalue')+"']").prop('selected',true);
+                }
+            }
+            if($('#subdistrict_id').attr('defaultvalue')){
+                var city_id = $('#city_id').attr('defaultvalue'),
+                    listSubdistrict = window.subdistrictJson[city_id];
+                $('#subdistrict_id').find('option:not(:first)').remove();
+                if(listSubdistrict){
+                    $.each(listSubdistrict, function(index, value) {
+                        $('#subdistrict_id')
+                            .append($("<option></option>")
+                                .attr("value",index)
+                                .text(value));
+                    });
+                    $("#subdistrict_id option[value='"+$('#subdistrict_id').attr('defaultvalue')+"']").prop('selected',true);
+                }
+            }
+            if($('#zipcode').attr('defaultvalue')){
+                var subdistrict_id = $('#subdistrict_id').attr('defaultvalue'),
+                    listPostcode = window.postcodeJson[subdistrict_id];
+                $('#zipcode').find('option:not(:first)').remove();
+                if(listPostcode){
+                    $.each(listPostcode, function(index, value) {
+                        $('#zipcode')
+                            .append($("<option></option>")
+                                .attr("value",value)
+                                .text(value));
+                    });
+                    $("#zipcode option[value='"+$('#zipcode').attr('defaultvalue')+"']").prop('selected',true);
+                }
+            }
+        });
+    });
+</script>

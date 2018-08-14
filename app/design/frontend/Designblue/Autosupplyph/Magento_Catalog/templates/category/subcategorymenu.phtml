@@ -1,0 +1,176 @@
+<?php
+
+/**
+
+ * Category view template
+
+ *
+
+ * @var $block \Magento\Catalog\Block\Category\View
+
+ */
+
+?>
+
+<?php
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+
+$category = $objectManager->get('Magento\Framework\Registry')->registry('current_category');//get current category
+
+$categoryname = $category->getId();
+
+
+
+if($categoryname == 97 || $categoryname == 106 || $categoryname == 2){
+
+}else{
+
+	$categoryid = $category->getParentCategory()->getId();
+
+	$category = $objectManager->create('Magento\Catalog\Model\Category')->load($categoryid);
+}
+
+$subcats = $category->getChildrenCategories();
+
+$subcats2 = $category->getChildrenCategories();
+
+$subcatsmobile = $category->getChildrenCategories();
+
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+
+?>
+
+<div class="div-submenu">
+
+	<ul class="sub-cat">
+
+		<?php
+
+		$subcount = 0;
+
+		foreach ($subcats as $subcat) 
+
+		{
+
+			$subcaturl = $subcat->getUrl();            
+
+				echo '<li class="list-subcat"><a href="' . $subcaturl . '" title="' . $subcat->getName() . '">' . $subcat->getName() . '</a></li>';
+
+				
+
+			$subcount++;
+
+			//if($category->getName() == 'Merchandise')
+
+			
+
+			if ($subcount == '7')
+
+			{
+
+				echo "<li class='list-subcat' id='more'><a href='#'>More</a></li>";
+
+				
+
+				echo "<div class='subcat2' style='display:none;'>";
+
+				echo "<ul class='subcat-more'>";
+
+					
+
+					$subcount2 = 0;
+
+					foreach ($subcats2 as $subcat2) 
+
+					{
+
+						if ($subcount2 >= '7')
+
+						{
+
+							$subcaturl2 = $subcat2->getUrl();            
+
+							echo '<li class="list-subcat2"><a href="' . $subcaturl2 . '" title="' . $subcat2->getName() . '">' . $subcat2->getName() . '</a></li>';
+
+						}
+
+						$subcount2++;
+
+					}
+
+				
+
+				echo "</ul>";
+
+				echo "</div>";
+
+				break;
+
+			}
+
+		} ?>
+
+	</ul>
+
+	
+
+	<div class="submenu-shopnow">
+
+		<a class="submenu-shopnow-link cars" href="/cars.html">SHOP CARS</a>
+
+		<a class="submenu-shopnow-link parts" href="/parts.html">SHOP PARTS</a>
+
+		<a class="submenu-shopnow-link merch" href="/general-merchandise.html">SHOP MERCHANDISE</a>
+
+	</div>
+
+</div>
+
+
+
+<div class="div-submenu-mobile" style="display:none;">
+
+	<ul class="sub-cat">
+
+		<?php
+
+
+
+		foreach ($subcatsmobile as $subcat3) 
+
+		{
+
+			$subcaturl3 = $subcat3->getUrl();            
+
+			echo '<li class="list-subcat"><a href="' . $subcaturl3 . '" title="' . $subcat3->getName() . '">' . $subcat3->getName() . '</a></li>';
+
+				
+
+		}
+
+		?>
+
+	</ul>
+
+</div>
+
+
+
+<script>
+
+require(['jquery'],function($){
+
+    $(document).ready(function(){
+
+        $("#more").click(function(){
+
+            $(".subcat2").toggle();
+
+        })
+
+    });
+
+});
+
+</script>

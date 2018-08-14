@@ -1,0 +1,187 @@
+<?php
+      $mainCats = $block->getMainCategories();
+
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface');
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+//hide the following category ids from the menu
+$excludeCatIds = array(
+			98,99,101,105,	/*parts*/
+			3,4,6,8,9,10,12,13,	/*merchandise*/
+		);
+
+//wheels and tires = 104
+//garage accessories = 7
+
+ ?>
+
+<!--<div class="sections nav-sections">-->
+<div class="navigation2">
+	<ul>
+		<li class="level0 home"><a class="level-top" href="/"><span>Home</span></a></li>
+		<li class="level0 aboutus">
+			<div class="div-aboutus"><a class="level-top" href="#"><span>About Us</span></a>
+			<ul class="submenu aboutus">
+				<li><a href="/aboutus#whoweare"><span>Who We Are</span></a></li>
+				<li><a href="/aboutus#whatweoffer"><span>What We Offer</span></a></li>
+				<li><a href="/aboutus#missionvision"><span>Mission & Vision</span></a></li>
+				<li><a href="/inquiry/index/careers?success="><span>Careers</span></a></li>
+				<li><a href="/inquiry/index/contactus?success="><span>Contact Us</span></a></li>
+			</ul>
+			</div>
+		</li>
+
+		<li class="level0 parts">
+			<div class="div-parts">
+			<span class="cat-img">
+			<?php foreach ($mainCats as $category): ?>
+				<?php if ($category->getLevel() == 3 && $category->getParentId()== 97 && !in_array($category->getId(),$excludeCatIds)): ?>
+							<img src="<?php echo $category->getImageUrl();?>" id="img-<?= $category->getId()?>">
+				<?php endif; ?>
+			<?php endforeach ?>
+			</span>
+
+			<a class="level-top" href="/parts.html"><span>Shop Parts</span></a>
+			<ul class="submenu parts">
+			<?php foreach ($mainCats as $category): ?>
+				<?php if ($category->getLevel() == 3 && $category->getParentId()== 97 && !in_array($category->getId(),$excludeCatIds)): ?>
+					<li><a href="<?= $category->getUrl(); ?>" data-cat-id="<?= $category->getId()?>"><?= $category->getName(); ?></a></li>
+				<?php endif; ?>
+			<?php endforeach ?>
+			</ul>
+			</div>
+		</li>
+
+		<li class="level0 cars">
+			<div class="div-cars">
+			<span class="cat-img">
+			<?php foreach ($mainCats as $category): ?>
+				<?php if ($category->getLevel() == 3 && $category->getParentId()== 106): ?>
+							<img src="<?php echo $category->getImageUrl();?>" id="img-<?= $category->getId()?>">
+				<?php endif; ?>
+			<?php endforeach ?>
+			</span>
+
+			<a class="level-top" href="/cars.html"><span>Shop Cars</span></a>
+			<ul class="submenu cars">
+			<?php foreach ($mainCats as $category): ?>
+				<?php if ($category->getLevel() == 3 && $category->getParentId()== 106): ?>
+					<li><a href="<?= $category->getUrl(); ?>" data-cat-id="<?= $category->getId()?>"><?= $category->getName(); ?></a></li>
+				<?php endif; ?>
+			<?php endforeach ?>
+			</ul>
+			</div>
+		</li>
+
+		<li class="level0 merch">
+			<div class="div-merch">
+			<span class="cat-img">
+			<?php foreach ($mainCats as $category): ?>
+				<?php if ($category->getLevel() == 3 && $category->getParentId()== 2 && !in_array($category->getId(),$excludeCatIds)): ?>
+						<img src="<?php echo $category->getImageUrl();?>" id="img-<?= $category->getId()?>">
+				<?php endif; ?>
+			<?php endforeach ?>
+			</span>
+
+			<a class="level-top" href="/general-merchandise.html"><span>Shop Merchandise</span></a>
+			<ul class="submenu merch">
+			<?php foreach ($mainCats as $category): ?>
+				<?php if ($category->getLevel() == 3 && $category->getParentId()== 2 && !in_array($category->getId(),$excludeCatIds)): ?>
+					<li><a href="<?= $category->getUrl(); ?>" data-cat-id="<?= $category->getId()?>"><?= $category->getName(); ?></a></li>
+				<?php endif; ?>
+			<?php endforeach ?>
+			</ul>
+			</div>
+		</li>
+
+		<li class="level0 services">
+			<div class="div-services">
+			<?php /*
+			<span class="cat-img">
+				<img src="<?php echo $mediaUrl?>wysiwyg/Insurance-image.png" id="img-li-insurance">
+				<img src="<?php echo $mediaUrl?>wysiwyg/Car_maintenance-image.png" id="img-li-carnaintenance">
+				<img src="<?php echo $mediaUrl?>wysiwyg/Car_Care_Detailing-image.png" id="img-li-carcare">
+				<img src="<?php echo $mediaUrl?>wysiwyg/Parts_Finder-image.png" id="img-li-partsfinder">
+				<img src="<?php echo $mediaUrl?>wysiwyg/Car_Finder-image.png" id="img-li-carsfinder">
+				<img src="<?php echo $mediaUrl?>wysiwyg/Buy_Sell_Your_Car-image.png" id="img-li-buysell">
+			</span>
+			*/ ?>
+
+			<a class="level-top" href="/services/index/services"><span>Services</span></a>
+			<ul class="submenu services">
+				<li><a href="/services/index/insurance" data-cat-id="li-insurance"><span>Insurance</span></a></li>
+				<?php /*
+				<li><a href="/services/index/carmaintenance" data-cat-id="li-carnaintenance"><span>Car Maintenance</span></a></li>
+				<li><a href="/services/index/partsinstallation" data-cat-id="li-partsintallation"><span>Parts Installation</span></a></li>
+				<li><a href="/car-rentals.html" data-cat-id="li-rentals"><span>Rentals and Leasing</span></a></li>
+				*/ ?>
+				<li><a href="/services/index/carcaredetailing" data-cat-id="li-carcare"><span>Car Care and Detailing</span></a></li>
+				<li><a href="/services/index/partsfinder" data-cat-id="li-partsfinder"><span>Parts Finder</span></a></li>
+				<li><a href="/services/index/carfinder" data-cat-id="li-carsfinder"><span>Cars Finder</span></a></li>
+				<li><a href="/inquiry/index/advertise?success=" data-cat-id="li-advertisewithus"><span>Advertise With Us</span></a></li>
+				<li><a href="/services/index/buysell" data-cat-id="li-buysell"><span>Buy/Sell your Car</span></a></li>
+				<li><a href="/services/index/services" data-cat-id="li-inquirenow"><span>Inquire Now</span></a></li>
+			</ul>
+			</div>
+		</li>
+
+		<li class="level0 newspromos"><a class="level-top" href="/news/category/news"><span>News & Promos</span></a></li>
+		<li class="level0 support"><a class="level-top" href="/inquiry/index/support?success="><span>Support</span></a></li>
+
+	</ul>
+</div>
+<!--</div>-->
+
+
+<style>
+	.div-aboutus:hover .submenu.aboutus,
+	.div-parts:hover .submenu.parts,
+	.div-cars:hover .submenu.cars,
+	.div-merch:hover .submenu.merch,
+	.div-services:hover .submenu.services{
+		display: block;
+	}
+
+	.cat-img {
+		position: absolute;
+		z-index: 9999;
+		top: 42px;
+		width: 200px;
+		left: 185px;
+	}
+
+	.cat-img img{
+		/*visibility:hidden;*/
+		display: none;
+		width: 200px;
+	}
+
+	.navigation2 .submenu a:hover #test {
+		display:block;
+	}
+
+</style>
+
+
+<script>
+require(['jquery'],function($){
+    $(document).ready(function(){
+
+
+		$('.navigation2 .submenu a').hover(function() {
+
+		   var data_img_id= "img-"+ $(this).attr('data-cat-id');
+			/*$('#'+data_img_id).css('visibility', 'visible');*/
+			$('#'+data_img_id).show();
+
+		},function() {
+		  var data_img_id= "img-"+ $(this).attr('data-cat-id');
+			/*$('#'+data_img_id).css('visibility', 'hidden');*/
+			$('#'+data_img_id).hide();
+		});
+
+    });
+});
+</script>

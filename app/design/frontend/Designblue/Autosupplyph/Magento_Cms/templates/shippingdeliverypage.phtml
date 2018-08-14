@@ -1,0 +1,262 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<div class="header-shippingdelivery"><p>SHIPPING & DELIVERY</p>
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="div-shippingdelivery-intro">
+<p class="div-shippingdelivery-intro">Once you have completed and confirmed your order, the shipping process comes in and takes place within 7 business days. <br/>
+</div>
+<div class="dv-shippingdelivery">
+<h2 class="shippingdelivery-cms-title">How to Track Orders</h2>
+	<div class="trackorders">
+		<p><b>Are you worried about your order?</b></p>
+		<p>Track your orders easily and hassle-free. You can track your order any time of the day by simply following these easy steps.</p>
+		<div class="steps">
+			<ul class="ul-steps">
+				<li class="li-steps">
+					<p class="steps-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Step_1-icon.png" /></p>
+					<p class="lbl-steps">STEP 1</p>
+					<p class="steps-desc">
+						Go to Order Tracker's page<br/>
+						<a href="www.autosupply.ph/ordertracker">(www.autosupply.ph/ordertracker)</a>
+					</p>
+				</li>
+				<li class="li-steps">
+					<p class="steps-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Step_2_-_icon.png" /></p>
+					<p class="lbl-steps">STEP 2</p>
+					<p class="steps-desc">
+						Fill out the needed data. (Order Number and Email Address)
+					</p>
+				</li>
+				<li class="li-steps">
+					<p class="steps-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Step_3-icon.png" /></p>
+					<p class="lbl-steps">STEP 3</p>
+					<p class="steps-desc">
+						Click the "Track" button.
+					</p>
+				</li>
+			</ul>
+		</div>
+		<div class="trackorders-desc">
+			<p>Once you clicked the button the information you need will appear on your screen to get you updated about the status of your order. Our system is always updated every single day to impart you the freshest and the latest information you need to know about your order.</p>
+
+			<br/><br/>
+			<p><b>I don’t see any information about the status of my order on this page. How do I get the info I need?</b></p>
+			<p>In the event that the you cannot see any information about your order, please do not hesitate to reach us on our social media pages.</p>
+			<div class="trackorders-icons">
+				<ul class="ul-icons">
+					<li class="li-icons">					
+						<p class="icons-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Facebook-icon.png" /></p>
+						<p class="p-icons">Facebook</p>
+					</li>
+					<li class="li-icons">					
+						<p class="icons-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Twitter-icon.png" /></p>
+						<p class="p-icons">Twitter</p>
+					</li>
+					<li class="li-icons">					
+						<p class="icons-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Google_Plus-icon.png" /></p>
+						<p class="p-icons">Gmail</p>
+					</li>
+					<li class="li-icons">					
+						<p class="icons-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Pinterest-icon.png" /></p>
+						<p class="p-icons">Pinterest</p>
+					</li>
+					<li class="li-icons">					
+						<p class="icons-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Instagram-icon.png" /></p>
+						<p class="p-icons">Instagram</p>
+					</li>
+				</ul>
+			</div>
+			<p>You can also reach us through our <a href="support">support portal</a> or call us at Tel no. 372-9146. (Office hours)</p>
+		</div>
+	</div>
+
+</div>
+<div class="dv-delivery">
+	<h2 class="shippingdelivery-cms-title">Delivery</h2>
+	<div class="div-delivery-line"></div>
+
+	<div class="div-delivery">
+		<p class="delivery-title"><b>When is the arrival of my delivery?</b></p>
+		<br/>
+		<p>Right after, officially placing your order, our system will conduct a confirmation process and inform you about it through your email or mobile number. The confirmation process will take about 24 to 48 hours after the order has been placed.</p><br/>
+		<p>The arrival of your order will take place within seven days. The items you ordered can be delivered on the next working day, the soonest, and on the seventh working day, the latest. (Holidays don’t count as working days) – Metro Manila. </p><br/>
+		<p>In other places specially the non-Metro Manila areas, the delivery will take place from 7 to 15 working days. However, there is also a good chance that if the item is available and in stock, the soonest possible time of the delivery can be also be within seven working days.</p>
+	</div>
+
+<div class="div-delivery-line"></div>
+
+	<div class="div-delivery">
+		<p class="delivery-title">I ordered several items but the courier only delivered one, where are the other items?</p>
+		<br/>
+		<p>Whenever we encounter multiple items in a single order, we ship each item as soon as they are made available. Shipping time for all items under one order number will still follow the applicable delivery time frame in your area.</p>
+	</div>
+
+<div class="div-delivery-line"></div>
+
+	<div class="div-delivery">
+		<p class="delivery-title">Can I make some prearrangements on the date of my delivery?</p>
+		<br/>
+		<p>Yes, it’s possible, but please be advised that we cannot guarantee the delivery of the item on the exact date as you prefer. We can only move the date time frame of the delivery in line with the date you wish to prearrange.</p>
+	</div>
+
+<div class="div-delivery-line"></div>
+
+	<div class="div-delivery">
+		<p class="delivery-title">Is it possible for you to deliver on weekends?</p>
+		<br/>
+		<p>It will always depend on the availability of our partner couriers. It is possible but there is no assurance, however, the chance is always bigger. You will be notified on the day of your delivery.</p>
+	</div>
+
+<div class="div-delivery-line"></div>
+
+	<div class="div-delivery">
+		<p class="delivery-title">Can I make some prearrangements on the date of my delivery?</p>
+		<br/>
+		<p>Yes, it’s possible, but please be advised that we cannot guarantee the delivery of the item on the exact date as you prefer. We can only move the date time frame of the delivery in line with the date you wish to prearrange.</p>
+	</div>
+
+<div class="div-delivery-line"></div>
+
+	<div class="div-delivery">
+		<p class="delivery-title">Is there such things such expedite delivery?</p>
+		<br/>
+		<p>The delivery is always within the time frame. We will follow the schedule as it is handled by our partner couriers.</p>
+	</div>
+
+<div class="div-delivery-line"></div>
+
+	<div class="div-delivery">
+		<p class="delivery-title">How do I get the exact date of my delivery?</p>
+		<br/>
+		<p>Unfortunately, we are not able to give you the exact time and date of the delivery but you can always track the status of your items for you to monitor and estimate the date of arrival.</p>
+	</div>
+
+<div class="div-delivery-line"></div>
+
+	<div class="div-delivery">
+		<p class="delivery-title">Can I ship my items to my office or to another address?</p>
+		<br/>
+		<p>Yes, it’s possible provided that you will fill in the necessary information we need in the delivery address box. Anyway, you will be given notice thru text messaging or email about the confirmation of your order and the complete delivery address will also be posted.</p>
+	</div>
+
+	<div class="div-delivery-line"></div>
+
+	<div class="div-delivery">
+		<p class="delivery-title">Can I pick up my order at autosupply.ph office?</p>
+		<br/>
+		<p>Unfortunately, we do not offer this option as of now.</p>
+	</div>
+</div>
+
+
+
+
+<style>
+.cms-shipping-delivery .page-main{
+    background: #f7f7f7;
+}
+.div-shippingdelivery-intro {
+    font-size: 15px;
+    padding: 15px 0;
+    margin: 0 auto;
+}
+
+.header-shippingdelivery p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.shippingdelivery-cms-title {
+    color: #ed1f24;
+}
+
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+.trackorders p{
+	font-size: 14px;
+}
+
+.steps {
+    text-align: center;
+    background: #fff;
+    margin: 15px 0 15px 0;
+}
+
+.ul-steps{
+	list-style: none;
+    display: inline-flex;
+    padding: 20px 0 0 0;
+    margin: 20px 0 0 0;
+
+}
+
+li.li-steps {
+    text-align: center;
+    width: 80%;
+    padding: 25px;
+}
+
+p.lbl-steps {
+    color: #ed1f24;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.steps-desc a {
+    color: #000;
+}
+
+.trackorders{
+	margin-top: 30px;
+}
+
+.ul-icons{
+    list-style: none;
+    display: inline-flex;
+    margin: 0px;
+
+
+}
+
+.li-icons{
+	display: inline-flex;
+    padding: 20px 15px 0px 10px;
+}
+
+p.p-icons {
+    margin: 15px;
+}
+
+.dv-shippingdelivery {
+    padding-bottom: 25px;
+}
+.dv-delivery {
+    padding-top: 25px;
+}
+
+.div-delivery {
+    margin: 20px 0 20px 0;
+}
+
+.div-delivery-line {
+    border-top: grey 1px solid;
+}
+
+p.delivery-title {
+    font-size: 16px;
+}
+
+</style>

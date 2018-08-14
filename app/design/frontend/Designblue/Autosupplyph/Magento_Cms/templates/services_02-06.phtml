@@ -1,0 +1,113 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<div class="header-srvc"><p>SERVICES</p></div>
+<div class="dv-srvc">
+	<div class="div-services">
+		<ul class="ul-services">
+			<li>
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Insurance-icon.png" /></p>
+				<p class="lbl-service">Insurance</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+			</li>
+			
+			<li>
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Car_Maintenance-icon.png" /></p>
+				<p class="lbl-service">Car Maintenance</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+			</li>
+			
+			<li>
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Parts_Installation-icon.png" /></p>
+				<p class="lbl-service">Parts Installation</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+			</li>
+			
+			<li>
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Rentals_and_Leasing-icon.png" /></p>
+				<p class="lbl-service">Rentals and Leasing</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+			</li>
+			
+			<li>
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Car_and_Detailing-icon.png" /></p>
+				<p class="lbl-service">Care Care and Detailing</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+			</li>
+		</ul>
+		
+		<ul class="ul-services">	
+			<li>
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Parts_Finder-icon.png" /></p>
+				<p class="lbl-service">Parts Finder</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+			</li>
+			
+			<li>
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Car_Finder-icon.png" /></p>
+				<p class="lbl-service">Cars Finder</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+			</li>
+			
+			<li>
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Events-icon.png" /></p>
+				<p class="lbl-service">Events</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+			</li>
+			
+			<li>
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Community-icon.png" /></p>
+				<p class="lbl-service">Community</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+			</li>
+			
+			<li>
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Advertise_with_us-icon.png" /></p>
+				<p class="lbl-service">Advertise Us</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="services-buysell">
+		<p class="buysell-lbl">We Buy/Sell Your Car</p>
+		<img src="<?php echo $mediaUrl?>wysiwyg/We_Buy_Sell_your_cars-icon.png" />
+		<p class="buysell-desc">
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+			Aenean commodo ligula eget dolor. Aenean
+		</p>
+	</div>
+</div>

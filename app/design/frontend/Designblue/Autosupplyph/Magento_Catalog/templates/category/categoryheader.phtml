@@ -1,0 +1,26 @@
+<?php
+/**
+ * Category view template
+ *
+ * @var $block \Magento\Catalog\Block\Category\View
+ */
+?>
+<?php
+    $_helper    = $this->helper('Magento\Catalog\Helper\Output');
+    $_category  = $block->getCurrentCategory();
+
+    if ($_category->getLevel() == 2 && $_category->getImageUrl() != "") {
+		$_imgUrl = $_category->getImageUrl();
+		$catbackground = "background: url('$_imgUrl');";
+	}else{
+		$catbackground = "background-color: #1f1f1f;";
+	}
+		
+		?><div class="category-image" style="<?php echo $catbackground; ?>"><?php
+
+			echo "<div class='category-name'>" . $_category->getName() . "</div>";
+			echo "<div class='category-desc'>" . $_category->getDescription() . "</div>";
+		
+		echo "</div>";
+
+?>

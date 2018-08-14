@@ -1,0 +1,150 @@
+<?php
+    $showsuccessmessage = 0;
+    $ifsuccess = $_GET['success'];
+
+    if($ifsuccess == true){
+        $showsuccessmessage = 1;
+    }
+
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+
+<div class="header-contactus"><p>Contact Us</p></div>
+
+<div class="div-contactus-intro">
+	<p class="div-contactus-intro-1">Feel free to message us in our Social Media Accounts as well. We will make sure that all your questions are answered the soonest possible way. <br/></p>
+</div>
+
+<div class="dv-contactus">
+	<?php if($showsuccessmessage == 1){ ?>
+		<form class="form inquiry success form-inquiry-car">
+			<fieldset class="fieldset inquiry car">
+			<div class="success-div">
+				<p class="success-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Form_sent-icon.png" /></p>
+				<h3 class="success-title">Thank you!</h3>
+				<p class="success-label">Your message has been sent. Please expect our response shortly.</p>
+			</div>
+			</fieldset>
+		</form>
+		<style>
+		.g-recaptcha{
+			display: none;
+		}
+		</style>
+	<?php }else{ ?>
+	
+	<!--<ul class="divi-contactus">
+		<li class="div1"> -->
+		
+		<div class="div1">
+			<form class="form inquiry car form-inquiry-car" action="<?php echo $block->getFormAction(); ?>" method="post" id="inquirycar-form" data-mage-init='{"validation":{}}'>
+				<fieldset class="fieldset inquiry car">
+
+					<div class="field field-fullname required">
+						<label class="label" for="fullname">
+							<span>Full Name</span>
+						</label>
+
+						<div class="control">
+							<input type="text" id="fullname" name="fullname" value="" title="Full Name" class="input-text required-entry"  data-validate="{required:true}">
+						</div>
+					</div>
+
+					<div class="field field-email required">
+						<label class="label" for="email">
+							<span>Email</span>
+						</label>
+
+						<div class="control">
+							<input type="text" id="email" name="email" value="" title="Email Address" class="input-text required-entry"  data-validate="{required:true, 'validate-email':true}">
+						</div>
+					</div>
+
+					<div class="field field-mobile required">
+						<label class="label" for="mobile">
+							<span>Phone Number</span>
+						</label>
+						
+						<div class="control">
+							<input type="text" id="mobile" name="mobile" value="" title="Contact Number" class="input-text required-entry"  data-validate="{required:true}">
+						</div>
+					</div>
+			
+					<div class="field field-message required">
+						<label class="label" for="message">
+							<span>Your Inquiry</span>
+						</label>
+
+						<div class="control">
+							<textarea id="message" name="message" value="" title="message" class="input-text required-entry"  data-validate="{required:true}" rows="7"></textarea>
+						</div>
+					</div>
+					
+					<center>
+						<?php echo $this->getLayout()->createBlock("Monashee\Recaptcha\Block\Recaptcha")->setTemplate("Monashee_Recaptcha::recaptcha.phtml")->toHtml();?>
+					</center>
+					
+				</fieldset>
+
+				<div class="actions-toolbar">
+					<div class="primary">
+						<button type="submit" class="action submit primary" title="Send"><span>Send</span></button>
+					</div>
+				</div>
+			</form>
+		<!--</li>-->
+		</div>
+		
+		<!--<li class="div2">-->
+		<div class="div2">
+			<div class="div-contactus">
+				<ul class="contactus-details-ul">
+					<li class="contactus-details-li">
+						<p class="contactus-details-p"><img src="<?php echo $mediaUrl?>wysiwyg/Office_address-icon.png" />
+						<span class="contactus-details-span">Office Address</span>
+						<p class="contactus-details-p2">Headquarters<br/>11 Biak na Bato street <br/> Brgy. Sto. Domingo <br/> Quezon City, Philippines</p>
+					</li>
+					
+					<li class="contactus-details-li">
+						<p class="contactus-details-p"><img src="<?php echo $mediaUrl?>wysiwyg/Contact_number-icon.png" />
+							<span class="contactus-details-span">Contact Number</span>
+						<p class="contactus-details-p2">Tel. No.: (02) 372 - 9146</p>
+					</li>
+					
+					<li class="contactus-details-li">
+						<p class="contactus-details-p"><img src="<?php echo $mediaUrl?>wysiwyg/Email_address-icon.png" />
+							<span class="contactus-details-span">Email Address</span>
+						<p class="contactus-details-p2">autosupply.ph17@gmail.com</p>
+					</li>
+					
+					<li class="contactus-details-li">
+						<p class="contactus-details-p socialmedia">Social Media Accounts:</p>
+						<p class="contactus-details-icons">
+							<a href="#"><img id="fb-contactus" class="contactus-details-icons2" src="<?php echo $mediaUrl?>wysiwyg/Facebook-icon.png" /></a>
+							<a href="#"><img id="twitter-contactus"class="contactus-details-icons2" src="<?php echo $mediaUrl?>wysiwyg/Twitter-icon.png" /></a>
+							<a href="#"><img id="pinterest-contactus" class="contactus-details-icons2" src="<?php echo $mediaUrl?>wysiwyg/Pinterest-icon.png" /></a>
+							<a href="#"><img id="instagram-contactus" class="contactus-details-icons2" src="<?php echo $mediaUrl?>wysiwyg/Instagram-icon.png" /></a>
+						</p>
+					</li>
+				</ul>
+			</div>
+		<!--</li>
+	</ul>-->
+		</div>
+	</div>
+	<?php } ?>
+</div>
+
+<style>
+
+
+
+
+
+/*  l */
+
+
+</style>

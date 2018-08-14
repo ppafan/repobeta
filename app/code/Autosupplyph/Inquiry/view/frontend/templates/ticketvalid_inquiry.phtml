@@ -1,0 +1,283 @@
+<?php
+
+
+    // $showsuccessmessage = 0;
+    $ticketnumber = $_GET['ticket'];
+
+    // if($ifsuccess == true){
+    //     $showsuccessmessage = 1;
+    // }
+
+
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+
+$objectManager_resource = \Magento\Framework\App\ObjectManager::getInstance(); // Instance of object manager
+$resource = $objectManager_resource->get('Magento\Framework\App\ResourceConnection');
+$connection = $resource->getConnection();
+
+$sql = "SELECT * FROM inquiry_openticket WHERE ticketnumber = '$ticketnumber'";
+$result = $connection->fetchRow($sql);
+
+
+?>
+<div class="header-support">
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="div-support-intro">
+<p class="div-support-intro-1">Please insert your ticket number to check the status of your concern.<br/>
+    <span style="font-family: 'Muli ExtraBold';">Don't know your ticket number?</span> Our team sends your ticket number via email.
+</p>
+
+
+</div>
+
+<form class="form inquiry car form-inquiry-notexist"
+
+action="<?php echo $block->getFormAction() ?>"
+
+method="post"
+
+id="inquirycar-form"
+
+data-mage-init='{"validation":{}}'>
+
+    <fieldset class="fieldset inquiry car">
+
+        <div class="ticket-number">
+            <p class="contactus-details-icons">
+                <img id="fb-contactus" class="contactus-details-icons2" src="<?php echo $mediaUrl?>wysiwyg/Ticket_Number-icon.png" /><span id="ticketnumbah-span">Ticket Number: </span><span><?php echo $ticketnumber; ?></span>
+            </p>
+        </div>
+
+        <div class="div-ticket-table">
+            <table class="ticket-table">
+                <thead>
+                    <tr>
+                        <td style="border-right: 1px solid #cccccc; text-align: center;"><strong>Date</strong></td>
+                        <td style="border-right: 1px solid #cccccc; text-align: center;"><strong>Time</strong></td>
+                        <td style="text-align: center;"><strong>Ticket Status</strong></td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <?php ?>
+                        
+
+                        <?php $status = $result['status']; 
+                        if($status == 0){
+                            $message = "Ticket opened by client";
+                            $date = date_format(date_create($result['created_at']), "m/d/Y");
+                            $time = date_format(date_create($result['created_at']), "H:i");
+                        }
+                        elseif($status == 1){
+                            $message = "In Process";
+                            $date = date_format(date_create($result['update_time']), "mm/dd/yyyy");
+                            $time = date_format(date_create($result['update_time']), "H:i");
+
+                        }
+                        else{
+                            $message = "Issue is addressed";
+                            $date = date_format(date_create($result['update_time']), "mm/dd/yyyy");
+                            $time = date_format(date_create($result['update_time']), "H:i");
+                        }
+
+                        ?>
+                        <td style="text-align: center;"><?php echo $date; ?></td>
+                        <td style="text-align: center;"><?php echo $time; ?></td>
+                        <td style="text-align: center;"><?php echo $message; ?></td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+
+
+    </fieldset>
+
+</form>
+    
+</div>
+
+<style>
+
+.header-support p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-support-form{
+            padding: 30px;
+}
+.header-support-form p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+        color: #ed1f24;
+}
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+/*.dv-support{
+    display: none;
+}*/
+
+.div-support-intro {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 40px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+p.div-support-intro-1{
+    margin-top: 10px;
+    text-align: center;
+}
+
+p.div-support-intro-2{
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.cms-support-with-us .column.main{
+    width: 100%;
+}
+
+
+.cms-support-with-us .form.inquiry.car{
+    width: 30%;
+    min-width: 460px;
+    margin: 0 auto;
+}
+
+
+a.support-redirect, button.action.submit.primary {
+    font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+a.support-redirect:hover, button.action.submit.primary:hover {
+    background-color: #ed1f24;
+    color: #fff;
+}
+
+
+.line{
+        border: 1px solid rgba(218, 217, 218, .87)!important;
+}
+
+.ticketstatus{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+
+}
+#ticketstatus-lbl{
+    font-weight: 600;
+    font-size: 14px;
+        margin-right: 30px;
+}
+
+.form-inquiry-car {
+    padding: 10px 0 70px 0;
+}
+.g-recaptcha {
+    width: 22%;
+    margin: 0 auto;
+    position: relative;
+    top: -170px;
+}
+
+.actions-toolbar{
+    position: relative;
+    top: 50px;
+}
+
+.form.inquiry.success{
+    box-shadow: 0 0 20px 0 #888888;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+.success-div{
+    text-align: center;
+    padding: 50px;
+}
+h3.success-title {
+    color: #C81C1F;
+}
+p.success-icon {
+    width: 20%;
+    margin: 0 auto;
+}
+
+p.success-label {
+    width: 75%;
+    margin: 0px auto;
+    font-family: 'Muli Bold';
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+ul.contactus-details-ul {
+    list-style: none;
+    text-align: left;
+}
+
+p.contactus-details-p {
+    display: inline-flex;
+}
+
+span.contactus-details-span {
+    margin: 10px 0 0 10px;
+    font-family: 'Muli Bold';
+}
+
+p.contactus-details-p2 {
+    margin: 10px 0 0 50px;
+        font-size: 14px;
+    width: 64%;
+}
+
+p.contactus-details-icons {
+    margin: 10px 0 0 5px;
+}
+
+li.contactus-details-li {
+    margin-bottom: 30px;
+}
+#ticketnumbah-span{
+    font-family: 'Muli ExtraBold';
+    margin-left: 15px;
+}
+
+table.ticket-table {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: #cccccc 1px solid;
+}
+
+table.ticket-table thead{
+    border-bottom: #cccccc 1px solid;
+}
+</style>

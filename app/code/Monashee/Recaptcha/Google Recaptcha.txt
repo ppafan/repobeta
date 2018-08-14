@@ -1,0 +1,30 @@
+﻿Site Key:
+6Ldx20wUAAAAAB4meyvRvVKfnR9VeujbPll1qBvX
+
+
+Secret Key:
+6Ldx20wUAAAAAL1CR6yDoiJ1Gd6O9dQ4xrgjprK0
+
+
+
+
+Paste this snippet before the closing </head> tag on your HTML template:
+<script src='https://www.google.com/recaptcha/api.js'></script>
+
+
+
+Paste this snippet at the end of the <form> where you want the reCAPTCHA widget to appear:
+<div class="g-recaptcha" data-sitekey="6Ldx20wUAAAAAB4meyvRvVKfnR9VeujbPll1qBvX"></div>
+
+
+
+Server side integration:
+When your users submit the form where you integrated reCAPTCHA, you'll get as part of the payload a string with the name "g-recaptcha-response". In order to check whether Google has verified that user, send a POST request with these parameters:
+URL: https://www.google.com/recaptcha/api/siteverify
+
+secret:
+6Ldx20wUAAAAAL1CR6yDoiJ1Gd6O9dQ4xrgjprK0
+response:
+The value of 'g-recaptcha-response'.
+remoteip:
+The end user's ip address.

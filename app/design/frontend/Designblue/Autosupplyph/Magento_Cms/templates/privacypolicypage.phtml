@@ -1,0 +1,70 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<div class="header-rentalsandleasing"><p>RENTALS & LEASING</p>
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="dv-rentalsandleasing">
+<p class="div-rentalsandleasing-intro">We also offer car rentals and leasing that assures the overall safety and security of the clients. Exceptional and well trained personnel cheerfully look after the day to day issues, and provide the needs of our clients, renters and customers. <br/>
+
+</p>
+	
+</div>
+
+<style>
+.header-rentalsandleasing p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+
+.div-rentalsandleasing-imge {
+    width: 50%;
+}
+
+.div-rentalsandleasing-desc {
+    width: 50%;
+    padding: 0px 0 0 60px;
+}
+
+#rentalsandleasing-desc-title{
+    font-size: 19px;
+    font-weight: 600;
+    padding: 40px 0;
+}
+
+.div-rentalsandleasing-inquire{
+	text-align: center;
+}
+
+.header-rentalsandleasing-inquire p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #ed1f24;
+}
+
+.div-rentalsandleasing-inquire p {
+	padding: 10px 0 20px 0;
+}
+
+.div-rentalsandleasing-intro {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 40px 0;
+}
+
+
+</style>

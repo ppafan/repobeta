@@ -1,0 +1,50 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+?>
+<?php if ($block->getResultCount()): ?>
+<?= $block->getChildHtml('tagged_product_list_rss_link') ?>
+<div class="search results">
+    <?php if ($messages = $block->getNoteMessages()):?>
+    <div class="message notice">
+        <div>
+            <?php foreach ($messages as $message):?>
+                <?= /* @escapeNotVerified */ $message ?><br />
+            <?php endforeach;?>
+        </div>
+    </div>
+    <?php endif; ?>
+    <?= $block->getProductListHtml() ?>
+</div>
+<?php else: ?>
+
+    <div class="noitems-compare">
+        <img src="<?php echo $mediaUrl?>wysiwyg/Nothing_to_Compare-icon.png" />
+        <h2>NO RESULTS FOUND</h2>
+        <p>Adjust filters to get better results.</p>
+    </div>
+<?php endif; ?>
+
+<style>
+.noitems-compare{
+    text-align:center;
+}
+
+.noitems-compare h2{
+   font-family:'Raleway ExtraBold';
+}
+
+.noitems-compare p{
+    font-family:'Muli Bold';
+}
+
+</style>

@@ -1,0 +1,68 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/** @var \Magento\Newsletter\Block\Subscribe $block */
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<div class="block newsletter">
+    <div class="title"><strong><?= $block->escapeHtml(__('Newsletter')) ?></strong></div>
+    <div class="content">
+		<span>SUBSCRIBE TO OUR NEWSLETTER<span>
+        <form class="form subscribe"
+            novalidate
+            action="<?= $block->escapeUrl($block->getFormActionUrl()) ?>"
+            method="post"
+            data-mage-init='{"validation": {"errorClass": "mage-error"}}'
+            id="newsletter-validate-detail">
+            <div class="field newsletter">
+                <label class="label" for="newsletter"><span><?= $block->escapeHtml(__('Sign Up for Our Newsletter:')) ?></span></label>
+                <div class="control">
+                    <input name="email" type="email" id="newsletter"
+                                placeholder="<?= $block->escapeHtmlAttr(__('Enter your email address')) ?>"
+                                data-validate="{required:true, 'validate-email':true}"/>
+                </div>
+            </div>
+            <div class="actions">
+                <button class="action subscribe primary" title="<?= $block->escapeHtmlAttr(__('Subscribe')) ?>" type="submit">
+                    <span><?= $block->escapeHtml(__('Subscribe')) ?></span>
+                </button>
+            </div>
+        </form>
+    </div>
+    <div class="div-mediaicons">
+        <ul class="ul-mediaicons">
+            <li class="li-mediaicons">
+                <p class="p-mediaicons"><a href="#"><img id="fbicon" src="<?php echo $mediaUrl?>wysiwyg/Facebook-icon-w.png" /></a></p>
+            </li>
+            <li class="li-mediaicons">
+                <p class="p-mediaicons"><a href="#"><img id="twittericon" src="<?php echo $mediaUrl?>wysiwyg/Twitter-icon-w.png" /></a></p>
+            </li>
+            <li class="li-mediaicons">
+                <p class="p-mediaicons"><a href="#"><img id="googleplusicon" src="<?php echo $mediaUrl?>wysiwyg/Google_Plus-icon-w.png" /></a></p>
+            </li>
+            <li class="li-mediaicons">
+                <p class="p-mediaicons"><a href="#"><img id="pinteresticon" src="<?php echo $mediaUrl?>wysiwyg/Pinterest-icon-w.png" /></a></p>
+            </li>
+            <li class="li-mediaicons">
+                <p class="p-mediaicons"><a href="#"><img id="linkedinicon" src="<?php echo $mediaUrl?>wysiwyg/Linked_In-icon-w.png" /></a></p>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<style>
+.ul-mediaicons{
+    list-style:none; display:inline-flex; width:100%;
+}
+.li-mediaicons{
+    padding: 5px 0 0 8px;
+}
+</style>

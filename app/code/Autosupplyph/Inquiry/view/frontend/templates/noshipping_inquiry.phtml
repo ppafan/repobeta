@@ -1,0 +1,95 @@
+<?php
+
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+
+$currentStore = $storeManager->getStore();
+
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+$baseUrl = $currentStore->getBaseUrl();
+
+?>
+
+<style>
+.inquiry-index-noshipping .page-main{
+    background: #f7f7f7;    
+
+}
+
+.inquiry-index-noshipping .page-title-wrapper {
+    text-align: center;
+    width: 68%;
+    margin: 50px auto 0;
+}
+
+.inquiry-index-noshipping .page-title-wrapper .page-title h1{
+    display: none;
+}
+
+.checkout-success{
+    box-shadow: 0 0 20px 0 #888888;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+.success-div{
+    text-align: center;
+    padding: 50px;
+}
+
+.success-div h3{
+    color: #ed1f24;
+    margin-bottom: 35px;
+}
+
+p.success-icon {
+    width: 20%;
+    margin: 0 auto;
+}
+
+p.success-label {
+    width: 80%;
+    margin: 5px auto;
+    font-family: 'Muli Bold';
+}
+
+.page-footer {
+    background: #262726 !important;
+    float: left;
+}
+
+.actions-toolbar{
+    width: 35%;
+    margin: 0 auto;
+    padding-bottom: 40px;
+}
+
+.checkout-onepage-success .page-title-wrapper span.base, .checkout-onepage-success .page-title-wrapper a.print{
+    display: none;
+}
+
+.success-div strong{
+    color: #000;
+}
+</style>
+<div class="checkout-success">
+    <div class="success-div">
+        <p class="success-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Form_sent-icon.png" /></p>
+        <h3 class="success-title">Thank you for shopping!</h3>
+            <p class="success-label"><?= /* @escapeNotVerified */ __('Please expect an email from us shortly.') ?></p>
+    </div>
+
+
+
+    <div class="actions-toolbar">
+        <div class="primary">
+            <a class="action primary continue" href="<?php echo $baseUrl; ?>/sales/order/print/order_id/<?php echo 12;//echo $block->getOrderId(); ?>" onclick="this.target='_blank'"><span><?=  __('PRINT RECEIPT') ?></span></a>
+        </div>
+    </div>
+</div>
+

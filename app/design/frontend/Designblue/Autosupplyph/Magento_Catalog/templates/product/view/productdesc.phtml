@@ -1,0 +1,875 @@
+<?php
+
+$_helper = $this->helper('Magento\Catalog\Helper\Output');
+
+$_product = $block->getProduct();
+
+
+
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+
+$store = $objectManager->get('Magento\Store\Model\StoreManagerInterface')->getStore();
+
+$imageUrl = $store->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA) . 'catalog/product' . $_product->getSpecification();
+
+
+
+$attributeSet = $objectManager->create('Magento\Eav\Api\AttributeSetRepositoryInterface');
+
+$attributeSetRepository = $attributeSet->get($_product->getAttributeSetId());
+
+$attribute_set_name = $attributeSetRepository->getAttributeSetName();
+
+
+
+$storeManager = $objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+?>
+
+
+
+    <div class="catalog-prod-desc">
+
+        <div class="prod-desc-lbl">
+
+            <div class="prod-desc-label">Description</div>
+
+        </div>
+
+        <div class="prod-desc-content">
+
+            <?php echo $_product->getDescription(); ?>
+
+        </div>
+
+        
+
+        <div class="prod-desc-ads">
+
+            <?php echo $block->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('product-view-ads')->toHtml();?>
+
+        </div>
+
+    </div>
+
+
+
+<?php if($attribute_set_name == 'Cars'): ?>
+
+
+
+    <div class="catalog-prod-specs">
+
+<div class="prod-specs-lbl"><div class="prod-specs-label">Specification</div></div>
+
+<div class="prod-specs-content">
+
+    <div data-mage-init='{"accordion":{"openedState": "active", "collapsible": true, "active": false, "multipleCollapsible": false}}'>
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+                <span>Summary</span>
+
+                <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+        <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Product Name</strong></td>
+                <td><?php echo $_product->getName(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Brand</strong></td>
+                <?php
+                $brandId = $_product->getBrand();
+                $attribute = $_product->getResource()->getAttribute('brand');
+                if ($attribute->usesSource()) {
+                    $brandlabel = $attribute->getSource()->getOptionText($brandId);
+                }
+
+                ?>
+                <td><?php echo $brandlabel; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Year</strong></td>
+                <?php
+                $yearId = $_product->getYear();
+                $attribute = $_product->getResource()->getAttribute('year');
+                if ($attribute->usesSource()) {
+                    $yearlabel = $attribute->getSource()->getOptionText($yearId);
+                }
+
+                ?>
+                <td><?php echo $yearlabel; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Body Type</strong></td>
+                <?php
+                $bodytypeId = $_product->getBodyType();
+                $attribute = $_product->getResource()->getAttribute('body_type');
+                if ($attribute->usesSource()) {
+                    $bodytypelabel = $attribute->getSource()->getOptionText($bodytypeId);
+                }
+
+                ?>
+                <td><?php echo $bodytypelabel; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Trim</strong></td>
+                <td><?php echo $_product->getTrim(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Price</strong></td>
+                <?php $price = $_product->getPrice(); 
+                $priceHelper = $objectManager->create('Magento\Framework\Pricing\Helper\Data'); // Instance of Pricing Helper
+                $formattedPrice = $priceHelper->currency($price, true, false);
+                ?>
+                <!-- <td><?php echo $_product->getPrice(); ?></td> -->
+                <td><?php echo $formattedPrice; ?></td>
+            </tr>
+            <tr>
+                <td><strong>Transmission Type</strong></td>
+                <?php
+                $transmissionId = $_product->getTransmissionType();
+                $attribute = $_product->getResource()->getAttribute('transmission_type');
+                if ($attribute->usesSource()) {
+                    $transmissionlabel = $attribute->getSource()->getOptionText($transmissionId);
+                }
+
+                ?>
+                <td><?php echo $transmissionlabel; ?></td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               
+               <span>General Specifications</span>
+                
+                <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+        <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Overall Length (mm)</strong></td>
+                <td><?php echo $_product->getOverallLengthMm(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Overall Width (mm)</strong></td>
+                <td><?php echo $_product->getOverallWidthMm(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Overall Height (mm)</strong></td>
+                <td><?php echo $_product->getOverallHeightMm(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Wheelbase (mm)</strong></td>
+                <td><?php echo $_product->getWheelbaseMm(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Whealbase Thread (mm)</strong></td>
+                <td><?php echo $_product->getWheelTreadFrontRearMm(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Turning Radius (mm)</strong></td>
+                <td><?php echo $_product->getTurningRadiusM(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Min Ground Clearance (mm)</strong></td>
+                <td><?php echo $_product->getMinGroundClearanceMm(); ?></td>
+            </tr>
+
+            <tr>
+                <td><strong>Curb Weight (kg)</strong></td>
+                <td><?php echo $_product->getCurbWeightKg(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Seating Capacity</strong></td>
+                <td><?php echo $_product->getSeatingCapacity(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Fuel Tank Capacity (L)</strong></td>
+                <td><?php echo $_product->getFuelTankCapacityL(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Max Speed</strong></td>
+                <td><?php echo $_product->getMaxSpeed(); ?></td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Engine</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+        <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Engine Type</strong></td>
+                <td><?php echo $_product->getEngineType(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Bore x Stroke</strong></td>
+                <td><?php echo $_product->getBoreXStroke(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Compression Ratio</strong></td>
+                <td><?php echo $_product->getCompressionRatio(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Emmissions</strong></td>
+                <td><?php echo $_product->getEmmissions(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Max Power</strong></td>
+                <td><?php echo $_product->getMaxPower(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Max Torque</strong></td>
+                <td><?php echo $_product->getMaxTorque(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Fuel Supply System</strong></td>
+                <td><?php echo $_product->getFuelSupplySystem(); ?></td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Transmission</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" /> 
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+        <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Paddle Shift</strong></td>
+                <td><?php echo $_product->getPaddleShift(); ?></td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Drivetrain</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+        <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Drive Train</strong></td>
+                <td><?php echo $_product->getDrivetrainType(); ?></td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Suspension</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+        <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Suspension Front</strong></td>
+                <td><?php echo $_product->getSuspensionFront(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Suspension Rear</strong></td>
+                <td><?php echo $_product->getSuspensionRear(); ?></td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Brakes</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+          <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Brakes Front</strong></td>
+                <td><?php echo $_product->getSuspensionFront(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Brakes Rear</strong></td>
+                <td><?php echo $_product->getSuspensionRear(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Brake Booster</strong></td>
+                <td><?php echo $_product->getBrakeBooster(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Parking Brake</strong></td>
+                <td><?php echo $_product->getParkingBrake(); ?></td>
+            </tr>
+
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Tire and Wheel</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+          <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Tires</strong></td>
+                <td><?php echo $_product->getTires(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Wheels</strong></td>
+                <td><?php echo $_product->getWheels(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Spare</strong></td>
+                <td><?php echo $_product->getSpare(); ?></td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Steering</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+          <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Steering Wheel</strong></td>
+                <td><?php echo $_product->getSteeringWheel(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Steering System</strong></td>
+                <td><?php echo $_product->getSteeringSystem(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Audio Controls</strong></td>
+                <td><?php echo $_product->getAudioControls(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Cruise Control</strong></td>
+                <td><?php echo $_product->getCruiseControl(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Steering Column Adjustment Tilt</strong></td>
+                <td><?php echo $_product->getSteeringColumnAdjustmentTil(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Steering Column Adjustment Telescopic</strong></td>
+                <td><?php echo $_product->getSteeringColumnAdjustmentTel(); ?></td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Multimedia System</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+          <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Multi Media System Type</strong></td>
+                <td><?php echo $_product->getMultiMediaSystemType(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Connectivity</strong></td>
+                <td><?php echo $_product->getConnectivity(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Hands-free System</strong></td>
+                <td><?php echo $_product->getHandsFreeSystem(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Navigation System</strong></td>
+                <td><?php echo $_product->getNavigationSystem(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Speakers</strong></td>
+                <td><?php echo $_product->getSpeakers(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Tweeters</strong></td>
+                <td><?php echo $_product->getTweeters(); ?></td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Interior</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+          <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Seat Material</strong></td>
+                <td><?php echo $_product->getSeatMaterial(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Seats (Front)</strong></td>
+                <td><?php echo $_product->getSeatsF(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Seats 2nd Row</strong></td>
+                <td><?php echo $_product->getSeats2(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Seats 3rd Row</strong></td>
+                <td><?php echo $_product->getSeats3(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Seats 4th Row</strong></td>
+                <td><?php echo $_product->getSeats4(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Seats 5th Row</strong></td>
+                <td><?php echo $_product->getSeats5(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Power Windows</strong></td>
+                <td><?php echo $_product->getPowerWindows(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Power Door Locks</strong></td>
+                <td><?php echo $_product->getPowerDoorLocks(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Push Start System</strong></td>
+                <td><?php echo $_product->getPushStartSystem(); ?></td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Airconditioning System</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+          <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Manual</strong></td>
+                <td><?php echo $_product->getManualAc(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Automatic</strong></td>
+                <td><?php echo $_product->getAutomaticAc(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Climate Control</strong></td>
+                <td><?php echo $_product->getClimateControl(); ?></td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Exterior</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+          <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Head Lamps</strong></td>
+                <td><?php echo $_product->getHeadLamps(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Daytime Running Lights (DRL)</strong></td>
+                <td><?php echo $_product->getDaytimeRunningLights(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Fog Lamps</strong></td>
+                <td><?php echo $_product->getFogLamps(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Rear Fog Lamps</strong></td>
+                <td><?php echo $_product->getRearFogLamps(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Side Turn Signal Lights</strong></td>
+                <td><?php echo $_product->getSideTurnSignalLights(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Tail Lamps</strong></td>
+                <td><?php echo $_product->getTailLamps(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Front Wipers</strong></td>
+                <td><?php echo $_product->getFrontWipers(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Rear Wiper</strong></td>
+                <td><?php echo $_product->getRearWiper(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Windshield Defogger</strong></td>
+                <td><?php echo $_product->getWindshieldDefogger(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Power Side Mirror</strong></td>
+                <td><?php echo $_product->getPowerSideMirror(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>High Mount Stop Lamps</strong></td>
+                <td><?php echo $_product->getHighMountStopLamps(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Spoiler</strong></td>
+                <td><?php echo $_product->getSpoiler(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Antenna</strong></td>
+                <td><?php echo $_product->getAntenna(); ?></td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Safety & Security</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+          <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Front Airbags</strong></td>
+                <td><?php echo $_product->getFrontAirbags(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Side Airbags</strong></td>
+                <td><?php echo $_product->getSideAirbags(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Curtain Airbags</strong></td>
+                <td><?php echo $_product->getCurtainAirbags(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Knee Airbags</strong></td>
+                <td><?php echo $_product->getKneeAirbags(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Driver's Seatbelt</strong></td>
+                <td><?php echo $_product->getDriversSeatbelt(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Front Passenger's Seatbelt</strong></td>
+                <td><?php echo $_product->getFrontSeatbelt(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>2nd Row Seatbelts</strong></td>
+                <td><?php echo $_product->get2Seatbelt(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>3rd Row Seatbelts</strong></td>
+                <td><?php echo $_product->get3Seatbelt(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>4th Row Seatbelts</strong></td>
+                <td><?php echo $_product->get4Seatbelt(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>5th Row Seatbelts</strong></td>
+                <td><?php echo $_product->get5Seatbelt(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Seatbelt Reminder</strong></td>
+                <td><?php echo $_product->getSeatbeltReminder(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Hill Start Assist</strong></td>
+                <td><?php echo $_product->getHillStartAssist(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Traction Control</strong></td>
+                <td><?php echo $_product->getTractionControl(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Anti-Lock Braking System (ABS)</strong></td>
+                <td><?php echo $_product->getAntilockBrakingSystem(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Electronic Brake-force Distribution system (EBD)</strong></td>
+                <td><?php echo $_product->getElectronicBrakeforce(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Brake Assist</strong></td>
+                <td><?php echo $_product->getBrakeAssist(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Tire Pressure Monitoring System</strong></td>
+                <td><?php echo $_product->getTirePressureMonitoring(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>ISOFIX</strong></td>
+                <td><?php echo $_product->getIsofix(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Blind Spot Warning (BSW) system</strong></td>
+                <td><?php echo $_product->getBlindSpotWarning(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Front Parking Sensor</strong></td>
+                <td><?php echo $_product->getFrontParkingSensor(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Reverse Parking Sensor</strong></td>
+                <td><?php echo $_product->getReverseParkingSensor(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Rear View Camera</strong></td>
+                <td><?php echo $_product->getRearViewCamera(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Stability Assist</strong></td>
+                <td><?php echo $_product->getStabilityAssist(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Side Impact Beam</strong></td>
+                <td><?php echo $_product->getSideImpactBeam(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Immobilizer</strong></td>
+                <td><?php echo $_product->getImmobilizer(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Anti-Theft Protection</strong></td>
+                <td><?php echo $_product->getAntitheftProtection(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Keyless Entry System</strong></td>
+                <td><?php echo $_product->getKeylessEntrySystem(); ?></td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+        
+
+        <div data-role="collapsible" class="specs-title">
+
+            <div data-role="trigger" class="prod-specs-trigger">
+
+               <span>Others</span>
+
+               <img src="<?php echo $mediaUrl?>wysiwyg/Expand-button.png" />
+
+            </div>
+
+        </div>
+
+        <div data-role="content" class="specs-content">
+
+          <table border="0">
+            <tbody>
+            <tr>
+                <td><strong>Sun Roof / Moon Roof</strong></td>
+                <td><?php echo $_product->getSunMoonRoof(); ?></td>
+            </tr>
+            <tr>
+                <td><strong>Warranty</strong></td>
+                <td><?php echo $_product->getWarranty(); ?></td>
+            </tr>
+            </tbody>
+        </table>
+
+        </div>
+
+    
+
+</div>
+        </div>
+
+    </div>
+
+
+
+<?php endif; ?>

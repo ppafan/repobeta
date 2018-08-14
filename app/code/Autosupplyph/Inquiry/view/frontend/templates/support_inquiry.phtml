@@ -1,0 +1,337 @@
+<div class="header-support">
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="div-support-intro">
+<p class="div-support-intro-1">
+Feel free to message us on our Social Media Accounts. We will make sure that all your questions and concerns are answered the soonest possible way.
+</p>
+</div>
+
+<p>Facebook: <a href="" target="_blank">https://www.facebook.com/autosupply.ph/</a></p>
+<p>Instagram: autosupply.ph</p>
+<p>Twitter: @autosupplyph</p>
+<p>Support: <a href="mailto: support@autosupply.ph">support@autosupply.ph</a></p>
+<p>Sales: <a href="mailto: sales@autosupply.ph">sales@autosupply.ph</a></p>
+
+<div class="div-support-intro">
+<p class="div-support-intro-1">
+Office Address:
+</p>
+</div>
+
+Headquarters <br />
+11 Biak na Bato street <br />
+Brgy. Sto. Domingo <br />
+Quezon City, Philippines <br />
+
+
+<p> Tel. no: (02) 372 - 9146</p>
+
+
+<br />
+<br />
+
+<?php
+
+/*
+    $showsuccessmessage = 0;
+    $ifsuccess = $_GET['success'];
+
+    if($ifsuccess == true){
+        $showsuccessmessage = 1;
+    }
+
+
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface');
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+?>
+<div class="header-support">
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="div-support-intro">
+<p class="div-support-intro-1">You'll get access to our support system by recording the incident that happened to you in a single transaction with us. Simply fill-out the information needed and we will make sure to attend to your concern as soon as possible. It is very important for us to know and record these incidents so we can continuously improve the services that we offer to our customers.<br/>
+
+</p>
+<p class="div-support-intro-1">
+Our highly-trained staff assures the rectification of any untoward incidents that may happen upon fulfillment of any order that you made with us. <br/>
+</p>
+
+</div>
+
+<div class="line"></div>
+<div class="ticketstatus">
+<label id="ticketstatus-lbl">Already opened a ticket?</label> <a class="support-redirect" href="checkticket">CHECK TICKET STATUS</a>
+</div>
+<div class="line"></div>
+<div class="dv-support">
+
+
+<div class="header-support-form"><p>CONTACT INFORMATION</p>
+</div>
+
+
+<?php if($showsuccessmessage == 1){ ?>
+<form class="form inquiry success form-inquiry-car">
+    <fieldset class="fieldset inquiry car">
+    <div class="success-div">
+        <p class="success-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Form_sent-icon.png" /></p>
+        <h3 class="success-title">Thank you!</h3>
+        <p class="success-label">Your message has been sent. Please expect our response shortly.</p>
+    </div>
+    </fieldset>
+<style>
+.g-recaptcha{
+    display: none;
+}
+</style>
+<?php }else{ ?>
+
+<form class="form inquiry car form-inquiry-car"
+
+action="<?php echo $block->getFormAction() ?>"
+
+method="post"
+
+id="inquirycar-form"
+
+data-mage-init='{"validation":{}}'>
+
+    <fieldset class="fieldset inquiry car">
+
+
+        <div class="field field-email required">
+
+            <label class="label" for="email">
+
+                <span>Email Address</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="email" name="email" value="" title="Email Address" class="input-text required-entry"  data-validate="{required:true, 'validate-email':true}">
+
+            </div>
+
+        </div>
+
+        <div class="field field-fullname required">
+
+            <label class="label" for="fullname">
+
+                <span>Full Name</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="fullname" name="fullname" value="" title="Full Name" class="input-text required-entry"  data-validate="{required:true}">
+
+            </div>
+
+        </div>
+
+
+        <div class="field field-mobile required">
+
+            <label class="label" for="mobile">
+
+                <span>Contact Number</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="mobile" name="mobile" value="" title="Contact Number" class="input-text required-entry"  data-validate="{required:true}">
+
+            </div>
+
+        </div>
+
+
+        <div class="field field-service required">
+
+            <label class="label" for="topic">
+
+                <span>Help Topic</span>
+
+            </label>
+
+
+            <div class="control">
+                <select class="validate-select" title="topic" id="topic" name="topic" data-validate="{required:true, 'validate-select':true}">>
+                <option value="General Inquiry">General Inquiry</option>
+                <option value="General Inquiry2">General Inquiry2</option>
+                </select>
+            </div>
+
+        </div>
+
+        <center>
+
+            <?php echo $this->getLayout()->createBlock("Monashee\Recaptcha\Block\Recaptcha")->setTemplate("Monashee_Recaptcha::recaptcha.phtml")->toHtml();?>
+
+        </center>
+
+    </fieldset>
+
+
+
+    <div class="actions-toolbar">
+
+        <div class="primary">
+
+            <button type="submit" class="action submit primary" title="Send"><span>Send</span></button>
+
+        </div>
+
+    </div>
+    <?php } ?>
+</form>
+
+</div>
+*/ ?>
+<style>
+
+.header-support p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-support-form{
+            padding: 30px;
+}
+.header-support-form p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+        color: #ed1f24;
+}
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+/*.dv-support{
+    display: none;
+}*/
+
+.div-support-intro {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 40px 0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+p.div-support-intro-1{
+    margin-top: 10px;
+}
+
+p.div-support-intro-2{
+    margin-top: 50px;
+}
+
+.cms-support-with-us .column.main{
+    width: 100%;
+}
+
+
+.cms-support-with-us .form.inquiry.car{
+    width: 30%;
+    min-width: 460px;
+    margin: 0 auto;
+}
+
+
+a.support-redirect, button.action.submit.primary {
+    font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+a.support-redirect:hover, button.action.submit.primary:hover {
+    background-color: #ed1f24;
+    color: #fff;
+}
+
+
+.line{
+        border: 1px solid rgba(218, 217, 218, .87)!important;
+}
+
+.ticketstatus{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+
+}
+#ticketstatus-lbl{
+    font-weight: 600;
+    font-size: 14px;
+        margin-right: 30px;
+}
+
+.form-inquiry-car {
+    padding: 10px 0 70px 0;
+}
+/*.g-recaptcha {
+    width: 30%;
+    margin: 0 auto;
+    position: relative;
+    top: -140px;
+}*/
+
+.actions-toolbar{
+    position: relative;
+    top: 50px;
+}
+
+.form.inquiry.success{
+    box-shadow: 0 0 20px 0 #888888;
+    background: #fff;
+    border-radius: 5px;
+    width: 40%;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+.success-div{
+    text-align: center;
+    padding: 50px;
+}
+h3.success-title {
+    color: #C81C1F;
+}
+p.success-icon {
+    width: 20%;
+    margin: 0 auto;
+}
+
+p.success-label {
+    width: 75%;
+    margin: 0px auto;
+    font-family: 'Muli Bold';
+    font-size: 16px;
+    margin-top: 20px;
+}
+</style>

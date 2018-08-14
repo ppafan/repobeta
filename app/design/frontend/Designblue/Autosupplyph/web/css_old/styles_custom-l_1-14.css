@@ -1,0 +1,687 @@
+p {
+     margin: 0;
+}
+ .page-main {
+     max-width: none;
+     padding:0;
+}
+ .page-layout-1colum.page-main {
+     max-width: 1280px;
+}
+ .page-layout-2columns-right .column.main {
+     width: 64%;
+     margin: 30px 0;
+}
+ .page-layout-2columns-right .sidebar-additional {
+     width: 27%;
+     float: left;
+     padding-left: 60px;
+}
+ .page-header .header.panel {
+     padding: 8px 85px;
+}
+ .page-header .panel.wrapper{
+     background-color: #313131;
+     border:none;
+}
+ .header.panel>.header.links>.authorization-link:after{
+     display: none !important;
+}
+ .block-search .action.search{
+     background: #f00;
+     opacity: 1 !important;
+     right: 0;
+     top: 1px;
+     width: 25px;
+     border-radius: 0;
+}
+ input#search{
+     height: 20px;
+     font-size: 12px;
+     color: #858585;
+     background: #000;
+     border: none;
+     font-weight: 600;
+}
+ .block-search .action.search:before{
+     font-size: 16px;
+     line-height: 20px;
+     color: #ffffff;
+}
+ .header.content {
+     padding: 0;
+     width: 65%;
+}
+ .logo {
+     margin: -15px 0;
+     width: 120px;
+}
+ .page-header{
+     background: #95989a;
+}
+ .cms-footer {
+     display: inline-flex;
+}
+ .footerlinks {
+     margin-right: 40px;
+     line-height: 1.8;
+     font-size: 10px;
+     color: #c1bcb6;
+}
+ .footer.content {
+     padding: 0px 40px 0px 55px;
+}
+ .page-footer {
+     background: #262726 !important;
+}
+ .footer.content .links{
+     padding-right: 0px !important;
+}
+ .block.newsletter {
+     color: #fff;
+     font-size: 12px;
+}
+ .block.newsletter {
+     width: 28%;
+     margin-top: 50px;
+}
+ #newsletter {
+     border-radius: 30px 0 0 30px;
+     border: none;
+     font-size: 10px;
+}
+ .navigation .level0 .submenu {
+     min-width: 185px;
+     background: #c81c1f;
+     top: 50px !important;
+     border: none;
+}
+ .navigation .level0 .submenu a{
+     color: #fff;
+}
+ .navigation .level0 .submenu a:hover, .navigation .level0 .submenu a.ui-state-focus{
+     background: #ed383b;
+     color: #fff;
+     text-decoration: none;
+}
+ .navigation {
+     background: #f7f7f7;
+     padding-left: 320px;
+     font-weight: 600;
+}
+ .navigation .level0 > .level-top{
+     line-height: 40px;
+     padding: 0px 10px;
+}
+ .shopslink {
+     display: inline-flex;
+     width: 100%;
+     height: 226px;
+}
+ .sections.nav-sections{
+     margin-bottom: 0 !important;
+}
+ .top-container {
+     margin: 0;
+     padding: 0;
+     max-width: none;
+}
+ .shopautoparts{
+     width: 50%;
+     background: url('../images/AutoParts-banner.png') no-repeat;
+     background-size: 100%;
+}
+ .shopcars{
+     width: 50%;
+     background: url('../images/Cars-banner.png') no-repeat;
+     background-size: 100%;
+}
+ .shoplink-title {
+     color: #FFF;
+     font-size: 32px;
+     font-weight: bold;
+     padding: 35px 95px 0;
+}
+ .shoplink-desc {
+     font-weight: 100;
+     font-size: 14px;
+     color: #FFF;
+     padding: 0 95px 0;
+     margin-bottom: 20px;
+}
+ .shoplink-now {
+     width: 95px;
+     padding: 5px 14px;
+     border: 2px solid #ed1f24;
+     border-radius: 30px;
+     position: relative;
+     left: 100px;
+     text-align: center;
+}
+ .shoplink-now.parts {
+     background-color: #ed1f24;
+}
+ .dv-srvc {
+     display: inline-flex;
+     background-color: #f7f7f7;
+     padding: 0px 80px 30px;
+}
+ .div-services {
+     width: 80%;
+     padding-right: 20px;
+}
+ .shoplink-now a{
+     color: #FFF;
+}
+ .shoplink-desc.parts {
+     width: 270px;
+}
+ .shoplink-desc.cars {
+     width: 185px;
+}
+ ul.ul-services {
+     list-style: none;
+     display: inline-flex;
+     padding: 0;
+     margin: 0;
+}
+ .services-buysell {
+     border-left: 2px solid #b1b1b1;
+     width: 20%;
+     padding: 0 20px;
+}
+ .ul-services li{
+     width: 18%;
+     padding: 20px;
+     font-size: 10px;
+     margin: 0;
+}
+ p.lbl-service {
+     text-align: center;
+     font-weight: bold;
+     margin: 10px 0;
+}
+ p.service-icon img {
+     height: 55px;
+}
+ p.service-icon, p.service-desc {
+     text-align: center;
+}
+ .widget.block.block-static-block {
+     margin-bottom: 0;
+}
+ .header-srvc {
+     background-color: #f8f7f7;
+}
+ .header-srvc p{
+     text-align: center;
+     font-size: 24px;
+     font-weight: bold;
+     padding: 40px 0;
+}
+ .buysell-lbl{
+     color: #c81c1f;
+     text-align: center;
+     font-size: 32px;
+     font-weight: 700;
+     padding-top: 45px;
+}
+ .services-buysell img{
+     padding: 0 40px;
+     width: 70%;
+}
+ .buysell-desc {
+     font-size: 10px;
+     padding: 20px;
+     text-align: center;
+}
+ .page-wrapper{
+     min-height: 0;
+}
+ .block-search {
+     margin-bottom: 0 !important;
+}
+ .home-search{
+     width: 100%;
+}
+ .home-ads {
+     padding: 10px 0px;
+     width: 100%;
+}
+ .home-ads img, .home-search input#search, .home-cat, .home-cars{
+     width: 80%;
+     float: right;
+}
+ .home-search input#search {
+     background: #fff;
+     border: 1px solid #e62f2d;
+     height: 35px;
+     border-radius: 30px;
+     font-weight: 400;
+     padding: 10px 0;
+     padding-left: 20px;
+}
+ .home-search .action.search:before{
+     display:none;
+}
+ .home-search .action.search > span{
+     position:relative;
+}
+ .home-search .action.search{
+     border-radius: 0 30px 30px 0;
+     height: 35px;
+     width: 80px;
+     top: 0px;
+     background: #f00 !important;
+     color: #fff;
+     font-size: 12px;
+     font-weight: 500;
+}
+ .home-categories, .home-topbrands, .home-featuredcars {
+     float: left;
+     width: 100%;
+}
+ .home-subcat {
+     width: 210px;
+     float: left;
+     margin: 10px 0 0 20px;
+}
+ .sub-categories {
+     background: #f8f7f7;
+     padding: 10px;
+     margin: 10px 0;
+     min-height: 39px;
+}
+ .sub-categories a{
+     color: #333333;
+     font-weight: 600;
+     font-size: 12px;
+}
+ .sub-categories a:hover{
+     color: #fff;
+     text-decoration: none;
+}
+ .home-lbl{
+     padding: 10px;
+     margin: 20px 0 10px 0;
+     background: linear-gradient(120deg, #c81c1f 40%, #fff 40%);
+}
+ .sub-categories:hover {
+     background: #ed1f24;
+     color: #fff;
+}
+ .lbl-popularcat, .lbl-topbrands, .lbl-featuredcars{
+     width: 37%;
+     text-align: right;
+     color: #fff;
+     text-transform: uppercase;
+     font-size: 14px;
+     font-weight: 700;
+}
+ .shop-by-all-categories a {
+     color: #ed1f24;
+     padding-left: 45px;
+}
+ .sub-categories:first-child{
+     margin: 0;
+}
+ .shop-by-all-categories {
+     background: url('../images/See_All-icon.png') no-repeat;
+     background-size: 30px;
+}
+ .shop-by-all-categories:hover{
+     background: url('../images/See_All-icon-hover.png') no-repeat;
+     background-size: 30px;
+}
+ .home-lbl.topbrands{
+     background: linear-gradient(120deg, #c81c1f 35%, #fff 35%);
+}
+ .lbl-topbrands {
+     width: 32%;
+}
+ .home-brands {
+     width: 118px;
+     float: left;
+     margin: 10px 0 0 20px;
+     height: 100px;
+}
+ .category-name {
+     color: #FFF;
+     text-transform: uppercase;
+     font-size: 28px;
+     font-weight: bold;
+     padding: 20px 140px 0;
+}
+ .category-desc {
+     font-size: 12px;
+     color: #fff;
+     width: 218px;
+     padding: 0 140px;
+}
+ .category-image {
+     height: 107px;
+     background-size: 100% !important;
+     background-repeat: no-repeat !important;
+     margin: 0;
+}
+ .div-submenu {
+     background: #313131;
+     width: 100%;
+     float: left;
+}
+ .sub-cat {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+     background: #313131;
+     float: left;
+}
+ .list-subcat {
+     float: left;
+     margin: 0;
+     width: 110px;
+     padding: 5px;
+     height: 30px;
+     border-right: 2px solid #1a1a1a;
+     text-align: center;
+     font-size: 10px;
+     text-transform: uppercase;
+     color: #fff;
+     font-weight: bold;
+}
+ .submenu-shopnow {
+     float: right;
+     background: #2f3031;
+     height: 40px;
+}
+ .submenu-shopnow-link {
+     padding: 5px 15px;
+     margin: 0 5px;
+     border: 2px solid #ed1f24;
+     color: #FFF !important;
+     border-radius: 30px;
+     position: relative;
+     top: 10px;
+     text-align: center;
+}
+ .breadcrumbs {
+     padding: 5px 240px;
+     margin: 0;
+}
+ .breadcrumbs strong {
+     font-weight: 600;
+     color: #ed1f24;
+}
+ .breadcrumbs a:visited, .breadcrumbs a {
+     font-weight: 600;
+     color: #575757;
+}
+ .login-line span {
+     margin: 10px 0;
+}
+ .login-line hr {
+     width: 40%;
+}
+ .login-line {
+     display: flex;
+}
+ .customer-account-login .page-title-wrapper, .customer-account-create .page-title-wrapper, .customer-account-forgotpassword .page-title-wrapper{
+     display: none;
+}
+ .block.block-customer-login, .form.create.account, .form.password.forget {
+     padding: 10px;
+     box-shadow: 0 0 20px 0 #888888;
+     background: #fff;
+     border-radius: 5px;
+}
+ .customer-account-login .page-main {
+     background: url('../images/Login-art.png') no-repeat;
+     background-size: contain;
+     background-color: #f7f7f7;
+     background-repeat: no-repeat;
+     background-position-y: 85%;
+}
+ .login-container{
+     width: 80%;
+	 margin: 50px auto;
+}
+ .login-container .fieldset > .field > .control{
+     width: 100%;
+}
+ .login-container .secondary {
+     float: right;
+}
+.login-container .action.remind {
+     color: #49aade;
+}
+ .block.block-new-customer .block-title {
+     width: 80%;
+     text-align: center;
+}
+ .block-customer-login .block-content, .block-new-customer .block-content{
+     width: 60%;
+     margin: auto;
+}
+ .login-container .block-new-customer .actions-toolbar {
+     margin-top: 90px;
+}
+ .div-block-title{
+     color: #c81c1f;
+     font-weight: bold;
+}
+ .login-container .block .block-title {
+     border-bottom: 0px solid #e8e8e8;
+     font-size: 1.8rem;
+     margin: 20px;
+     padding: 0;
+     text-align: center;
+}
+ .login-container .action.login.primary, .login-container .action.create.primary, .customer-account-create .action.submit.primary,  .customer-account-forgotpassword .action.submit.primary {
+     background: none;
+     color: #ed1f24;
+     border: 2px solid #ed1f24;
+     border-radius: 30px;
+     padding: 7px 30px;
+     text-transform: uppercase;
+	 margin: 0;
+}
+ .login-container .action.login.primary:hover, .login-container .action.create.primary:hover, .customer-account-create .action.submit.primary:hover, .customer-account-forgotpassword .action.submit.primary:hover {
+     background-color: #ed1f24;
+     color: #fff;
+}
+ .login-container ul {
+	list-style: none;
+    padding: 0;
+}
+
+ .login-container ul li:before {
+	-webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 12px;
+    line-height: 22px;
+    color: #ed1f24;
+    content: '\e610';
+    font-family: 'luma-icons';
+    vertical-align: middle;
+    display: inline-block;
+    font-weight: normal;
+    overflow: hidden;
+    speak: none;
+    text-align: center;
+    padding: 0 5px;
+    border: 1px solid #ed1f24;
+    border-radius: 20px;
+    margin: 0 15px;
+}
+
+ .fb-login {
+    border: 2px solid #395799;
+}
+ .fb-logo {
+     width: 40px;
+     float: left;
+     background-color: #395799;
+}
+ .fb-logo img {
+     width: 15px;
+     margin: auto;
+     padding: 10px;
+}
+ .fb-link {
+     padding: 10px;
+     text-align: center;
+}
+ .fb-link a{
+     color: #395799;
+}
+ .block-customer-login .block-content {
+     margin-bottom: 50px !important;
+}
+ .block.block-new-customer {
+     margin: 50px 0;
+}
+/*signup*/
+ .customer-account-create .page-main{
+	background: url('../images/Signup-art.png') no-repeat;
+     background-size: contain;
+     background-color: #f7f7f7;
+     background-repeat: no-repeat;
+     background-position-y: 75%;
+}
+
+ .form.create.account, .form.password.forget {
+	margin: 50px auto;
+	width: 40%;
+    min-width: 560px;
+    margin: 0 auto;
+}
+ .fieldset.create.info {
+     margin-bottom: 0;
+}
+ .fieldset.create.info .field, .fieldset.create.account .field, .fieldset.forgot.password .field{
+     width: 60%;
+     margin: 10px auto;
+}
+
+.g-recaptcha {
+    width: 54%;
+    margin: 10px auto;
+}
+
+.customer-account-create .actions-toolbar,  .customer-account-forgotpassword .actions-toolbar {
+    width: 35%;
+    margin: 0 auto 25px;
+}
+
+.customer-account-create .div-block-title {
+    width: 50%;
+    margin: 20px auto;
+    text-align: center;
+    background: url('../images/Signup-icon.png') no-repeat;
+    background-size: 27px;
+    background-position-x: 225px;
+}
+.customer-account-create .ui-datepicker-trigger{
+	display:none;
+}
+
+.customer-account-create ._has-datepicker{
+	width: 100% !important;
+	margin-right: 0px !important;
+}
+
+.fieldset.create.info legend {
+	width: 82%;
+    margin: 25px 50px;
+    padding: 0;
+}
+
+/*forgot password*/
+ .customer-account-forgotpassword .div-block-title{
+	 width: 100%;
+    text-align: center;
+    margin: 20px 0;
+ }
+ 
+.form.password.forget{
+	margin: 50px auto;
+}
+
+ .customer-account-forgotpassword .page-main{
+	 background: url('../images/Forgotpassword-art.png') no-repeat;
+     background-size: contain;
+     background-color: #f7f7f7;
+     background-repeat: no-repeat;
+     background-position-y: 75%;
+}
+
+/*cart*/
+ .checkout-cart-index .page-main{
+     background: #F7F7F7;
+}
+ .checkout-cart-index .page-title-wrapper {
+}
+ th.col.item{
+     border-right: 1px solid #cccccc;
+}
+ th.col.price, th.col.qty, th.col.subtotal{
+     width: 10%;
+     text-align: left !important;
+     border-right: 1px solid #cccccc;
+}
+ th.col.actions{
+     width: 10%;
+     text-align: left !important;
+}
+ .cart.table-wrapper .cart thead tr th.col {
+     border-bottom: 0px solid #cccccc 
+}
+ table#shopping-cart-table tbody:nth-child(odd) {
+     background-color: #fffafa;
+}
+ .cart-container .form-cart .actions.main .clear, .cart-container .form-cart .actions.main .continue {
+     display:block 
+}
+ .cart.main.actions {
+     width: 100%;
+}
+ button.action.continue {
+     float: left;
+     background: #FFFFFF;
+}
+ button.action.continue a{
+     color: #CB2B2E;
+}
+ button.action.clear, button.action.update {
+     float: right;
+     background: #FFFFFF;
+     color: #A3A3A3;
+}
+ .cart-summary strong.summary.title {
+     text-align: center;
+     color: #CB2B2E;
+}
+ .cart-summary {
+     background: #ffffff;
+}
+ .cart-summary .checkout-methods-items .action.primary.checkout {
+     width: 100%;
+     text-transform: uppercase;
+     color: #ED1F24;
+     background: #FFFFFF;
+     border: 2px solid;
+     border-radius: 30px;
+}
+
+/*sidebar*/
+.sidebar.sidebar-main {
+    margin: 30px 0;
+}
+
+.sidebar-title {
+    color: #c92726;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+ 

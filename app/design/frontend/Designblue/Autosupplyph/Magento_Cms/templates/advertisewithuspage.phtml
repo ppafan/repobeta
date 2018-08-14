@@ -1,0 +1,201 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<div class="header-carmaintenance"><p>ADVERTISE WITH US</p>
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="div-advertise-intro">
+<p class="div-advertise-intro-1">Over a million and more buyers from a small-to-medium auto-related enterprises all over the city rely online to discover, compare and purchase the products and services they need for their business. <br/>
+
+</p>
+<p class="div-advertise-intro-1">
+Autosupply.ph will give you that potential to have a continuous and unlimited purchase transactions through its period of operations. <br/>
+</p>
+<p class="div-advertise-intro-1">
+Make your business gain more popularity and skyrocket the size of your network. Simply fill out this form and we will give everything you need to know through E-mail or phone call to advertise your products on our platform. <br/>
+</p>
+<p class="div-advertise-intro-2">
+Are you ready to reach our audience? Get in touch and Advertise with us now!
+</p>
+</div>
+<div class="dv-advertise">
+
+<form class="form inquiry car form-inquiry-car"
+
+action="<?php echo $block->getFormAction() ?>"
+
+method="post"
+
+id="inquirycar-form"
+
+data-mage-init='{"validation":{}}'>
+
+    <fieldset class="fieldset inquiry car">
+
+        <div class="field field-fullname required">
+
+            <label class="label" for="fullname">
+
+                <span>Full Name</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="fullname" name="fullname" value="" title="Full Name" class="input-text required-entry"  data-validate="{required:true}">
+
+            </div>
+
+        </div>
+
+
+
+        <div class="field field-company required">
+
+            <label class="label" for="company">
+
+                <span>Company</span>
+
+            </label>
+
+            <div class="control">
+
+                <input type="text" id="company" name="company" value="" title="Company" class="input-text required-entry"  data-validate="{required:true}">
+
+            </div>
+
+        </div>
+
+
+
+        <div class="field field-email required">
+
+            <label class="label" for="email">
+
+                <span>Email Address</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="email" name="email" value="" title="Email Address" class="input-text required-entry"  data-validate="{required:true, 'validate-email':true}">
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="field field-mobile required">
+
+            <label class="label" for="mobile">
+
+                <span>Contact Number</span>
+
+            </label>
+
+
+
+            <div class="control">
+
+                <input type="text" id="mobile" name="mobile" value="" title="Contact Number" class="input-text required-entry"  data-validate="{required:true}">
+
+            </div>
+
+        </div>
+
+        <?= $block->getChildHtml('form_additional_info') ?>
+
+    </fieldset>
+
+
+
+    <div class="actions-toolbar">
+
+        <div class="primary">
+
+            <button type="submit" class="action submit primary" title="Send"><span>Send</span></button>
+
+        </div>
+
+    </div>
+
+</form>
+	
+</div>
+
+<style>
+.header-carmaintenance p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+/*.dv-advertise{
+    display: none;
+}*/
+
+.div-advertise-intro {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 40px 0;
+    width: 68%;
+    margin: 0 auto;
+}
+
+p.div-advertise-intro-1{
+    margin-top: 10px;
+}
+
+p.div-advertise-intro-2{
+    margin-top: 50px;
+}
+
+.cms-advertise-with-us .column.main{
+    width: 100%;
+}
+
+
+.cms-advertise-with-us .form.inquiry.car{
+    width: 30%;
+    min-width: 460px;
+    margin: 0 auto;
+}
+
+button.action.submit.primary {
+    font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+button.action.submit.primary:hover{
+    background-color: #ed1f24; 
+    color: #fff;
+}
+
+
+</style>

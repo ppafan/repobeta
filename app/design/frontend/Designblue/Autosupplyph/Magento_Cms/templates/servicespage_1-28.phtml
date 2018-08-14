@@ -1,0 +1,191 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<div class="header-srvc-page"><p>SERVICES</p>
+<div class="header-bottom">&nbsp;</div>
+</div>
+
+<div class="dv-srvc-page">
+	<div class="div-services-page">
+		<ul class="ul-services-page">
+			<li class="li-services-page">
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Insurance-icon.png" /></p>
+				<p class="lbl-service">Insurance</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+				<p class="services-redirect"><a class="services-redirect" href="">KNOW MORE</a></p>
+			</li>
+			
+			<li class="li-services-page">
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Car_Maintenance-icon.png" /></p>
+				<p class="lbl-service">Car Maintenance</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+				<p class="services-redirect"><a class="services-redirect" href="">KNOW MORE</a></p>
+			</li>
+			
+			<li class="li-services-page">
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Parts_Installation-icon.png" /></p>
+				<p class="lbl-service">Parts Installation</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+				<p class="services-redirect"><a class="services-redirect" href="">KNOW MORE</a></p>
+			</li>
+			
+			<li class="li-services-page">
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Rentals_and_Leasing-icon.png" /></p>
+				<p class="lbl-service">Rentals and Leasing</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+				<p class="services-redirect"><a class="services-redirect" href="">KNOW MORE</a></p>
+			</li>
+		</ul>
+		
+		<ul class="ul-services-page">	
+			<li class="li-services-page">
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Car_and_Detailing-icon.png" /></p>
+				<p class="lbl-service">Care Care and Detailing</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+				<p class="services-redirect"><a class="services-redirect" href="">KNOW MORE</a></p>
+			</li>
+			
+			<li class="li-services-page">
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Parts_Finder-icon.png" /></p>
+				<p class="lbl-service">Parts Finder</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+				<p class="services-redirect"><a class="services-redirect" href="">KNOW MORE</a></p>
+			</li>
+			
+			<li class="li-services-page">
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Car_Finder-icon.png" /></p>
+				<p class="lbl-service">Cars Finder</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+				<p class="services-redirect"><a class="services-redirect" href="">KNOW MORE</a></p>
+			</li>
+			
+			<li class="li-services-page">
+				<p class="service-icon"><img src="<?php echo $mediaUrl?>wysiwyg/Advertise_with_us-icon.png" /></p>
+				<p class="lbl-service">Advertise With Us</p>
+				<p class="service-desc">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+					Aenean commodo ligula eget dolor. Aenean massa. Cum
+				</p>
+				<p class="services-redirect"><a class="services-redirect" href="">KNOW MORE</a></p>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="services-buysell-page">
+		<div class="services-buysell-page-img">
+			<img src="<?php echo $mediaUrl?>wysiwyg/We_Buy_Sell_your_cars-icon.png" />
+		</div>
+		<div class="services-buysell-page-desc">
+			<p class="buysell-lbl-page">Buy/Sell Your Car</p>
+			<p class="buysell-desc-page">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit
+				Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis paturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
+			</p>
+			<a class="services-redirect" href="">KNOW MORE</a>
+		</div>
+	</div>
+</div>
+
+<style>
+.header-bottom {
+    border-bottom: 1px solid #ed1f24;
+    border-bottom-width: medium;
+    margin: 0 auto;
+    width: 5%;
+}
+
+.header-srvc-page p {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 40px 0;
+}
+
+.dv-srvc-page {
+    /*padding: 0px 80px 30px;*/
+}
+
+.div-services-page{
+}
+
+.ul-services-page{
+    list-style: none;
+    display: inline-flex;
+    padding: 20px 0 0 0;
+    margin: 20px 0 0 0;
+}
+
+li.li-services-page {
+    padding: 0px 0px 50px 0px;
+    margin: 0px 0px 0px 30px;
+}
+
+p.services-redirect {
+    text-align: center;
+    margin-top: 30px;
+}
+
+a.services-redirect{
+    font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.services-buysell-page {
+    background: #f7f7f7;
+    display: inline-flex;
+    margin: 35px 0 0px 0px;
+    padding: 40px 0px 40px 20px;
+    width: 100%;
+}
+
+.services-buysell-page-img {
+    width: 45%;
+    margin: 0px 0 0 65px;
+}
+
+.services-buysell-page-desc {
+   	width: 55%;
+}
+
+.buysell-lbl-page {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.buysell-desc-page {
+    font-size: 12px;
+    padding: 10px 0 60px 0;
+    width: 75%;
+}
+
+</style>

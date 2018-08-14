@@ -1,0 +1,301 @@
+<?php
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+
+// @codingStandardsIgnoreFile
+
+/* @var $block \Magento\Catalog\Block\Product\Compare\ListCompare */
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface'); 
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+
+$_product = $block->getProduct();
+
+
+?>
+<?php $_total = $block->getItems()->getSize() ?>
+<?php if ($_total): ?>
+
+<div class="header-carfinder"><p>Compare List</p>
+<div class="header-bottom">&nbsp;</div>
+</div>
+        <div class="table-wrapper comparison">
+            <table class="data table table-comparison" id="product-comparison"
+                data-mage-init='{"compareList":{
+                    "windowPrintSelector":".action.print",
+                    "productsInRow":"5",
+                    "selectors":{
+                        "productAddToCartSelector":"button.action.tocart"}
+                }}'>
+                <caption class="table-caption"><?= /* @escapeNotVerified */ __('Compare Products') ?></caption>
+                <thead>
+                <tr>
+                    <?php $_i = 0 ?>
+                    <?php foreach ($block->getItems() as $_item): ?>
+                        <?php if ($_i++ == 0): ?>
+                            <th scope="row" class="cell label remove"><span><?= /* @escapeNotVerified */ __('Remove Product') ?></span></th>
+                        <?php endif; ?>
+                        <td class="cell remove product">
+                            <?php $_helper = $this->helper('Magento\Catalog\Helper\Output'); ?>
+                            <strong class="product-item-name">
+                                <a href="<?= $block->getProductUrl($_item) ?>" title="<?= $block->stripTags($_item->getName(), null, true) ?>">
+                                    <?= $_helper->productAttribute($_item, $_item->getName(), 'name') ?>
+                                </a>
+                            </strong>
+                            <?php $compareHelper = $this->helper('Magento\Catalog\Helper\Product\Compare');?>
+                            <a href="#" data-post='<?= $compareHelper->getPostDataRemove($_item) ?>'
+                               class="action delete" title="<?= __('Remove Product') ?>">
+                                <span><?= __('Remove Product') ?></span>
+                            </a>
+                        </td>
+                    <?php endforeach; ?>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <?php $_i = 0; ?>
+                    <?php $_helper = $this->helper('Magento\Catalog\Helper\Output'); ?>
+                    <?php /** @var $_item \Magento\Catalog\Model\Product */ ?>
+                    <?php foreach ($block->getItems() as $_item): ?>
+                        <?php if ($_i++ == 0): ?>
+                            <th scope="row" class="cell label product"><span><?= /* @escapeNotVerified */ __('Product') ?></span></th>
+                        <?php endif; ?>
+                        <td data-th="<?= $block->escapeHtml(__('Product')) ?>" class="cell product info">
+                            <a class="product-item-photo" href="<?= /* @escapeNotVerified */ $block->getProductUrl($_item) ?>" title="<?= /* @escapeNotVerified */ $block->stripTags($_item->getName(), null, true) ?>">
+                                <?= $block->getImage($_item, 'product_comparison_list')->toHtml() ?>
+                            </a>
+                        </td>
+                    <?php endforeach; ?>
+                </tr>
+                </tbody>
+                <tbody>
+                <?php foreach ($block->getAttributes() as $_attribute): ?>
+                    <tr class="compare-table">
+                        <?php $_i = 0 ?>
+                        <?php foreach ($block->getItems() as $_item): ?>
+                            <?php if ($_i++ == 0): ?>
+                                <th scope="row" class="cell label">
+                                    <span class="attribute label">
+                                        <?= $block->escapeHtml($_attribute->getStoreLabel() ? $_attribute->getStoreLabel() : __($_attribute->getFrontendLabel())) ?>
+                                    </span>
+                                </th>
+                            <?php endif; ?>
+                            <td class="cell product attribute">
+                                <div class="attribute value">
+                                    <?php switch ($_attribute->getAttributeCode()) {
+                                        case "price": ?>
+                                            <?php
+                                                /* @escapeNotVerified */ echo $block->getProductPrice(
+                                                    $_item,
+                                                    '-compare-list-' . $_attribute->getCode()
+                                                )
+                                            ?>
+                                            <?php break;
+                                        case "small_image": ?>
+                                            <?php $block->getImage($_item, 'product_small_image')->toHtml(); ?>
+                                            <?php break;
+                                        default: ?>
+                                        <?= /* @escapeNotVerified */ $_helper->productAttribute($_item, $block->getProductAttributeValue($_item, $_attribute), $_attribute->getAttributeCode()) ?>
+                                        <?php break;
+                                    } ?>
+                                </div>
+                            </td>
+                        <?php endforeach; ?>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+
+    <tbody>
+
+    <tr>
+        <?php $_i = 0; ?>
+        <?php $_helper = $this->helper('Magento\Catalog\Helper\Output'); ?>
+        <?php /** @var $_item \Magento\Catalog\Model\Product */ ?>
+        <?php foreach ($block->getItems() as $_item): ?>
+            <?php if ($_i++ == 0): ?>
+                <th scope="row" class="cell label product"><span><?= /* @escapeNotVerified */ __('Product') ?></span></th>
+            <?php endif; ?>
+            <td data-th="<?= $block->escapeHtml(__('Product')) ?>" class="cell product info">
+                <div class="product-item-actions">
+                    <div class="actions-primary">
+                        <?php $callforprice = strtolower($_item->getCallforpriceText());?>
+                    	<?php if($callforprice == "inquire"): ?>
+                    		<a class="action compare primary compare" href="/inquiry?id=<?php echo $_item->getId() ?>">INQUIRE</a>
+
+                    <?php elseif($callforprice == "book a car"):?>
+                            <a class="action compare primary compare" href="/inquiry?id=<?php echo $_item->getId() ?>">BOOK A CAR</a>
+                    <?php else: ?>
+                        <form data-role="tocart-form" action="<?= $this->helper('Magento\Catalog\Helper\Product\Compare')->getAddToCartUrl($_item) ?>" method="post">
+                            <?= $block->getBlockHtml('formkey') ?>
+                            <button type="submit" class="action tocart primary">
+                                <span><?=  __('Add to Cart') ?></span>
+                            </button>
+                        </form>
+                <?php endif; ?>
+                    </div>
+                    <?php if ($this->helper('Magento\Wishlist\Helper\Data')->isAllow()) : ?>
+                <div class="compare-wishlist-productview">
+                    <p><a class="compare-addtowishlist" href="#" data-post='<?= $block->getAddToWishlistParams($_item) ?>' data-action="add-to-wishlist">
+                        <span><?=  __('Add to Wish List') ?></span>
+                    </a></p>
+
+                    <?php endif; ?>
+
+                    <p><a class="compare-seeproduct" href="<?= $block->getProductUrl($_item) ?>" title="<?= $block->stripTags($_item->getName(), null, true) ?>">
+                        <span><?=  __('SEE PRODUCT') ?></span>
+                    </a></p>
+                </div>
+                </div>
+            </td>
+        <?php endforeach; ?>
+    </tr>
+    </tbody>
+</table>
+
+
+        </div>
+        <?php if (!$block->isRedirectToCartEnabled()) : ?>
+            <script type="text/x-magento-init">
+            {
+                "[data-role=tocart-form]": {
+                    "catalogAddToCart": {}
+                }
+            }
+            </script>
+        <?php endif; ?>
+<?php else: ?>
+    <div class="noitems-compare">
+        <img src="<?php echo $mediaUrl?>wysiwyg/Nothing_to_Compare-icon.png" />
+        <h2>THERE IS NOTHING TO COMPARE</h2>
+        <p>You have to add 2 to 4 items.</p>
+    </div>
+<?php endif; ?>
+
+
+<style>
+
+.catalog-product-compare-index .column.main{
+    width: 100%;
+    background: #f7f7f7;
+}
+.header-carfinder p{
+    color: #C81C1F;
+    font-family: 'Raleway ExtraBold';
+    font-size: 20px;
+    padding: 30px 0px 0px 20px;
+}
+    
+.header-bottom {
+    border-bottom: 1px solid #95989A;
+    border-bottom-width: medium;
+    margin: 0 auto 40px;
+    width: 100%;
+}
+
+.table-comparison .cell.label .attribute.label{
+        font-family: 'Muli Bold';
+}
+
+
+th.cell.label.remove, th.cell.label.product {
+    border-right: 0px solid #cccccc;
+}
+
+strong.product-item-name {
+    float: left;
+}
+
+.table-comparison .price-box{
+    margin: 0px;
+}
+
+
+.table-comparison .cell {
+    padding: 10px;
+}
+
+.product-inquire {
+    display: none;
+}
+
+span.product-image-container {
+    width: 150px !important;
+}
+
+button.action.tocart.primary, .action.compare.primary.compare {
+    font-size: 12px;
+    background: none;
+    color: #ed1f24;
+    border: 2px solid #ed1f24;
+    border-radius: 30px;
+    padding: 7px 30px;
+    text-transform: uppercase;
+    margin: 0;
+    box-shadow: none;
+}
+
+button.action.tocart.primary:hover, .action.compare.primary.compare:hover{
+    background-color: #ed1f24;
+    color: #fff;
+}
+
+.compare-addtowishlist{
+    text-align: center;
+    box-shadow: none;
+    background-image: none;
+    background-color: #FFFFFF;
+    border: none;
+    color: #a3a3a3;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    box-sizing: unset;
+    text-transform: uppercase;
+}
+
+.compare-seeproduct{
+    text-align: center;
+    box-shadow: none;
+    background-image: none;
+    background-color: #FFFFFF;
+    border: none;
+    color: #a3a3a3;
+    padding: 5px 34px;
+    font-size: 12px;
+    font-weight: 600;
+    box-sizing: unset;
+    text-transform: uppercase;
+}
+
+.compare-seeproduct span, .compare-addtowishlist span{
+    color: #a3a3a3;
+}
+
+.compare-wishlist-productview p{
+    margin: 15px 0 15px 0px;
+}
+
+#product-comparison tr.compare-table:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+#product-comparison tr.compare-table:nth-child(even) {
+    background-color: #fffafa;
+}
+
+.noitems-compare{
+    text-align:center;
+}
+
+.noitems-compare h2{
+   font-family:'Raleway ExtraBold';
+}
+
+.noitems-compare p{
+    font-family:'Muli Bold';
+}
+
+</style>

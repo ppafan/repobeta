@@ -1,0 +1,593 @@
+/* .account.page-layout-2columns-left .column.main { */
+    /* width: 75% !important; */
+    /* margin-right: 0px !important; */
+/* } */
+th.col.id:after, th.col.date:after, th.col.shipping:after, th.col.total:after, th.col.status:after {
+    border-left: 1px solid #a6a6a6;
+    content: '';
+    display: inline-block;
+    height: 20px;
+    float: right;
+    vertical-align: -5px;
+}
+.block.block-reorder, .block.block-reviews-dashboard {
+    display: none;
+}
+table#my-orders-table > thead >tr {
+    border-bottom: 1px solid #cfcfcf;
+}
+body.account tbody > tr > td.col.id,
+body.account tbody > tr > td.col.shipping, 
+body.account tbody > tr > td.col.date, 
+body.account tbody > tr > td.col.total, 
+body.account tbody > tr > td.col.status,
+body.account tbody > tr > td.col.item, 
+body.account tbody > tr > td.col.summary, 
+body.account tbody > tr > td.col.description {
+    border-right: 1px solid #e8e8e8 !important;
+}
+body.account tbody > tr > td.col.id, 
+body.account tbody > tr > td.col.shipping, 
+body.account tbody > tr > td.col.date, 
+body.account tbody > tr > td.col.total, 
+body.account tbody > tr > td.col.status, 
+body.account tbody > tr > td.col.actions, 
+body.account tbody > tr > td.col.item, 
+body.account tbody > tr > td.col.summary, 
+body.account tbody > tr > td.col.description {
+    border-top: none !important;
+    background-color: #fff;
+}
+body.account a.table > tbody > tr > td{
+	   border-right: 1px solid #cccccc;
+}
+body.account th.col.id, body.account th.col.date, body.account th.col.shipping, body.account th.col.total,body.account th.col.status {
+    padding-right: 0;
+}
+/* body.account .page-main { */
+    /* width: 68% !important; */
+    /* margin-top: 40px; */
+/* } */
+/* body.account .breadcrumbs { */
+    /* background-color: #fff; */
+    /* max-width: 100%; */
+/* } */
+body.account .page-wrapper {
+    background-color: #f7f7f7;
+}
+/* body.account .sidebar .product-items-names .product-item { */
+    /* padding: 10px !important; */
+    /* margin-bottom: 10px; */
+/* } */
+
+/* .account .sidebar-main,.account.page-layout-2columns-left .sidebar{ */
+	/* margin-left: 0px; */
+        /* width: 24.3% !important; */
+/* } */
+body.account.customer-account-edit.page-layout-2columns-left input#change-password {
+    margin-left: 5px !important;
+}
+
+.fb-link {
+    padding: 9px !important; 
+    text-align: center;
+}
+
+body.cms-home.cms-index-index.page-layout-2columns-right .home-featuredcars .owl-item {
+    margin-right: 10px !important;
+}
+
+@media only screen and (min-width: 2559px) {
+	.block-content.fproducts .owl-stage-outer {
+		width: 50% !important; 
+		margin: 0 auto;
+		height: 217px !important;
+	}
+	.home-featuredcars .owl-carousel .owl-dots.disabled,.home-featuredcars .owl-carousel .owl-nav.disabled {
+		width: 90%;
+		margin-left: 65px;
+	}
+	body.cms-home.cms-index-index.page-layout-2columns-right .home-featuredcars .owl-stage-outer {
+		width: 84%; 
+	}
+	body.cms-home.cms-index-index.page-layout-2columns-right .home-fproducts .owl-stage-outer{
+		width: 54%;
+	}
+	body.account .breadcrumbs {
+		background-color: #fff;
+		max-width: 100%;
+	 
+		padding-left: 650px;
+	}
+	body.account .page-main {
+		width: 50.5% !important;
+	}
+	.navigation, .navigation2 {
+		/* padding-left: 123px !important; */
+		padding-left: 770px !important;
+		max-width: 100% !important;
+	}
+	
+	.page-layout-2columns-left .sidebar{
+		margin-left: 220px !important;
+	}
+}
+
+@media only screen and (max-width: 1280px) {
+
+	body.cms-home.cms-index-index.page-layout-2columns-right .home-featuredcars .owl-stage-outer {
+		width: 80%; 
+	}
+
+}
+@media only screen and (max-width: 1040px) {
+
+	.home-featuredcars .slick-prev {
+		left: 0px !important;
+	}
+	.home-featuredcars .slick-next{
+		right: 0px !important;
+	}
+
+	.home-featuredcars .slick-list.draggable {
+		margin-left: 18px !important;
+	}
+
+	.page-layout-2columns-right .sidebar-main {
+		padding-left: 3%;
+	}
+	/* body.account .page-main { */
+		/* width: 91% !important; */
+	/* } */
+	/* .account.page-layout-2columns-left .column.main { */
+		/* width: 69% !important;  */
+	/* } */
+
+	.block-customer-login .block-content, .block-new-customer .block-content {
+		width: 75% !important;
+	}
+	/*productview*/
+	/*
+	.catalog-product-view .product-info-main{
+		  width: 35% !important;
+		margin-right: 114px !important;
+	}*/
+	.catalog-product-view  .prod-desc-content{
+	    margin-left: 0;	
+	}
+	.catalog-product-view .prod-desc-ads{
+		 width: 45%;
+    	float: right;
+	}
+	.fotorama__stage__frame .fotorama__img {
+	  width: 314px !important;
+	}
+
+	.prod-desc-lbl{
+	    padding: 10px;
+	    margin: 20px 0 10px 0;
+	    background: linear-gradient(120deg, #c81c1f 30%, #fff 30%);
+	}
+	.prod-desc-label {
+	    width: 27%;
+	    text-align: right;
+	    color: #fff;
+	    text-transform: uppercase;
+	    font-size: 14px;
+	    font-weight: 700;
+	}
+		
+	.prod-desc-content {
+		width: 45% !important;
+		float: left !important;
+		margin-left: 25% !important;
+	}
+	.prod-specs-lbl { 
+		background: linear-gradient(121deg, #c81c1f 27%, #fff 27%);
+	    padding: 10px;
+        margin: 20px 0 10px 0;
+	}
+	.prod-specs-content {
+		width: auto !important;
+		margin-left: 0 !important;
+		padding-left: 141px !important;
+	}
+	.prod-specs-label {
+		width: 24% !important;
+	    text-align: right;
+	    color: #fff;
+	    text-transform: uppercase;
+	    font-size: 14px;
+	    font-weight: 700;		
+	  }
+	  /*
+	  .catalog-product-view .product.media {
+		width: 38%;
+		margin-left: 15px!important ;
+	}*/
+	body.cms-home.cms-index-index.page-layout-2columns-right.home-cars.owl-carousel.owl-loaded {
+		width: 104% !important;
+	}
+
+
+	body.cms-home.cms-index-index.page-layout-2columns-right .home-featuredcars .owl-stage-outer {
+		width: 100%; 
+	}
+
+}
+@media only screen and (max-width: 780px) {
+	
+	.home-featuredcars .slick-list.draggable {
+		margin-left: 0px !important;
+	}
+	
+	.minicart-wrapper {
+		top: -57px !important;
+		right: 10px !important;
+	}
+	
+	.categories {
+		height: 680px;
+	}
+
+	body.account .block-compare .actions-toolbar {
+		margin: 17px 20px 0;
+	}
+	.abs-remove-button-for-blocks:before, 
+	.sidebar .product-items .action.delete:before, 
+	.table-comparison .cell.remove .action.delete:before,
+	 .block-compare .action.delete:before,
+	  .filter-current .action.remove:before {
+		right: 6px !important;
+	}
+	body.account .page-main {
+		/*width: 100% !important;*/
+	}
+	/* body.account .sidebar .product-items-names .product-item { */
+		/* padding: 10px 10px 10px 0px !important; */
+	/* } */
+	body.account .block-compare .block-content {
+		padding: 0px;
+	}
+	body.account .sidebar .block-compare .product-item-link {
+		color: #FFF;
+		font-size: 11px;
+	}
+	.sidebar.sidebar-main .block.block-collapsible-nav {
+		display: none;
+	}
+	body.account.customer-account-index.page-layout-2columns-left .box-information .box-content {
+		font-size: 11px !important;
+	}
+	.account .action.edit{
+		padding: 5px 25px !important;
+		font-size: 11px !important;
+	}
+	.account .block-compare .empty {
+		font-size: 15px;
+		text-align: center;
+	}
+	.account .block-compare .block-title strong {
+		font-size: 15px;
+	}
+	/* .account.page-layout-2columns-left .column.main { */
+		/* width: 74% !important; */
+		/* margin-right: 0px !important; */
+		/* padding: 0px !important; */
+	/* } */
+	table#my-orders-table {
+		font-size: 12px;
+	}
+	.account .block-compare .block-title strong{
+		margin: 0px !important;
+	}
+
+
+	 
+	/*productview*/
+	/*
+	.catalog-product-view .product-info-main {
+		width: 35% !important;
+		margin-right: 15px !important;
+	}
+	.prod-desc-content {
+	 
+		margin-left: 85px !important;
+	}*/
+	.prod-specs-content { 
+		padding-left: 69px !important;
+	}
+	body.cms-home.cms-index-index.page-layout-2columns-right .home-featuredcars .owl-stage-outer {
+		width: 93%;
+	}
+
+	.featuredcars-seeall{
+		margin-top: 0px;
+	}
+
+
+}
+@media only screen and (max-width: 640px) {
+	
+	 .footerlinks p {
+		margin: 0;
+	}
+	
+	 .footerlinks {
+		margin: 20px 0;
+	}
+	
+	.minicart-wrapper {
+		top: -111px !important;
+		right: 38px !important;
+		position: absolute;
+	}
+
+	.home-featuredproducts .slick-prev {
+		left: 28px !important;
+	}
+	.home-featuredproducts .slick-next{
+		right: 28px !important;
+	}
+	.slick-prev {
+		left: 10px !important;
+	}
+	.slick-next{
+		right: 10px !important;
+	}
+	/* .account .block.block-reorder,.account .block.block-reviews-dashboard { */
+		/* display: block; */
+	/* } */
+	/* ol#cart-sidebar-reorder li.product-item { */
+		/* padding-left: 15px !important; */
+		/* text-align: left; */
+		/* width: 99%; */
+	/* } */
+	body.account.customer-account-index.page-layout-2columns-left {
+		font-size: 12px;
+	}
+	.account .action.edit, a.action.change-password {
+		padding: 5px 5px !important;
+		font-size: 11px !important;
+	}
+	body.account .box.box-information,body.account .box.box-newsletter {
+		width: 95%;
+		min-height: 110px;
+		background: #FFF;
+		padding: 10px 15px;
+		border-radius: 5px;
+		box-shadow: 0px 4px 12px 2px #ccc;
+	}
+	body.account .block-content .item{
+		float: none !important;
+	}
+	body.account.customer-account-edit.page-layout-2columns-left input#change-password ,body.account.customer-account-edit.page-layout-2columns-left input#change-email{
+		margin-left: 5px !important;
+	}
+	/* .account.page-layout-2columns-left .column.main { */
+		/* padding: 0px 10px !important; */
+	/* } */
+	  a.action.towishlist, a.action.tocompare, .catalog-product-view .link-inquire-car {
+	 
+		display: inline-block;
+	}
+
+	 .footer.content .links a, .footer.content .links strong{
+	  display: inline !important; 
+	  font-size: 18px;
+	 }
+	 footer.page-footer.block.newsletter {
+		font-size: 14px;
+	}
+	.ticketstatus {
+	 width: auto!important;
+	 }
+
+
+	a.support-redirect, button.action.submit.primary {
+		display: inline-block !important;
+	}
+
+	/*product view*/
+	.catalog-product-view .product-info-main {
+		width: 100% !important;
+		margin-right: 0 !important;
+	}
+
+	.catalog-product-view .prod-desc-lbl,.catalog-product-view .prod-specs-lbl {
+		  padding: 10px;
+		margin: 20px 0 10px 0;
+		background: linear-gradient(120deg, #c81c1f 27%, #fff 27%);
+	}
+	.catalog-product-view .prod-desc-label,.catalog-product-view .prod-specs-label{
+	  width: 24%;
+		text-align: right;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	.prod-desc-ads {
+		float: none;
+		width: 100%;
+	}
+	.prod-desc-content {
+		float: none !important;
+		width: auto !important;
+		margin-left: 57px !important;
+	}
+	.prod-specs-content {
+		padding-left: 34px !important;
+	}
+	.footer.content .block {
+		float: none !important;
+	}
+	 .prod-desc-ads > div{
+	  width: 100% !important;
+	  margin: 18px 0;
+	 }
+	 /*login signup */
+	 .cms-home .page-header{	
+	  margin-bottom: 0px !important;
+	 }
+	 .page-header{	
+	  margin-bottom: 42px !important;
+	 }
+	 .fb-login {
+		border: 2px solid #395799;
+		margin: 10px 0;
+	}
+	.fb-logo {
+		width: 40px;
+		float: left;
+		background-color: #395799;
+	}
+	.fb-link a {
+		color: #395799;
+	}
+	.fb-logo img {
+		width: 15px;
+		margin: auto;
+		padding: 10px;
+	}
+
+	/*insurance*/
+
+	#ticketstatus-lbl{
+	  margin-right: 0px !important;
+	} 
+
+	body.cms-home.cms-index-index.page-layout-2columns-right .home-featuredcars .owl-stage-outer {
+		width: 80%;
+	}
+	body.cms-home.cms-index-index.page-layout-2columns-right .fproducts .owl-item.active {
+		width: 290px !important ;
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+	}
+	.block-content.fproducts .owl-stage-outer {
+		width: 100%;
+	}
+	.block-content.fproducts .owl-nav {
+		width: 98% !important;
+		margin-left: 2px !important;
+	}
+}
+@media only screen and (max-width: 500px) {
+	
+	.home-featuredproducts .slick-next {
+		right: 10px !important;
+	}
+	.home-featuredproducts .slick-prev {
+		left: -4px !important;
+	}
+
+	#maincontent{	
+		overflow-x: hidden;
+
+	}
+	body.account .box.box-information, body.account .box.box-newsletter {
+		width: 93.5%;
+	}
+	.block-customer-login .block-content, .block-new-customer .block-content {
+		width: 100% !important;
+	}
+
+	/*product view*/
+	.catalog-product-view .product.media {
+		width: 100%;
+		 margin-left: 0px !important; 
+	}
+	.product-info-price > *:last-child{
+	  padding:0px !important;
+	}
+	.catalog-product-view .prod-desc-lbl,.catalog-product-view .prod-specs-lbl {
+	 
+		background: linear-gradient(120deg, #c81c1f 45%, #fff 45%);
+	}
+	.prod-desc-content { 
+		margin-left: 22px !important;
+	}
+	.prod-specs-content {
+		padding-left: 12px !important;
+	}
+	.product-info-main .product-info-price,.product.info.detailed,.product.data.items{
+	  margin-bottom: 0px;
+	}
+	.product-info-main .product-add-form{
+	  padding-bottom: 0px !important;
+	}
+	body.cms-home.cms-index-index.page-layout-2columns-right .home-featuredcars .owl-stage-outer {
+		width: 51%;
+	}
+	.block-content.fproducts .owl-nav {
+		width: 94% !important;
+		margin-left: -5px !important;
+	}
+	
+		
+	.minicart-wrapper {
+		top: -101px !important;
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+	.sidebar .block.widget .products-grid .product-item {
+		width: 14%  !important;
+	}
+	ol#cart-sidebar-reorder li.product-item { 
+		width: 98%;
+	}
+	body.account .box.box-information, body.account .box.box-newsletter {
+		width: 90.5%;
+	}
+	  #ticketstatus-lbl {
+	 
+		 margin-right: 0 !important; 
+	}
+	body.customer-account-forgotpassword.page-layout-1column .column.main {
+		padding: 0px 0px;
+	}
+	body.customer-account-create.page-layout-1column fieldset.fieldset.create.account #email_address,
+	body.customer-account-create.page-layout-1column fieldset.fieldset.create.account #password,
+	body.customer-account-create.page-layout-1column fieldset.fieldset.create.account #password-confirmation {
+		width: 100%;
+	}
+	body.customer-account-create.page-layout-1column fieldset.fieldset.create.account  .control {
+		width: 90%;
+	}
+	body.customer-account-create.page-layout-1column .fieldset > .field, .fieldset > .fields > .field {
+		margin: 0 0 5px;
+	}
+	body.customer-account-create.page-layout-1column .fieldset{
+	  margin: 0 0 5px;
+	}
+	.cms-insurance .div-insurance-imgdesc {
+		background: none;
+	}
+	.home-cars .product-item-info {
+		width: 268px !important;
+	}
+	body.cms-home.cms-index-index.page-layout-2columns-right .home-featuredcars .owl-stage-outer {
+		width: 100%;
+	}
+	body.cms-home.cms-index-index.page-layout-2columns-right .fproducts .owl-item.active {
+		width: 214px !important;
+	}
+	.block-content.fproducts .owl-nav {
+		width: 95% !important;
+		margin-left: 0px !important;
+	}
+	.sidebar .product-items .product-item-info, .sidebar .products-grid .product-item-info:hover {
+		margin-left: 10px;
+	}
+	.block-content.fproducts .owl-stage-outer, .block-content.featuredcars .owl-stage-outer {
+		width: 70%;
+		overflow-x:hidden !important; 
+	}
+
+}
+.catalog-prod-specs{
+	clear: both;
+}

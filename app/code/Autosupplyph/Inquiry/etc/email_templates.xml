@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+
+    <template id="inquiry_cars_cartemplate" label="Cars Inquiry Email" file="inquiry_cars_cartemplate.html" type="html" module="Autosupplyph_Inquiry" area="adminhtml"/>
+
+    <template id="inquiry_cars_rentalstemplate" label="Rentals and Leasing Inquiry Email" file="inquiry_cars_rentalstemplate.html" type="html" module="Autosupplyph_Inquiry" area="adminhtml"/>
+
+    <template id="inquiry_cars_servicetemplate" label="Services Inquiry Email" file="inquiry_cars_servicetemplate.html" type="html" module="Autosupplyph_Inquiry" area="adminhtml"/>
+
+    <template id="inquiry_cars_supporttemplate" label="Support Inquiry Email" file="inquiry_cars_supporttemplate.html" type="html" module="Autosupplyph_Inquiry" area="adminhtml"/>
+
+    <template id="inquiry_cars_advertisetemplate" label="Advertise with Us Inquiry Email" file="inquiry_cars_advertisetemplate.html" type="html" module="Autosupplyph_Inquiry" area="adminhtml"/>
+
+    <template id="inquiry_cars_careerstemplate" label="Careers Email" file="inquiry_cars_careerstemplate.html" type="html" module="Autosupplyph_Inquiry" area="adminhtml"/>
+
+    <template id="inquiry_cars_contactustemplate" label="Contact Us Email" file="inquiry_cars_contactustemplate.html" type="html" module="Autosupplyph_Inquiry" area="adminhtml"/>
+
+    <template id="inquiry_cars_noshippingtemplate" label="No Shipping Email" file="inquiry_cars_noshippingtemplate.html" type="html" module="Autosupplyph_Inquiry" area="adminhtml"/>
+
+    <template id="inquiry_cars_checktickettemplate" label="Check Ticket Status" file="inquiry_cars_checktickettemplate.html" type="html" module="Autosupplyph_Inquiry" area="adminhtml"/>
+
+
+</config>
+

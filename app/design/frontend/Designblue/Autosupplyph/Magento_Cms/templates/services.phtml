@@ -1,0 +1,127 @@
+<?php
+$_objectManager = \Magento\Framework\App\ObjectManager::getInstance(); //instance of\Magento\Framework\App\ObjectManager
+$storeManager = $_objectManager->get('Magento\Store\Model\StoreManagerInterface');
+$currentStore = $storeManager->getStore();
+$mediaUrl = $currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
+?>
+<div class="header-srvc"><p>SERVICES</p></div>
+<div class="dv-srvc">
+	<div class="div-services">
+		<ul class="ul-services">
+			<li>
+				<a></a>
+				<p class="service-icon"><a href="/services/index/insurance"><img src="<?php echo $mediaUrl?>wysiwyg/Insurance-icon.png" /></a></p>
+				<p class="lbl-service">Insurance</p>
+				<p class="service-desc">
+					Do you, sometimes, ever find yourself in the middle of an agony that, anytime, unforeseen events happen when you drive. If you do, then you are drive-conscious and if you are, then here’s our answer to your question.
+				</p>
+			</li>
+
+			<li>
+				<p class="service-icon"><a href="/services/index/partsfinder"><img src="<?php echo $mediaUrl?>wysiwyg/Parts_Finder-icon.png" /></a></p>
+				<p class="lbl-service">Parts Finder</p>
+				<p class="service-desc">
+					Locate an auto part that you need in just seconds at autosupply.ph
+					While we recommend and suggest other related choices that are possibly useful and you may want for your car.
+				</p>
+			</li>
+
+			<li>
+				<p class="service-icon"><a href="/services/index/carfinder"><img src="<?php echo $mediaUrl?>wysiwyg/Car_Finder-icon.png" /></a></p>
+				<p class="lbl-service">Cars Finder</p>
+				<p class="service-desc">
+					Find a car that fits your preference on the spot.
+					From oldies and pre-owned cars to the latest brand-new models.
+				</p>
+			</li>
+
+			<li>
+				<p class="service-icon"><a href="/services/index/carcaredetailing"><img src="<?php echo $mediaUrl?>wysiwyg/Car_and_Detailing-icon.png" /></a></p>
+				<p class="lbl-service">Car Care and Detailing</p>
+				<p class="service-desc">
+					Your car deserves the best car maintenance.
+					Keep your car running fresh and free from unexpected breakdowns.
+				</p>
+			</li>
+
+<?php /*
+			<li>
+				<p class="service-icon"><a href="/services/index/carmaintenance"><img src="<?php echo $mediaUrl?>wysiwyg/Car_Maintenance-icon.png" /></a></p>
+				<p class="lbl-service">Car Maintenance</p>
+				<p class="service-desc">
+					Your car deserves the best car maintenance. Keep your car running fresh and free from unexpected breakdowns.
+				</p>
+			</li>
+
+			<li>
+				<p class="service-icon"><a href="/services/index/partsinstallation"><img src="<?php echo $mediaUrl?>wysiwyg/Parts_Installation-icon.png" /></a></p>
+				<p class="lbl-service">Parts Installation</p>
+				<p class="service-desc">
+					We have highly trained mechanics who can go straight to you to supervise and run the installation of the auto parts that you want for your car anywhere in the country.
+				</p>
+			</li>
+
+			<li>
+				<p class="service-icon"><a href="/car-rentals.html"><img src="<?php echo $mediaUrl?>wysiwyg/Rentals_and_Leasing-icon.png" /></a></p>
+				<p class="lbl-service">Rentals and Leasing</p>
+				<p class="service-desc">
+					We also offer car rentals and leasing that assures the overall safety and security of the clients
+				</p>
+			</li>
+*/ ?>
+		</ul>
+
+		<ul class="ul-services">
+
+<?php /*
+
+			<li>
+				<p class="service-icon"><a href="/services/index/carcaredetailing"><img src="<?php echo $mediaUrl?>wysiwyg/Car_and_Detailing-icon.png" /></a></p>
+				<p class="lbl-service">Car Care and Detailing</p>
+				<p class="service-desc">
+					Your car deserves the best car maintenance.
+					Keep your car running fresh and free from unexpected breakdowns.
+				</p>
+			</li>
+
+			<li>
+				<p class="service-icon"><a href="/services/index/partsfinder"><img src="<?php echo $mediaUrl?>wysiwyg/Parts_Finder-icon.png" /></a></p>
+				<p class="lbl-service">Parts Finder</p>
+				<p class="service-desc">
+					Locate an auto part that you need in just seconds at autosupply.ph
+					While we recommend and suggest other related choices that are possibly useful and you may want for your car.
+				</p>
+			</li>
+
+			<li>
+				<p class="service-icon"><a href="/services/index/carfinder"><img src="<?php echo $mediaUrl?>wysiwyg/Car_Finder-icon.png" /></a></p>
+				<p class="lbl-service">Cars Finder</p>
+				<p class="service-desc">
+					Find a car that fits your preference on the spot.
+					From oldies and pre-owned cars to the latest brand-new models.
+				</p>
+			</li>
+*/ ?>
+			<li>
+				<p class="service-icon"><a href="/inquiry/index/advertise?success="><img src="<?php echo $mediaUrl?>wysiwyg/Advertise_with_us-icon.png" /></a></p>
+				<p class="lbl-service">Advertise with Us</p>
+				<p class="service-desc">
+					Over a million and more buyers from a small-to-medium auto-related enterprises all over the city rely online to discover, compare and purchase the products and services they need for their business.
+				</p>
+			</li>
+
+			<li><p>&nbsp;</p></li>
+			<li><p>&nbsp;</p></li>
+			<li><p>&nbsp;</p></li>
+
+		</ul>
+	</div>
+
+	<div class="services-buysell">
+		<p class="buysell-lbl">We Buy/Sell Your Car</p>
+		<a href="/services/index/buysell"><img src="<?php echo $mediaUrl?>wysiwyg/We_Buy_Sell_your_cars-icon.png" /></a>
+		<p class="buysell-desc">
+					Autosupply provides a wide variety of updated listings and make it as your ultimate guide to buy or sell your cars here on our platform
+		</p>
+	</div>
+</div>
